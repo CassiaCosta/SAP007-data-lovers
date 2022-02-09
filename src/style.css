@@ -1,0 +1,45 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+/* Estilização do header */
+.header_navigation .nav_bar {
+    height: 70px;
+    background-color: #0c1c3e;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.header_navigation .nav_bar .nav_bar_img {
+    width: 90px;
+}
+
+.header_navigation .nav_bar a {
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    color: white;
+}
+
+/* Estilização do conteúdo central */
+.main_pageInitial .main_background_img img {
+    width: 100%;
+}
+
+.main_pageInitial .main_welcome {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    text-shadow: 5px 5px 5px rgb(0 0 0 / 80%);
+    text-align: center;
+    right: 500px;
+    left: 500px;
+    top: calc(8.5% + 80px);
+    position: absolute;
+}
+
+.main_pageInitial .main_welcome h1 {
+    font-size: 36px;
+    line-height: 52px;
+}

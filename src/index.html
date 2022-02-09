@@ -8,30 +8,51 @@
 </head>
 
 <body>
-  <header>
-    <nav>
+  <header class="header_navigation">
+    <nav class="nav_bar">
+      <img class="nav_bar_img" src="/img/logo-pokemonGo.png">
+      <a href="#">Página inicial</a>
+      <a href="">Sobre</a>
+      <a href="https://www.pokemon.com/br/" target="_blank">Site oficial Pokémon</a>
+      <a href="https://pokemongolive.com/pt_br/" target="_blank">Site oficial do jogo</a>
+    </nav>
+  </header>
+
+  <div class="main_pageInitial">
+    <picture class="main_background_img">
+      <img src="/img/background-img.jpg" alt="">
+    </picture>
+
+    <div class="main_welcome">
+      <h1>Sejam bem-vindes, <br> Treinadores!</h1>
+      <h3>Breve explicação de como funciona o projeto</h3>
+    </div>
+
+    <button class="main_button">
+      <a href="/src/main.html">Iniciar</a>
+    </button>
+  </div>
+
+  <footer class="footer_navigation">
+    <section class="footer_links">
       <a href="#">Página inicial</a>
       <a href="">Sobre</a>
       <a href="https://www.pokemon.com/br/" target="_blank">Site oficial Pokémon</a>
       <a href="https://pokemongolive.com/pt_br/" target="_blank">Site Oficial do jogo</a>
-    </nav>
-  </header>
-  <div id="main">
-    <h1>Sejam bem-vindes, <br> Treinadores</h1>
-    <h3>Breve explicação de como funciona o projeto</h3>
-    <button class="botaoInicial">
-      <a href="/src/main.html">Iniciar</a>
-    </button>
-    <div class="botoesDownload">
+    </section>
+
+    <section class="footer_buttonsDownload">
       <button>Google Play</button>
       <button>App Store</button>
-    </div>
-  </div>
-  <footer>
-    <p>GitHub: </p>
-    <a href="https://github.com/CassiaCosta" target="_blank">Cássia Costa</a>
-    <a href="https://github.com/erikakrause" target="_blank">Érika Moreno</a>
+    </section>
+
+    <section class="footer_githubLinks">
+      <p>GitHub: </p>
+      <a href="https://github.com/CassiaCosta" target="_blank">Cássia Costa</a>
+      <a href="https://github.com/erikakrause" target="_blank">Érika Moreno</a>
+    </section>
   </footer>
+
   <script src="main.js" type="module"></script>
 </body>
 
