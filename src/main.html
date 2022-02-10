@@ -3,26 +3,64 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>Pokémon - Data Lovers</title>
+    <link rel="shortcut icon" href="/img/Poké_icon.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-    <header>
-        <nav>
+    <header class="header_navigation">
+        <nav class="nav_bar">
+            <img class="nav_bar_img" src="/img/logo-pokemonGo.png">
             <a href="/src/index.html">Página inicial</a>
             <a href="">Sobre</a>
             <a href="https://www.pokemon.com/br/" target="_blank">Site oficial Pokémon</a>
             <a href="https://pokemongolive.com/pt_br/" target="_blank">Site Oficial do jogo</a>
+            <a href=""> Quem somos</a>
         </nav>
     </header>
-    <div id="main">
+
+    <div class="main_pageInitial">
+        <picture class="main_background_img">
+            <img src="/img/background_mainHTML.jpeg" alt="">
+        </picture>
+
+        <section>
+            <input type="text" placeholder="Nome do Pokémon">
+            <select>
+                <option value disabled selected> Tipo de poder</option>
+            </select>
+        </section>
+        <div class="main_explanation">
+            <section class="explanation_front"></section>
+            <section class="explanation_back"></section>
+        </div>
         <h1>Parte de pequisa aqui</h1>
     </div>
-    <footer>
-        <p>GitHub: </p>
-        <a href="https://github.com/CassiaCosta" target="_blank">Cássia Costa</a>
-        <a href="https://github.com/erikakrause" target="_blank">Érika Moreno</a>
+
+    <footer class="footer_navigation">
+        <section class="footer_links">
+            <a href="#">Página inicial</a>
+            <a href="">Sobre</a>
+            <a href="https://www.pokemon.com/br/" target="_blank">Site oficial Pokémon</a>
+            <a href="https://pokemongolive.com/pt_br/" target="_blank">Site Oficial do jogo</a>
+            <a href=""> Quem somos</a>
+        </section>
+
+        <section class="footer_buttonsDownload">
+            <button>
+                <img src="/img/googleplay-button.png" alt="">
+            </button>
+            <button>
+                <img src="/img/appstore-button.png" alt="">
+            </button>
+        </section>
+
+        <section class="footer_githubLinks">
+            <p>GitHub: </p>
+            <a href="https://github.com/CassiaCosta" target="_blank">Cássia Costa</a>
+            <a href="https://github.com/erikakrause" target="_blank">Érika Moreno</a>
+        </section>
     </footer>
     <script src="main.js" type="module"></script>
 </body>
