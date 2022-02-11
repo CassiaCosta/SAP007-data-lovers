@@ -21,16 +21,30 @@
     </header>
 
     <div class="main_pageInitial">
-        <picture class="main_background_img">
+        <!-- <picture class="main_background_img">
             <img src="/img/background_mainHTML.jpeg" alt="">
-        </picture>
+        </picture> -->
 
-        <section>
+        <section class="section_search">
+            <p>Filtrar por: </p>
             <input type="text" placeholder="Nome do Pokémon">
+            <select>
+                <option value disabled selected>Tipo</option>
+            </select>
             <select>
                 <option value disabled selected> Tipo de poder</option>
             </select>
+            <select>
+                <option value disabled selected>Local de origem</option>
+                <option value="">Kanto</option>
+                <option value="">Johto</option>
+            </select>
+            <select>
+                <option value disabled selected>Escolha a ordem</option>
+            </select>
+            <button>Buscar</button>
         </section>
+
         <div class="main_explanation">
             <section class="explanation_front"></section>
             <section class="explanation_back"></section>
@@ -40,7 +54,7 @@
 
     <footer class="footer_navigation">
         <section class="footer_links">
-            <a href="#">Página inicial</a>
+            <a href="/src/index.html">Página inicial</a>
             <a href="">Sobre</a>
             <a href="https://www.pokemon.com/br/" target="_blank">Site oficial Pokémon</a>
             <a href="https://pokemongolive.com/pt_br/" target="_blank">Site Oficial do jogo</a>
@@ -49,10 +63,14 @@
 
         <section class="footer_buttonsDownload">
             <button>
-                <img src="/img/googleplay-button.png" alt="">
+                <a href="https://play.google.com/store/apps/details?id=com.nianticlabs.pokemongo" target="_blank">
+                    <img src="/img/googleplay-button.png" alt="">
+                </a>
             </button>
             <button>
-                <img src="/img/appstore-button.png" alt="">
+                <a href="https://apps.apple.com/vc/app/pok%C3%A9mon-go/id1094591345" target="_blank">
+                    <img src="/img/appstore-button.png" alt="">
+                </a>
             </button>
         </section>
 
