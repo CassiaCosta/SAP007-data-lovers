@@ -1,19 +1,17 @@
-# Data Lovers
+# POKÉMON GO - Data Lovers
 
 Projeto desenvolvido com o objetivo  de organizar, filtrar e buscar dados para facilitar a necessidade de pesquisa do usuário.
-<br>
 
-![gif](img/giphy.gif)
+![gif](/img-readme/giphy.gif)
 
 ## Índice 
  
 - [1. Preâmbulo](#1-preâmbulo) 
 - [2. Resumo do Projeto](#2-resumo-projeto) 
-- [3. Introdução](#3-introdução)
-- [4. Pesquisa](#4-pesquisa)
-- [5. Histórias de Usuários](#5-histórias-de-usuário)
-- [6. Protótipo](#6-prototipo)
-- [7. Teste de Usabilidade](#7-teste-de-usabilidade)
+- [3. Pesquisa](#3-pesquisa)
+- [4. Histórias de Usuários](#4-histórias-de-usuário)
+- [5. Protótipo](#5-prototipo)
+- [6. Teste de Usabilidade](#6-teste-de-usabilidade)
 
 ---
 
@@ -41,17 +39,60 @@ O objetivo principal deste projeto é que aprenda a desenhar e construir uma
 interface web onde se possa visualizar e manipular dados, entendendo o que o
 usuário necessita.
 
-## 3. Introdução
+Projeto desenvolvido por [Cássia Costa](https://github.com/CassiaCosta) e [Érika Moreno.](https://github.com/erikakrause)
 
-## 4. Pesquisa
+## 3. Pesquisa
+Para a pesquisa utilizamos **Google Forms** visando identificar a idade e gênero dos usuários e quais são os seus interesses em relação ao jogo e quais os itens  mais relevantes para fazer uma pesquisa em nossa aplicação.
 
-## 5. Histórias de usuários
+Os resultados foram: 
 
-## 6. Protótipo
+- 41,7% dos usuários tem a idade entre 21 a 30 anos e 37,5% são adultos com mais de 30 anos. Objetivemos também uma singela parcela de adolescente que estão na faixa etária de 15 anos.
 
-#### Protótipo de baixa fidelidade
+![age](/img-readme/age.png)
 
-#### Protótipo de alta fidelidade
+- 66,7% que responderam nossa pesquisa é do público feminino.
 
-## 7. Testes de usabilidade
+![gender](/img-readme/gender.png)
+
+- Em relação ao tipo da busca em nossa aplicação, as  informações mais relevantes foram: a raridade do pokémon, e o tipo de espécie ao qual pertence.
+
+![sort-search](/img-readme/order.png)
+
+- 48% informaram que a raridade é o item mais relevante para se buscar um pokémon.
+
+![relevants-info](/img-readme/relevants-info.png)
+
+
+## 4. Histórias de usuários
+
+Após a análise das respostas identificamos dois usuários:
+
+**História 1**
+
+![adult](/img-readme/adult.jpg)
+
+**História 2**
+
+![young](/img-readme/young.jpg)
+
+## 5. Protótipo
+
+A paleta de cores foi escolhida baseada nas cores principais do logo.
+
+![palette](/img-readme/color-palette.png)
+
+### Protótipo de baixa fidelidade
+**Página inicial**
+![low-prototype](/img-readme/index-low-prototype.jpg)
+
+**Filtros e Cards**
+![low-prototype](/img-readme/main-low-prototype.jpg)
+
+### Protótipo de alta fidelidade
+Utilizamos a ferramente Mockflow para o protótipo de alta fidelidade:
+
+**Página inicial**
+![prototype-index](/img-readme/prototype-index.png) 
+
+## 6. Testes de usabilidade
 
