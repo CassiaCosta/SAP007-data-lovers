@@ -132,3 +132,48 @@ body {
     color: white;
     border-radius: 50px;
 }
+
+/* Seção dos cards */
+
+.main_pageInitial .main_explanation {
+    height: 400px;
+    width: 800px;
+    background-color: white;
+    border-radius: 50px;
+    margin: auto;
+    text-align: center;
+    opacity: 0.7;
+}
+
+.main_pageInitial .main_explanation .explanation_cards{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main_pageInitial .main_explanation .title_explanation {
+    height: 70px;
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main_pageInitial .main_explanation .explanation_front,
+.main_pageInitial .main_explanation .explanation_back {
+    background-color: yellow;
+    height: 300px;
+    width: 200px;
+    border-radius: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.main_pageInitial .main_explanation .explanation_front h2,
+.main_pageInitial .main_explanation .explanation_back h2 {
+    margin-top: 50px;
+}
+
+.main_pageInitial .main_explanation picture img {
+    width: 80px;
+    margin: 20px;
+}
