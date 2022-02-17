@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
     <meta charset="UTF-8">
     <title>Pokémon - Data Lovers</title>
     <link rel="shortcut icon" href="/img/Poké_icon.png" type="image/x-icon">
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style-main.css" />
 </head>
 
 <body>
@@ -13,14 +13,13 @@
         <nav class="nav_bar">
             <img class="nav_bar_img" src="/img/logo-pokemonGo.png">
             <a href="/src/index.html">Página inicial</a>
-            <a href="">Sobre</a>
+            <a href="/src/about.html">Sobre</a>
             <a href="https://www.pokemon.com/br/" target="_blank">Site oficial Pokémon</a>
             <a href="https://pokemongolive.com/pt_br/" target="_blank">Site Oficial do jogo</a>
-            <a href=""> Quem somos</a>
         </nav>
     </header>
 
-    <div class="main_pageInitial">
+    <div class="main_pageInitial2">
         <!-- <picture class="main_background_img">
             <img src="/img/background_mainHTML.jpeg" alt="">
         </picture> -->
@@ -29,50 +28,55 @@
             <p>Filtrar por: </p>
             <input type="text" placeholder="Nome do Pokémon">
             <select>
+                <option value disabled selected>Escolha a ordem</option>
+                <option value="">-</option>
+                <option value="">Todos</option>
+                <option value="">A - Z</option>
+                <option value="">Raridade</option>
+                <option value="">Mais forte - mais fraco</option>
+            </select>
+            <select>
                 <option value disabled selected>Tipo</option>
+                <option value="">-</option>
+                <option value="">Fogo</option>
+                <option value="">Água</option>
+                <option value="">Grama</option>
+                <option value="">Voador</option>
+                <option value="">Lutador</option>
+                <option value="">Veneno</option>
+                <option value="">Elétrico</option>
+                <option value="">Terra</option>
+                <option value="">Pedra</option>
+                <option value="">Psíquico</option>
+                <option value="">Gelo</option>
+                <option value="">Inseto</option>
+                <option value="">Fantasma</option>
+                <option value="">Ferro</option>
+                <option value="">Dragão</option>
+                <option value="">Sombrio</option>
+                <option value="">Fada</option>
             </select>
             <select>
-                <option value disabled selected> Tipo de poder</option>
+                <option value disabled selected>Chance de captura</option>
+                <option value="">-</option>
+                <option value="">Maior</option>
+                <option value="">Menor</option>
             </select>
             <select>
-                <option value disabled selected>Local de origem</option>
+                <option value disabled selected>Região</option>
+                <option value="">-</option>
+                <option value="">Todos</option>
                 <option value="">Kanto</option>
                 <option value="">Johto</option>
             </select>
-            <select>
-                <option value disabled selected>Escolha a ordem</option>
-            </select>
             <button>Buscar</button>
         </section>
-        <div class="main_explanation">
-            <h1 class="title_explanation">Instruções sobre os cards:</h1>
-
-            <div class="explanation_cards">
-                <section class="explanation_front">
-                    <h2>Frente do Card:</h2>
-                    <br>
-                    <h4>Imagem do Pokémon</h4>
-                    <h4>+</h4>
-                    <h4>Nome do Pokémon</h4>
-                    <h4>+</h4>
-                    <h4>Número do Pokémon</h4>
-                </section>
-                <picture>
-                    <img src="/img/icon-arrows.png" alt="">
-                </picture>
-                <section class="explanation_back">
-                    <h2>Verso do Card:</h2>
-                    <br>
-                    <h4>Mais informações <br> sobre <br> o Pokémon</h4>
-                </section>
-            </div>
-        </div>
     </div>
 
     <footer class="footer_navigation">
         <section class="footer_links">
             <a href="/src/index.html">Página inicial</a>
-            <a href="">Sobre</a>
+            <a href="/src/about.html">Sobre</a>
             <a href="https://www.pokemon.com/br/" target="_blank">Site oficial Pokémon</a>
             <a href="https://pokemongolive.com/pt_br/" target="_blank">Site Oficial do jogo</a>
             <a href=""> Quem somos</a>

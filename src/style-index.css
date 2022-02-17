@@ -1,0 +1,98 @@
+/* CONFIGURAÇÃO GERAL */
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+body {
+    background-color: #18242e;
+}
+
+/* ESTILIZAÇÃO DO HEADER */
+.header_navigation .nav_bar {
+    height: 70px;
+    background-color: #0c1c3e;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.header_navigation .nav_bar .nav_bar_img {
+    width: 90px;
+}
+
+.header_navigation .nav_bar a {
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    color: white;
+}
+
+/* CONTEÚDO PRINCIAL */
+.main_welcome {
+    background-image: url(/img/background-img-3.jpg);
+    background-size: cover;
+    height: 600px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    text-shadow: 5px 5px 5px rgb(0 0 0 / 80%);
+    display: grid;
+    justify-content: center;
+    text-align: center;
+}
+
+.main_welcome .welcome h1 {
+    font-size: 36px;
+    line-height: 50px;
+    margin: 40px;
+}
+
+.main_welcome .main_logo img {
+    width: 200px;
+}
+
+.main_welcome .main_button .button_initial {
+    height: 40px;
+    width: 150px;
+    border-radius: 50px;
+    font-size: 20px;
+    background-color: #0c1c3e;
+}
+
+.main_welcome .main_button .button_initial a {
+    text-decoration: none;
+    color: white;
+}
+
+/* ESTILIZAÇÃO DO FOOTER */
+.footer_navigation {
+    background-color: #0c1c3e;
+    height: 150px;
+    font-size: 15px;
+    color: gray;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footer_navigation .footer_links a,
+.footer_navigation .footer_githubLinks a {
+    text-decoration: none;
+    color: gray;
+}
+
+.footer_navigation .footer_links,
+.footer_githubLinks {
+    display: grid;
+    line-height: 20px;
+}
+
+.footer_navigation .footer_buttonsDownload button {
+    background-color: #0c1c3e;
+}
+
+.footer_navigation .footer_buttonsDownload button img {
+    height: 50px;
+}
