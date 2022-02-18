@@ -1,12 +1,22 @@
+/* CONFIGURAÇÃO GERAL */
+
 * {
     padding: 0;
     margin: 0;
     border: 0;
 }
 
+body {
+    background-color: #050d1f;
+}
+
+/* ESTILIZAÇÃO DO HEADER */
+
 .header_navigation .nav_bar {
     height: 70px;
+    width: 100%;
     background-color: #0c1c3e;
+    position: fixed;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -17,80 +27,68 @@
 }
 
 .header_navigation .nav_bar a {
+    text-decoration: none;
     font-size: 20px;
     font-family: Arial, Helvetica, sans-serif;
-    text-decoration: none;
     color: white;
 }
 
+.header_navigation .nav_bar a:hover {
+    font-size: 21px;
+    color: yellow;
+    cursor: pointer;
+}
 
-body {
-    background-color: beige;
+/* BARRA DE FILTRAR */
+
+.main_content .section_search {
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 60px;
+    width: 100%;
+    top: 80px;
+    border: none;
+    border-radius: 50px;
+    background-color: white;
+    position: fixed;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.main_content .section_search input,
+.main_content .section_search select,
+.main_content .section_search button {
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 40px;
+    width: 150px;
+    text-align: center;
+}
+
+.main_content .section_search button {
+    color: white;
+    border-radius: 50px;
+    background-color: #0c1c3e;
+}
+
+.main_content .section_search button:hover {
+    background-color: #050d1f;
+    cursor: pointer;
 }
 
 /* ESTILIZAÇÃO DA PÁGINA DE PESQUISA */
 
-.main_pageInitial2 {
+.main_content::before {
+    content: " ";
     background-image: url(/img/background_mainHTML.jpeg);
     background-size: cover;
-    height: 600px;
-}
-
-/* Barra de fltrar */
-.main_pageInitial2 .section_search {
-    background-color: white;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    height: 60px;
-    border: none;
-    border-radius: 50px;
-    font-size: 20px;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.main_pageInitial2 .section_search input,
-.main_pageInitial2 .section_search select,
-.main_pageInitial2 .section_search button {
-    height: 40px;
-    width: 150px;
-    font-size: 15px;
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
-}
-
-.main_pageInitial2 .section_search button {
-    background-color: #0c1c3e;
-    color: white;
-    border-radius: 50px;
-}
-
-.footer_navigation {
-    height: 150px;
-    font-size: 15px;
-    color: gray;
-    font-family: Arial, Helvetica, sans-serif;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.footer_navigation .footer_links a,
-.footer_navigation .footer_githubLinks a {
-    text-decoration: none;
-    color: gray;
-}
-
-.footer_navigation .footer_links,
-.footer_githubLinks {
-    display: grid;
-    line-height: 20px;
-}
-
-.footer_navigation .footer_buttonsDownload button {
-    background-color: #0c1c3e;
-}
-
-.footer_navigation .footer_buttonsDownload button img {
-    height: 50px;
+    position: absolute;
+    height: 700px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.5;
+    z-index: -1;
 }

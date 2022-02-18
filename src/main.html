@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Pokémon - Data Lovers</title>
+    <title>Pokémon-Data Lovers</title>
     <link rel="shortcut icon" href="/img/Poké_icon.png" type="image/x-icon">
     <link rel="stylesheet" href="style-main.css" />
 </head>
@@ -19,88 +19,56 @@
         </nav>
     </header>
 
-    <div class="main_pageInitial2">
-        <!-- <picture class="main_background_img">
-            <img src="/img/background_mainHTML.jpeg" alt="">
-        </picture> -->
-
+    <div class="main_content">
         <section class="section_search">
             <p>Filtrar por: </p>
             <input type="text" placeholder="Nome do Pokémon">
-            <select>
+            <select class="order_filter">
                 <option value disabled selected>Escolha a ordem</option>
                 <option value="">-</option>
-                <option value="">Todos</option>
                 <option value="">A - Z</option>
+                <option value="">Z - A</option>
                 <option value="">Raridade</option>
                 <option value="">Mais forte - mais fraco</option>
             </select>
-            <select>
+            <select class="type_filter">
                 <option value disabled selected>Tipo</option>
                 <option value="">-</option>
-                <option value="">Fogo</option>
                 <option value="">Água</option>
-                <option value="">Grama</option>
-                <option value="">Voador</option>
-                <option value="">Lutador</option>
-                <option value="">Veneno</option>
+                <option value="">Dragão</option>
                 <option value="">Elétrico</option>
-                <option value="">Terra</option>
-                <option value="">Pedra</option>
-                <option value="">Psíquico</option>
-                <option value="">Gelo</option>
-                <option value="">Inseto</option>
+                <option value="">Fada</option>
                 <option value="">Fantasma</option>
                 <option value="">Ferro</option>
-                <option value="">Dragão</option>
+                <option value="">Fogo</option>
+                <option value="">Gelo</option>
+                <option value="">Grama</option>
+                <option value="">Inseto</option>
+                <option value="">Lutador</option>
+                <option value="">Pedra</option>
+                <option value="">Psíquico</option>
                 <option value="">Sombrio</option>
-                <option value="">Fada</option>
+                <option value="">Terra</option>
+                <option value="">Voador</option>
+                <option value="">Veneno</option>
             </select>
-            <select>
+            <select class="capture_filter">
                 <option value disabled selected>Chance de captura</option>
                 <option value="">-</option>
                 <option value="">Maior</option>
                 <option value="">Menor</option>
             </select>
-            <select>
+            <select class="region_filter">
                 <option value disabled selected>Região</option>
                 <option value="">-</option>
                 <option value="">Todos</option>
                 <option value="">Kanto</option>
                 <option value="">Johto</option>
             </select>
-            <button>Buscar</button>
+            <button class="search_button">Buscar</button>
         </section>
     </div>
-
-    <footer class="footer_navigation">
-        <section class="footer_links">
-            <a href="/src/index.html">Página inicial</a>
-            <a href="/src/about.html">Sobre</a>
-            <a href="https://www.pokemon.com/br/" target="_blank">Site oficial Pokémon</a>
-            <a href="https://pokemongolive.com/pt_br/" target="_blank">Site Oficial do jogo</a>
-            <a href=""> Quem somos</a>
-        </section>
-
-        <section class="footer_buttonsDownload">
-            <button>
-                <a href="https://play.google.com/store/apps/details?id=com.nianticlabs.pokemongo" target="_blank">
-                    <img src="/img/googleplay-button.png" alt="">
-                </a>
-            </button>
-            <button>
-                <a href="https://apps.apple.com/vc/app/pok%C3%A9mon-go/id1094591345" target="_blank">
-                    <img src="/img/appstore-button.png" alt="">
-                </a>
-            </button>
-        </section>
-
-        <section class="footer_githubLinks">
-            <p>GitHub: </p>
-            <a href="https://github.com/CassiaCosta" target="_blank">Cássia Costa</a>
-            <a href="https://github.com/erikakrause" target="_blank">Érika Moreno</a>
-        </section>
-    </footer>
+    
     <script src="main.js" type="module"></script>
 </body>
 
