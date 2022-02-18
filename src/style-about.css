@@ -1,11 +1,20 @@
+/* CONFIGURAÇÃO GERAL */
+
 * {
     padding: 0;
     margin: 0;
     border: 0;
 }
 
+body {
+    background-color: #050d1f;
+}
+
+/* ESTILIZAÇÃO DO HEADER */
+
 .header_navigation .nav_bar {
     height: 70px;
+    width: 100%;
     background-color: #0c1c3e;
     display: flex;
     justify-content: space-around;
@@ -17,18 +26,37 @@
 }
 
 .header_navigation .nav_bar a {
+    text-decoration: none;
     font-size: 20px;
     font-family: Arial, Helvetica, sans-serif;
-    text-decoration: none;
     color: white;
 }
 
-
-body {
-    background-color: #18242e;
+.header_navigation .nav_bar a:hover {
+    font-size: 21px;
+    color: yellow;
+    cursor: pointer;
 }
 
-.main_explanation {
+/* ESTILIZAÇÃO DO BACKGROUND */
+
+.main_content::before {
+    content: " ";
+    background-image: url(/img/background_mainHTML.jpeg);
+    background-size: cover;
+    position: absolute;
+    height: 700px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+/* CONTÊINER DE EXPLICAÇÃO DOS CARDS */
+
+.main_content .main_explanation_cards {
     height: 400px;
     width: 800px;
     background-color: white;
@@ -38,13 +66,7 @@ body {
     opacity: 0.7;
 }
 
-.main_explanation .explanation_cards{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.main_explanation .title_explanation {
+.main_content .main_explanation_cards .title_explanation {
     height: 70px;
     margin-top: 60px;
     display: flex;
@@ -52,33 +74,49 @@ body {
     align-items: center;
 }
 
-.main_explanation .explanation_front,
-.main_explanation .explanation_back {
-    background-color: yellow;
+.main_content .main_explanation_cards .cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main_content .main_explanation_cards .cards .explanation_front,
+.main_content .main_explanation_cards .cards .explanation_back {
+    font-family: Arial, Helvetica, sans-serif;
     height: 300px;
     width: 200px;
     border-radius: 30px;
-    font-family: Arial, Helvetica, sans-serif;
+    background-color: yellow;
 }
 
-.main_explanation .explanation_front h2,
-.main_explanation .explanation_back h2 {
-    margin-top: 50px;
-}
-
-.main_explanation picture img {
+.main_content .main_explanation_cards picture img {
     width: 80px;
     margin: 20px;
 }
 
+.main_content .main_explanation_cards .cards .explanation_front h2,
+.main_content .main_explanation_cards .cards .explanation_back h2 {
+    margin-top: 50px;
+}
+
+/* ESTILIZAÇÃO DO FOOTER */
+
 .footer_navigation {
-    height: 150px;
     font-size: 15px;
     color: gray;
     font-family: Arial, Helvetica, sans-serif;
+    height: 120px;
+    margin-top: 100px;
+    background-color: #0c1c3e;
     display: flex;
     justify-content: space-around;
     align-items: center;
+}
+
+.footer_navigation .footer_links,
+.footer_navigation .footer_githubLinks {
+    display: grid;
+    line-height: 20px;
 }
 
 .footer_navigation .footer_links a,
@@ -87,16 +125,20 @@ body {
     color: gray;
 }
 
-.footer_navigation .footer_links,
-.footer_githubLinks {
-    display: grid;
-    line-height: 20px;
+.footer_navigation .footer_links a:hover,
+.footer_navigation .footer_githubLinks a:hover {
+    color: yellow;
+    cursor: pointer;
 }
 
-.footer_navigation .footer_buttonsDownload button {
-    background-color: #0c1c3e;
+.footer_navigation .footer_githubLinks p {
+    font-weight: bold;
 }
 
 .footer_navigation .footer_buttonsDownload button img {
     height: 50px;
+}
+
+.footer_navigation .footer_buttonsDownload button {
+    background-color: #0c1c3e;
 }
