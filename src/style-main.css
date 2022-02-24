@@ -7,7 +7,7 @@
 }
 
 body {
-    background-color: #050d1f;
+    background-color: rgb(42, 110, 183);
 }
 
 /* ESTILIZAÇÃO DO HEADER */
@@ -93,11 +93,10 @@ body {
     right: 0px;
     bottom: 0px;
     left: 0px;
-    position: absolute;
+    position: fixed;
     z-index: -1;
     opacity: 0.5;
     background-repeat: no-repeat;
-    background-attachment: fixed;
 }
 
 /* BARRA DO CÁLCULO AGREGADO */
@@ -147,29 +146,61 @@ body {
 
 .main_content .mainList .cards .front_cards {
     display: grid;
-    align-content: space-around;
+    align-content: space-between;
     text-align: center;
+    background-color: rgb(255, 203, 8);
+    box-shadow: 3px 3px 3px rgba(255, 255, 255, 0.623);
 }
 
 .main_content .mainList .cards .back_cards {
-    display: none;
+    /* display: none; */
+    /* display: grid; */
+    align-items: center;
+    justify-content: center;
+    font-size: ;
+}
+
+.main_content .mainList .cards .back_cards .weightPokemon,
+.main_content .mainList .cards .back_cards .rarityPokemon,
+.main_content .mainList .cards .back_cards .specialAttackPokemon {
+    border-top: 2px solid gray;
+}
+
+.main_content .mainList .cards .back_cards .weightPokemon,
+.main_content .mainList .cards .back_cards .rarityPokemon,
+.main_content .mainList .cards .back_cards .specialAttackPokemon {
+    padding: 20px 0 5px 0;
 }
 
 .main_content .mainList .cards .front_cards .numberPokemon {
     font-size: 12px;
     font-weight: bold;
-    margin-top: 3px;
+    padding-top: 3px;
+    /* margin-top: 3px; */
+    /* background-color: yellow; */
+}
+
+.main_content .mainList .cards .front_cards .info_cards {
+    /* height: 172px;
+    background-color: yellow;
+    border-radius: 10px; */
+    background-color: white;
+    border-radius: 0 0 10px 10px;
 }
 
 .main_content .mainList .cards .front_cards .namePokemon {
     font-size: 15px;
     font-weight: bold;
     text-transform: capitalize;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 .main_content .mainList .cards .front_cards .typePokemon,
 .main_content .mainList .cards .front_cards .regionPokemon {
     font-size: 15px;
+    border-top: 2px solid gray;
+    padding: 3px;
 }
 
 .main_content .mainList .cards .front_cards .regionPokemon {
