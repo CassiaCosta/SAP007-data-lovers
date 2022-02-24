@@ -12,6 +12,10 @@ body {
 
 /* ESTILIZAÇÃO DO HEADER */
 
+.header_navigation .nav_bar .nav_bar_button {
+    background: none;
+}
+
 .header_navigation .nav_bar {
     height: 70px;
     width: 100%;
@@ -22,7 +26,9 @@ body {
 }
 
 .header_navigation .nav_bar .nav_bar_img {
-    width: 90px;
+    height: 85px;
+    width: 130px;
+    margin-top: 22px;
 }
 
 .header_navigation .nav_bar a {
@@ -141,4 +147,8 @@ body {
 
 .footer_navigation .footer_buttonsDownload button {
     background-color: #0c1c3e;
+}
+
+.footer_navigation .footer_githubLink a img {
+    height: 50px;
 }

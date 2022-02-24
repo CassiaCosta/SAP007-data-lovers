@@ -12,6 +12,10 @@ body {
 
 /* ESTILIZAÇÃO DO HEADER */
 
+.header_navigation .nav_bar .nav_bar_button {
+    background: none;
+}
+
 .header_navigation .nav_bar {
     height: 70px;
     width: 100%;
@@ -22,7 +26,9 @@ body {
 }
 
 .header_navigation .nav_bar .nav_bar_img {
-    width: 90px;
+    height: 85px;
+    width: 130px;
+    margin-top: 22px;
 }
 
 .header_navigation .nav_bar a {
@@ -42,7 +48,7 @@ body {
 
 .main_content::before {
     content: " ";
-    background-image: url(/img/thumb-1920-1160159.png);
+    background-image: url(/img/background-initial.png);
     background-size: cover;
     position: absolute;
     height: 700px;
@@ -73,11 +79,17 @@ body {
     margin: 40px;
 }
 
-.main_welcome .logo img {
-    width: 200px;
+.main_content .main_welcome .welcome h3 {
+    font-size: 17px;
 }
 
-.main_welcome .button_initial button {
+.main_content .main_welcome .logo img {
+    margin-top: 30px;
+    height: 180px;
+    width: 270px;
+}
+
+.main_content .main_welcome .button_initial button {
     font-size: 20px;
     height: 40px;
     width: 150px;
@@ -85,14 +97,15 @@ body {
     background-color: #0c1c3e;
 }
 
-.main_welcome .button_initial button:hover {
+.main_content .main_welcome .button_initial button:hover {
     background-color: #050d1f;
     cursor: pointer;
 }
 
-.main_welcome .button_initial button a {
+.main_content .main_welcome .button_initial a {
     text-decoration: none;
     color: white;
+    padding: 10px 45px;
 }
 
 /* ESTILIZAÇÃO DO FOOTER */
@@ -110,28 +123,32 @@ body {
 }
 
 .footer_navigation .footer_links,
-.footer_navigation .footer_githubLinks {
+.footer_navigation .footer_githubLink {
     display: grid;
     line-height: 20px;
 }
 
 .footer_navigation .footer_links a,
-.footer_navigation .footer_githubLinks a {
+.footer_navigation .footer_githubLink a {
     text-decoration: none;
     color: gray;
 }
 
 .footer_navigation .footer_links a:hover,
-.footer_navigation .footer_githubLinks a:hover {
+.footer_navigation .footer_githubLink a:hover {
     color: yellow;
     cursor: pointer;
 }
 
-.footer_navigation .footer_githubLinks p {
+.footer_navigation .footer_githubLink p {
     font-weight: bold;
 }
 
 .footer_navigation .footer_buttonsDownload button img {
+    height: 50px;
+}
+
+.footer_navigation .footer_githubLink a img {
     height: 50px;
 }
 

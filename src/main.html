@@ -3,15 +3,19 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Pokémon-Data Lovers</title>
-    <link rel="shortcut icon" href="/img/Poké_icon.png" type="image/x-icon">
+    <title>Pokémon Guide</title>
+    <link rel="shortcut icon" href="/img/Poke_icon.png" type="image/x-icon">
     <link rel="stylesheet" href="style-main.css" />
 </head>
 
 <body>
     <header class="header_navigation">
         <nav class="nav_bar">
-            <img class="nav_bar_img" src="/img/logo-pokemonGo.png">
+            <button class="nav_bar_button">
+                <a href="/src/index.html">
+                    <img class="nav_bar_img" src="/img/logo.png">
+                </a>
+            </button>
             <a href="/src/index.html">Página inicial</a>
             <a href="/src/about.html">Sobre</a>
             <a href="https://www.pokemon.com/br/" target="_blank">Site oficial Pokémon</a>
@@ -21,17 +25,8 @@
 
     <div class="main_content">
         <section class="section_search">
-            <p>Filtrar por: </p>
-            <input type="text" placeholder="Nome do Pokémon">
-            <select class="order_filter">
-                <option value disabled selected>Escolha a ordem</option>
-                <option value="">-</option>
-                <option value="">A - Z</option>
-                <option value="">Z - A</option>
-                <option value="">Raridade</option>
-                <option value="">Mais forte - mais fraco</option>
-            </select>
-            <select class="type_filter">
+            <p>Buscar por: </p>
+            <select class="type_filter" id="type_filter">
                 <option value disabled selected>Tipo</option>
                 <option value="">-</option>
                 <option value="">Água</option>
@@ -49,8 +44,8 @@
                 <option value="">Psíquico</option>
                 <option value="">Sombrio</option>
                 <option value="">Terra</option>
-                <option value="">Voador</option>
                 <option value="">Veneno</option>
+                <option value="">Voador</option>
             </select>
             <select class="capture_filter">
                 <option value disabled selected>Chance de captura</option>
@@ -59,16 +54,31 @@
                 <option value="">Menor</option>
             </select>
             <select class="region_filter">
-                <option value disabled selected>Região</option>
+                <option value disabled selected>Região de origem</option>
                 <option value="">-</option>
                 <option value="">Todos</option>
                 <option value="">Kanto</option>
                 <option value="">Johto</option>
             </select>
-            <button class="search_button">Buscar</button>
+            <select class="order_filter">
+                <option value disabled selected>Ordenar</option>
+                <option value="">-</option>
+                <option value="">A - Z</option>
+                <option value="">Z - A</option>
+                <option value="">Raridade</option>
+                <option value="">Mais forte - mais fraco</option>
+            </select>
+            <input type="text" placeholder="Nome do Pokémon">
+            <!-- <button class="search_button">Buscar</button> -->
+            <button class="clear_button">Limpar</button>
         </section>
+        <section class="calculation_print">
+            <p>Local de print do cálculo</p>
+        </section>
+        <div class="mainList" id="mainList"></div>
     </div>
-    
+
+
     <script src="main.js" type="module"></script>
 </body>
 
