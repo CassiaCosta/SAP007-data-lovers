@@ -1,0 +1,157 @@
+/* CONFIGURAÇÃO GERAL */
+
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+body {
+    background-color: #050d1f;
+}
+
+/* ESTILIZAÇÃO DO HEADER */
+
+.header_navigation .nav_bar .nav_bar_button {
+    background: none;
+}
+
+.header_navigation .nav_bar {
+    height: 70px;
+    width: 100%;
+    background-color: #0c1c3e;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.header_navigation .nav_bar .nav_bar_img {
+    height: 85px;
+    width: 130px;
+    margin-top: 22px;
+}
+
+.header_navigation .nav_bar a {
+    text-decoration: none;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+.header_navigation .nav_bar a:hover {
+    font-size: 21px;
+    color: yellow;
+    cursor: pointer;
+}
+
+/* CONTEÚDO PRINCIAL */
+
+.main_content::before {
+    content: " ";
+    background-image: url(/img/background-initial.png);
+    background-size: cover;
+    position: absolute;
+    height: 700px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.7;
+    z-index: -1;
+}
+
+.main_content .main_welcome {
+    height: 82vh;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    text-shadow: 2px 2px 2px rgb(0 0 0 / 100%);
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+.main_content .main_welcome .welcome h1 {
+    font-size: 36px;
+    line-height: 50px;
+    margin: 40px;
+}
+
+.main_content .main_welcome .welcome h3 {
+    font-size: 17px;
+}
+
+.main_content .main_welcome .logo img {
+    margin-top: 30px;
+    height: 180px;
+    width: 270px;
+}
+
+.main_content .main_welcome .button_initial button {
+    font-size: 20px;
+    height: 40px;
+    width: 150px;
+    border-radius: 50px;
+    background-color: #0c1c3e;
+}
+
+.main_content .main_welcome .button_initial button:hover {
+    background-color: #050d1f;
+    cursor: pointer;
+}
+
+.main_content .main_welcome .button_initial a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 45px;
+}
+
+/* ESTILIZAÇÃO DO FOOTER */
+
+.footer_navigation {
+    font-size: 15px;
+    color: gray;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 120px;
+    margin-top: 100px;
+    background-color: #0c1c3e;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footer_navigation .footer_links,
+.footer_navigation .footer_githubLink {
+    display: grid;
+    line-height: 20px;
+}
+
+.footer_navigation .footer_links a,
+.footer_navigation .footer_githubLink a {
+    text-decoration: none;
+    color: gray;
+}
+
+.footer_navigation .footer_links a:hover,
+.footer_navigation .footer_githubLink a:hover {
+    color: yellow;
+    cursor: pointer;
+}
+
+.footer_navigation .footer_githubLink p {
+    font-weight: bold;
+}
+
+.footer_navigation .footer_buttonsDownload button img {
+    height: 50px;
+}
+
+.footer_navigation .footer_githubLink a img {
+    height: 50px;
+}
+
+.footer_navigation .footer_buttonsDownload button {
+    background-color: #0c1c3e;
+}

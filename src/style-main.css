@@ -1,0 +1,177 @@
+/* CONFIGURAÇÃO GERAL */
+
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+body {
+    background-color: #050d1f;
+}
+
+/* ESTILIZAÇÃO DO HEADER */
+
+.header_navigation .nav_bar .nav_bar_button {
+    background: none;
+}
+
+.header_navigation .nav_bar {
+    height: 70px;
+    width: 100%;
+    background-color: #0c1c3e;
+    position: fixed;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.header_navigation .nav_bar .nav_bar_img {
+    height: 85px;
+    width: 130px;
+    margin-top: 22px;
+}
+
+.header_navigation .nav_bar a {
+    text-decoration: none;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+.header_navigation .nav_bar a:hover {
+    font-size: 21px;
+    color: yellow;
+    cursor: pointer;
+}
+
+/* BARRA DE FILTRAR */
+
+.main_content .section_search {
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 60px;
+    width: 100%;
+    top: 70px;
+    border: none;
+    border-radius: 50px;
+    background-color: white;
+    position: fixed;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.main_content .section_search input,
+.main_content .section_search select,
+.main_content .section_search button {
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 40px;
+    width: 150px;
+    text-align: center;
+}
+
+.main_content .section_search button {
+    color: white;
+    border-radius: 50px;
+    background-color: #0c1c3e;
+}
+
+.main_content .section_search button:hover {
+    background-color: #050d1f;
+    cursor: pointer;
+}
+
+/* ESTILIZAÇÃO DO BACKGROUND */
+
+.main_content::before {
+    content: " ";
+    background-image: url(/img/background_sky.jpeg);
+    background-size: cover;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    position: absolute;
+    z-index: -1;
+    opacity: 0.5;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* BARRA DO CÁLCULO AGREGADO */
+
+.main_content .calculation_print {
+    font-size: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    height: 30px;
+    width: 62%;
+    border-radius: 50px;
+    top: 150px;
+    margin: auto;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: -1;
+    opacity: 0.7;
+}
+
+/* ESTILIZAÇÃO DOS CARDS */
+
+.main_content .mainList {
+    top: 160px;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    z-index: -1;
+}
+
+.main_content .mainList .cards {
+    top: 10px;
+}
+
+.main_content .mainList .cards .front_cards,
+.main_content .mainList .cards .back_cards {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    height: 255px;
+    width: 190px;
+    border-radius: 10px;
+    margin: 10px;
+    background-color: white;
+}
+
+.main_content .mainList .cards .front_cards {
+    display: grid;
+    align-content: space-around;
+    text-align: center;
+}
+
+.main_content .mainList .cards .back_cards {
+    display: none;
+}
+
+.main_content .mainList .cards .front_cards .numberPokemon {
+    font-size: 12px;
+    font-weight: bold;
+    margin-top: 3px;
+}
+
+.main_content .mainList .cards .front_cards .namePokemon {
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.main_content .mainList .cards .front_cards .typePokemon,
+.main_content .mainList .cards .front_cards .regionPokemon {
+    font-size: 15px;
+}
+
+.main_content .mainList .cards .front_cards .regionPokemon {
+    margin-bottom: 5px;
+}
