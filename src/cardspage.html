@@ -26,7 +26,7 @@
     <div class="main_content">
         <section class="section_search">
             <p>Buscar por: </p>
-            <select class="type_filter" id="type_filter">
+            <select class="type_filter" id="typeFilter">
                 <option value disabled selected>Tipo</option>
                 <option value="water">Água</option>
                 <option value="dragon">Dragão</option>
@@ -44,25 +44,25 @@
                 <option value="poison">Venenoso</option>
                 <option value="flying">Voador</option>
             </select>
-            <select class="size_filter">
+            <select class="size_filter" id="sizeFilter">
                 <option value disabled selected>Tamanho</option>
                 <option value="height">Altura</option>
                 <option value="weight">Peso</option>
             </select>
-            <select class="region_filter">
+            <select class="region_filter" id="regionFilter">
                 <option value disabled selected>Região de origem</option>
                 <option value="kanto">Kanto</option>
                 <option value="johto">Johto</option>
             </select>
-            <select class="order_filter">
+            <select class="order_filter" id="orderFilter">
                 <option value disabled selected>Ordenar</option>
                 <option value="a-z">A - Z</option>
                 <option value="z-a">Z - A</option>
                 <option value="strong">Fortes - Fracos</option>
                 <option value="weak">Fracos - Fortes</option>
             </select>
-            <input type="text" placeholder="Nome do Pokémon">
-            <button class="clear_button">Limpar</button>
+            <input type="text" placeholder="Nome do Pokémon" id="nameFilter">
+            <button class="clear_button" id="clearButton">Limpar</button>
         </section>
         <section class="calculation_print">
             <p>Local de print do cálculo</p>
