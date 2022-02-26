@@ -1,12 +1,9 @@
-// import { example } from './data.js';
-import { orderFilter, regionFilter, searchName, sizeFilter, typeFilter } from './data.js';
+import { orderFilter, regionFilter, searchName, typeFilter } from './data.js';
 import data from './data/pokemon/pokemon.js';
 
 
-const allPokemons = data.pokemon
-
 let selectType = document.getElementById('typeFilter');
-let selectSize = document.getElementById('sizeFilter');
+// let selectSize = document.getElementById('sizeFilter');
 let selectRegion = document.getElementById('regionFilter');
 let selectOrder = document.getElementById('orderFilter');
 let inputName = document.getElementById('nameFilter');
@@ -16,8 +13,8 @@ let clearButton = document.getElementById('clearButton');
 
 // FUNÇÃO DE MOSTRAR OS CARDS
 
-function showPokemon() {
-    document.getElementById('pokemonList').innerHTML = allPokemons.map((item) => `
+function showPokemon(data) {
+    document.getElementById('pokemonList').innerHTML = data.map((item) => `
     <div class="cards">
         <section class="front_cards">
             <p class="numberPokemon">${item.num}</p>
@@ -42,33 +39,39 @@ function showPokemon() {
 
 showPokemon(data.pokemon);
 
+
 function searchByType() {
-    return typeFilter;
+    return showPokemon(typeFilter(data.pokemon, selectType.value))
 }
 
-function searchBySize() {
-    return sizeFilter
-}
+// function searchBySize() {
+//     return sizeFilter
+// }
 
 function searchByRegion() {
-    return regionFilter
+    return showPokemon(regionFilter(data.pokemon, selectRegion.value))
 }
 
 function searchByOrder() {
-    return orderFilter
+    return showPokemon(orderFilter(data.pokemon, selectOrder.value))
 }
 
 function searchByName() {
-    return searchName
+    return showPokemon(searchName(data.pokemon, inputName.value))
 }
 
 function cleanFilters() {
-
+    selectType.value = ""
+    // selectSize.value = ""
+    selectRegion.value = ""
+    selectOrder.value = ""
+    inputName.value = ""
+    showPokemon(data.pokemon)
 }
 
 
 selectType.addEventListener('change', searchByType);
-selectSize.addEventListener('change', searchBySize);
+// selectSize.addEventListener('change', searchBySize);
 selectRegion.addEventListener('change', searchByRegion);
 selectOrder.addEventListener('change', searchByOrder);
 inputName.addEventListener('keypress', searchByName);
