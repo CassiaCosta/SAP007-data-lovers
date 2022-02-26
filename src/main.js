@@ -1,4 +1,5 @@
 // import { example } from './data.js';
+import pokemon from './data/pokemon/pokemon.js';
 import data from './data/pokemon/pokemon.js';
 
 // window.onload = function() {
@@ -6,25 +7,25 @@ import data from './data/pokemon/pokemon.js';
 // };
 
 function showPokemon(data) {
-    document.getElementById('mainList').innerHTML = data.map((item) => `
+    document.getElementById('pokemonList').innerHTML = data.map((item) => `
     <div class="cards">
         <section class="front_cards">
             <p class="numberPokemon">${item.num}</p>
             <picture>
-                <img class="image_card" src="${item.img}">
+                <img class="image_card" src="${item.img}" alt="imagem do Pokémon">
             </picture>
             <div class="info_cards">
-            <p class="namePokemon">${item.name}</p>
-            <p class="typePokemon"> <b>Tipo:</b> ${item.type}</p>
-            <p class="regionPokemon"> <b>Região:</b> ${item.generation["name"]}</p>
+                <p class="namePokemon">${item.name}</p>
+                <p class="typePokemon"> <b>Tipo:</b> ${item.type}</p>
+                <p class="regionPokemon"> <b>Região:</b> ${item.generation["name"]}</p>
             </div>
-        </section>
-        <section class="back_cards">
-            <p class="heightPokemon"> <b> Altura:</b> ${item.size["height"]}</p>
-            <p class="weightPokemon"> <b> Peso: </b> ${item.size["weight"]}</p>
-            <p class="rarityPokemon"> <b>Raridade:</b> ${item["pokemon-rarity"]}</p>
-            <p class="specialAttackPokemon"> <b>Ataque especial:</b> ${item["special-attack"][0].name}</p>
-        </section>
+            </section>
+            <section class="back_cards">
+                <p class="heightPokemon"> <b> Altura:</b> ${item.size["height"]}</p>
+                <p class="weightPokemon"> <b> Peso: </b> ${item.size["weight"]}</p>
+                <p class="rarityPokemon"> <b>Raridade:</b> ${item["pokemon-rarity"]}</p>
+                <p class="specialAttackPokemon"> <b>Ataque especial:</b> <br> ${item["special-attack"][0].name}</p>
+            </section>
     </div>
     `).join('')
 }
@@ -33,7 +34,15 @@ showPokemon(data.pokemon);
 
 
 
-// const pokemonList = document.getElementById('mainList');
+
+
+
+// document.getElementById('type_filter').addEventListener("change", filterType);
+
+
+
+
+// const pokemonList = document.getElementById('pokemonList');
 // const url = './data/pokemon/pokemon.json';
 
 // function showPokemon(element) {
