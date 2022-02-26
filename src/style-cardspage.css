@@ -7,17 +7,14 @@
 }
 
 body {
-    background-color: rgb(42, 110, 183);
+    background-color: #0c1c3e;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 /* ESTILIZAÇÃO DO HEADER */
 
-.header_navigation .nav_bar .nav_bar_button {
-    background: none;
-}
-
 .header_navigation .nav_bar {
-    height: 70px;
+    height: 75px;
     width: 100%;
     background-color: #0c1c3e;
     position: fixed;
@@ -32,28 +29,28 @@ body {
     margin-top: 22px;
 }
 
+.header_navigation .nav_bar .nav_bar_buttonLogo {
+    background: none;
+}
+
 .header_navigation .nav_bar a {
     text-decoration: none;
     font-size: 20px;
-    font-family: Arial, Helvetica, sans-serif;
     color: white;
 }
 
 .header_navigation .nav_bar a:hover {
     font-size: 21px;
     color: yellow;
-    cursor: pointer;
 }
 
 /* BARRA DE FILTRAR */
 
 .main_content .section_search {
     font-size: 20px;
-    font-family: Arial, Helvetica, sans-serif;
     height: 60px;
     width: 100%;
-    top: 70px;
-    border: none;
+    top: 75px;
     border-radius: 50px;
     background-color: white;
     position: fixed;
@@ -62,11 +59,10 @@ body {
     align-items: center;
 }
 
-.main_content .section_search input,
 .main_content .section_search select,
+.main_content .section_search input,
 .main_content .section_search button {
     font-size: 15px;
-    font-family: Arial, Helvetica, sans-serif;
     height: 40px;
     width: 150px;
     text-align: center;
@@ -80,7 +76,6 @@ body {
 
 .main_content .section_search button:hover {
     background-color: #050d1f;
-    cursor: pointer;
 }
 
 /* ESTILIZAÇÃO DO BACKGROUND */
@@ -96,16 +91,14 @@ body {
     position: fixed;
     z-index: -1;
     opacity: 0.5;
-    background-repeat: no-repeat;
 }
 
 /* BARRA DO CÁLCULO AGREGADO */
 
 .main_content .calculation_print {
     font-size: 15px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
     height: 30px;
-    width: 62%;
+    width: 55%;
     border-radius: 50px;
     top: 150px;
     margin: auto;
@@ -118,9 +111,13 @@ body {
     opacity: 0.7;
 }
 
+.main_content .calculation_print {
+    display: none;
+}
+
 /* ESTILIZAÇÃO DOS CARDS */
 
-.main_content .mainList {
+.main_content .pokemonList {
     top: 160px;
     display: grid;
     grid-template-columns: auto auto auto auto;
@@ -130,79 +127,69 @@ body {
     z-index: -1;
 }
 
-.main_content .mainList .cards {
+.main_content .pokemonList .cards {
     top: 10px;
 }
 
-.main_content .mainList .cards .front_cards,
-.main_content .mainList .cards .back_cards {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+.main_content .pokemonList .cards .front_cards,
+.main_content .pokemonList .cards .back_cards {
     height: 255px;
-    width: 190px;
+    width: 170px;
     border-radius: 10px;
-    margin: 10px;
-    background-color: white;
+    margin: 8px;
+    display: grid;
 }
 
-.main_content .mainList .cards .front_cards {
-    display: grid;
+.main_content .pokemonList .cards .front_cards {
+    background-color: rgb(255, 203, 8);
     align-content: space-between;
     text-align: center;
-    background-color: rgb(255, 203, 8);
-    box-shadow: 3px 3px 3px rgba(255, 255, 255, 0.623);
 }
 
-.main_content .mainList .cards .back_cards {
-    /* display: none; */
-    /* display: grid; */
-    align-items: center;
-    justify-content: center;
-    font-size: ;
-}
-
-.main_content .mainList .cards .back_cards .weightPokemon,
-.main_content .mainList .cards .back_cards .rarityPokemon,
-.main_content .mainList .cards .back_cards .specialAttackPokemon {
-    border-top: 2px solid gray;
-}
-
-.main_content .mainList .cards .back_cards .weightPokemon,
-.main_content .mainList .cards .back_cards .rarityPokemon,
-.main_content .mainList .cards .back_cards .specialAttackPokemon {
-    padding: 20px 0 5px 0;
-}
-
-.main_content .mainList .cards .front_cards .numberPokemon {
+.main_content .pokemonList .cards .front_cards .numberPokemon {
     font-size: 12px;
     font-weight: bold;
     padding-top: 3px;
-    /* margin-top: 3px; */
-    /* background-color: yellow; */
 }
 
-.main_content .mainList .cards .front_cards .info_cards {
-    /* height: 172px;
-    background-color: yellow;
-    border-radius: 10px; */
-    background-color: white;
-    border-radius: 0 0 10px 10px;
-}
-
-.main_content .mainList .cards .front_cards .namePokemon {
-    font-size: 15px;
+.main_content .pokemonList .cards .front_cards .namePokemon {
+    font-size: 20px;
     font-weight: bold;
     text-transform: capitalize;
     padding-top: 5px;
     padding-bottom: 5px;
 }
 
-.main_content .mainList .cards .front_cards .typePokemon,
-.main_content .mainList .cards .front_cards .regionPokemon {
+.main_content .pokemonList .cards .front_cards .info_cards {    
+    background-color: white;
+    border-radius: 0 0 10px 10px;
+}
+
+.main_content .pokemonList .cards .front_cards .typePokemon,
+.main_content .pokemonList .cards .front_cards .regionPokemon {
     font-size: 15px;
     border-top: 2px solid gray;
     padding: 3px;
 }
 
-.main_content .mainList .cards .front_cards .regionPokemon {
+.main_content .pokemonList .cards .front_cards .regionPokemon {
     margin-bottom: 5px;
+}
+
+.main_content .pokemonList .cards .back_cards {
+    font-size: 15px;
+    background-color: white;
+    align-items: center;
+    align-content: center;
+    display: none;
+}
+
+.main_content .pokemonList .cards .back_cards .weightPokemon,
+.main_content .pokemonList .cards .back_cards .rarityPokemon,
+.main_content .pokemonList .cards .back_cards .specialAttackPokemon {
+    border-top: 2px solid gray;
+    padding: 10px 0 10px 0;
+}
+.main_content .pokemonList .cards .back_cards .heightPokemon {
+    padding: 10px 0 10px 0;
 }

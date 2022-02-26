@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Pokémon Guide</title>
+    <link rel="shortcut icon" href="/img/Poke_icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style-cardspage.css" />
+</head>
+
+<body>
+    <header class="header_navigation">
+        <nav class="nav_bar">
+            <button class="nav_bar_buttonLogo">
+                <a href="/src/home.html">
+                    <img class="nav_bar_img" src="/img/logo.png" alt="Logo da página">
+                </a>
+            </button>
+            <a href="/src/home.html">Página inicial</a>
+            <a href="/src/about.html">Sobre</a>
+            <a href="https://www.pokemon.com/br/" target="_blank">Site oficial Pokémon</a>
+            <a href="https://pokemongolive.com/pt_br/" target="_blank">Site oficial do jogo</a>
+        </nav>
+    </header>
+
+    <div class="main_content">
+        <section class="section_search">
+            <p>Buscar por: </p>
+            <select class="type_filter" id="type_filter">
+                <option value disabled selected>Tipo</option>
+                <option value="water">Água</option>
+                <option value="dragon">Dragão</option>
+                <option value="electric">Elétrico</option>
+                <option value="ghost">Fantasma</option>
+                <option value="fire">Fogo</option>
+                <option value="ice">Gelo</option>
+                <option value="bug">Inseto</option>
+                <option value="fighting">Lutador</option>
+                <option value="normal">Normal</option>
+                <option value="rock">Pedra</option>
+                <option value="grass">Planta</option>
+                <option value="psychic">Psíquico</option>
+                <option value="ground">Terra</option>
+                <option value="poison">Venenoso</option>
+                <option value="flying">Voador</option>
+            </select>
+            <select class="size_filter">
+                <option value disabled selected>Tamanho</option>
+                <option value="height">Altura</option>
+                <option value="weight">Peso</option>
+            </select>
+            <select class="region_filter">
+                <option value disabled selected>Região de origem</option>
+                <option value="kanto">Kanto</option>
+                <option value="johto">Johto</option>
+            </select>
+            <select class="order_filter">
+                <option value disabled selected>Ordenar</option>
+                <option value="a-z">A - Z</option>
+                <option value="z-a">Z - A</option>
+                <option value="strong">Fortes - Fracos</option>
+                <option value="weak">Fracos - Fortes</option>
+            </select>
+            <input type="text" placeholder="Nome do Pokémon">
+            <button class="clear_button">Limpar</button>
+        </section>
+        <section class="calculation_print">
+            <p>Local de print do cálculo</p>
+        </section>
+
+        <div class="pokemonList" id="pokemonList"></div>
+    </div>
+
+
+    <script src="main.js" type="module"></script>
+</body>
+
+</html>

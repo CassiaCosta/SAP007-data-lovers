@@ -7,17 +7,14 @@
 }
 
 body {
-    background-color: #050d1f;
+    background-color: #0c1c3e;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 /* ESTILIZAÇÃO DO HEADER */
 
-.header_navigation .nav_bar .nav_bar_button {
-    background: none;
-}
-
 .header_navigation .nav_bar {
-    height: 70px;
+    height: 75px;
     width: 100%;
     background-color: #0c1c3e;
     display: flex;
@@ -31,77 +28,91 @@ body {
     margin-top: 22px;
 }
 
+.header_navigation .nav_bar .nav_bar_buttonLogo {
+    background: none;
+}
+
 .header_navigation .nav_bar a {
     text-decoration: none;
     font-size: 20px;
-    font-family: Arial, Helvetica, sans-serif;
     color: white;
 }
 
 .header_navigation .nav_bar a:hover {
     font-size: 21px;
     color: yellow;
-    cursor: pointer;
 }
 
 /* ESTILIZAÇÃO DO BACKGROUND */
 
 .main_content::before {
     content: " ";
-    background-image: url(/img/background_mainHTML.jpeg);
+    background-image: url(/img/background_sky.jpeg);
     background-size: cover;
-    position: absolute;
-    height: 700px;
     top: 0px;
     right: 0px;
     bottom: 0px;
     left: 0px;
-    opacity: 0.5;
+    position: fixed;
     z-index: -1;
+    opacity: 0.5;
+}
+/* CONTÊINER DE INFORMAÇÕES */
+
+.main_content {
+    font-size: 20px;
+    color: #0c1c3e;
+    width: 70%;
+    background-color: white;
+    border-radius: 10px;
+    padding: 50px;
+    margin: 50px auto 50px auto;
+}
+
+.main_content .description,
+.main_content .explanation,
+.main_content .aboutGames,
+.main_content .aboutAnime {
+    line-height: 32px;
+    margin-top: 30px;
+    margin-bottom: 35px;
 }
 
 /* CONTÊINER DE EXPLICAÇÃO DOS CARDS */
 
-.main_content .main_explanation_cards {
-    height: 400px;
-    width: 800px;
-    background-color: white;
-    border-radius: 50px;
+.main_content .explanation_cards {
+    height: 300px;
     margin: auto;
     text-align: center;
-    opacity: 0.7;
+    opacity: 0.8;
 }
 
-.main_content .main_explanation_cards .title_explanation {
-    height: 70px;
-    margin-top: 60px;
+.main_content .explanation_cards .title_explanation {
+    height: 50px;
+}
+
+.main_content .explanation_cards .cards {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.main_content .main_explanation_cards .cards {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.main_content .main_explanation_cards .cards .explanation_front,
-.main_content .main_explanation_cards .cards .explanation_back {
-    font-family: Arial, Helvetica, sans-serif;
-    height: 300px;
-    width: 200px;
+.main_content .explanation_cards .cards .explanation_front,
+.main_content .explanation_cards .cards .explanation_back {
+    font-size: 13px;
+    background-color: rgb(255, 203, 8);
+    height: 240px;
+    width: 170px;
     border-radius: 30px;
-    background-color: yellow;
 }
 
-.main_content .main_explanation_cards picture img {
-    width: 80px;
+.main_content .explanation_cards picture img {
+    width: 70px;
     margin: 20px;
 }
 
-.main_content .main_explanation_cards .cards .explanation_front h2,
-.main_content .main_explanation_cards .cards .explanation_back h2 {
+.main_content .explanation_cards .cards .explanation_front h2,
+.main_content .explanation_cards .cards .explanation_back h2 {
     margin-top: 50px;
 }
 
@@ -109,46 +120,32 @@ body {
 
 .footer_navigation {
     font-size: 15px;
-    color: gray;
-    font-family: Arial, Helvetica, sans-serif;
     height: 120px;
-    margin-top: 100px;
     background-color: #0c1c3e;
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
 
-.footer_navigation .footer_links,
-.footer_navigation .footer_githubLinks {
+.footer_navigation .footer_links {
     display: grid;
-    line-height: 20px;
+    line-height: 21px;
 }
 
-.footer_navigation .footer_links a,
-.footer_navigation .footer_githubLinks a {
+.footer_navigation .footer_links a {
     text-decoration: none;
     color: gray;
 }
 
-.footer_navigation .footer_links a:hover,
-.footer_navigation .footer_githubLinks a:hover {
+.footer_navigation .footer_links a:hover {
     color: yellow;
-    cursor: pointer;
 }
 
-.footer_navigation .footer_githubLinks p {
-    font-weight: bold;
-}
-
-.footer_navigation .footer_buttonsDownload button img {
+.footer_navigation .footer_buttonsDownload button img,
+.footer_navigation .footer_githubLink a img {
     height: 50px;
 }
 
 .footer_navigation .footer_buttonsDownload button {
     background-color: #0c1c3e;
-}
-
-.footer_navigation .footer_githubLink a img {
-    height: 50px;
 }
