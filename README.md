@@ -37,7 +37,6 @@ O mundo dos jogos do Pokémon é muito vasto, existem inúmeros pokémons de div
 Visando essa possibilidade, o projeto Pokémon Guide foi projetado para preencher essa lacuna, trazendo um guia de informações dos Pokémons da região de Kanto e Johto.
 
 ## 4. Usuários
-
 ### A pesquisa
 
 Para a pesquisa foi utilizado **Google Forms** visando identificar a idade e gênero dos usuários e quais são os seus interesses em relação ao jogo e quais os itens  mais relevantes para fazer uma pesquisa em nossa aplicação.
@@ -93,4 +92,13 @@ Utilizamos a ferramente Mockflow para o protótipo de alta fidelidade:
 ![prototype-index](/img-readme/prototype-index.png) 
 
 ## 6. Testes de usabilidade
+
+## 7. Objetivos de aprendizagem
+
+## 8. Linguagens utilizadas
+
+HTML5
+CSS3
+Node.JS
+JavaScript
 
