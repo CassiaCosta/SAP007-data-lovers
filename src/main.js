@@ -10,6 +10,7 @@ let inputName = document.getElementById('nameFilter');
 
 let clearButton = document.getElementById('clearButton');
 
+let calculationBar = document.getElementById('calculation');
 
 // FUNÇÃO DE MOSTRAR OS CARDS
 
@@ -35,6 +36,7 @@ function showPokemon(data) {
             </section>
     </div>
     `).join('')
+    calculationBar.innerHTML = "Você está vendo todos os cards!"
 }
 
 showPokemon(data.pokemon);
