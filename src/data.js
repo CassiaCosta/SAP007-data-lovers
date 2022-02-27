@@ -1,25 +1,12 @@
-// estas funciones son de ejemplo
-
-// import pokemon from "./data/pokemon/pokemon"
-
-// import pokemon from "./data/pokemon/pokemon";
-
-// export const example = () => {
-//   return 'example';
-// };
-
-// export const anotherExample = () => {
-//   return 'OMG';
-// };
-
 export const typeFilter = (data, type) => {
     const filterType = data.filter(pokemonType => pokemonType.type.find(item => item === type) === type)
     return filterType
 }
 
-// export const sizeFilter = () => {
-
-// }
+export const rarityFilter = (data, rarity) => {
+    const filterRarity = data.filter(pokemonRarity => pokemonRarity["pokemon-rarity"] == rarity)
+    return filterRarity
+}
 
 export const regionFilter = (data, region) => {
     const filterRegion = data.filter(pokemonRegion => pokemonRegion.generation["name"] == region)

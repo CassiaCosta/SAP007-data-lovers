@@ -94,6 +94,14 @@ Utilizamos a ferramente Mockflow para o protótipo de alta fidelidade:
 ## 6. Testes de usabilidade
 
 ## 7. Objetivos de aprendizagem
+Aprendemos a desenhar protótipos de baixa e alta fidelida para construir uma interface web onde fosse possível visualizar e manipular dados, de acordo com a necessidade do usuário.
+
+ - Foi feita pesquisa para montar as histórias de usuário e entender suas necessidades;
+ - Criação dessas histórias de usuário com base nas necessidades obtidas no resultado da pesquisa;
+ - Os critérios de aceitação em manipular os dados, filtrar e extrair dele as informações para a realização de tarefas como; a construção de funções para manipular esses dados e o retorno dos dados de acordo com o desejo do usuário;
+ - Criação de responsividade para o layout para se adequar a outros dispositivos móveis (celulares, tablets e notebooks);
+ - Manipulação do DOM para interação do usuário com a página;
+ - Manipulação de arrays e objetos;
 
 ## 8. Linguagens utilizadas
 
