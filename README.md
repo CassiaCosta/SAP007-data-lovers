@@ -5,7 +5,7 @@ Projeto desenvolvido com o objetivo  de organizar, filtrar e buscar dados para f
 ## Índice 
  
 - [1. Introdução](#1-introdução)
-- [2. Resumo do projeto](#2-resumo-projeto)
+- [2. Objetivo do projeto](#2-objetivo-projeto)
 - [3. O problema vs A solução](#3-o-problema-vs-a-solução)
 - [4. Usuários](#4-usuários)
 - [5. Protótipos](#5-protótipos)
@@ -20,16 +20,27 @@ Projeto desenvolvido com o objetivo  de organizar, filtrar e buscar dados para f
 Ao jogar Pokémon GO o usuário interage com um mapa baseado no mundo real (inicialmente o Google Maps e atualmente o OpenStreetMap). O jogador se localiza e procura Pokémon por meio desse mapa. À medida que ele se desloca, o aplicativo vibra para avisar sobre a presença das criaturas virtuais pelo caminho. Ao tocar a tela do smartphone é possível visualizar o Pokémon no mesmo local onde o jogador está, pois, o jogo sobrepõe à visualização da câmara a imagem do Pokémon e simula que ele está no local onde o jogador se encontra, semelhantemente à realidade virtual. Para capturar o monstrinho.
 Pensando nos jogadores, e até mesmo nos fãs do anime, foi proposto o desenvolvimento desse projeto que é capaz de, através de um banco de dados, extrtair informações sobre diversos Pokémons.
 
-## 2. Resumo do projeto
+## 2. Objetivo do projeto
 
-O objetivo principal deste projeto é que aprenda a desenhar e construir uma
-interface web onde se possa visualizar e manipular dados, entendendo o que o
-usuário necessita.
+Pokémon Guide foi desenvolvido pensando nos fãs e jogadores de Pokémon Go, para ajudar como um guia que contenha as informações principais e essênciais sobre os Pokémons.
 
-Projeto desenvolvido por [Cássia Costa](https://github.com/CassiaCosta) e [Érika Moreno.](https://github.com/erikakrause)
+É possível encontram uma "ficha técnica" contendo informações como: os tipos de Pokémons, indo dos normais aos mais raros; a região de origem de cada um; quais são os mais resistentes a certos tipos de poderes e também suas fraquezas; tamanho; ataques especiais; quais são os mais fáceis de capturar e quais tem maior chance de fuga; sobre os ovos e desova; e as próximas evoluções assim como as evoluções anteriores.
 
-## 3. Pesquisa
-Para a pesquisa utilizamos **Google Forms** visando identificar a idade e gênero dos usuários e quais são os seus interesses em relação ao jogo e quais os itens  mais relevantes para fazer uma pesquisa em nossa aplicação.
+Pokémon Guide ajudará a descobrir quais são os pokémons favoritos e quais não poderão faltar na lista de captura!
+
+Projeto desenvolvido por [Cássia Costa](https://github.com/CassiaCosta).
+
+## 3. O problema vs A solução
+
+O mundo dos jogos do Pokémon é muito vasto, existem inúmeros pokémons de diversos tipos de diferentes regiões. Atualmmente existem 891 tipos de pokémons distribuidos em dez regiões e por mais fã que seja, é quase impossível, saber as informações de todos.
+É possível que, como usuário de Pokémon Go, quando encontrar uma dessas criaturas não saber de fato qual o tipo daquele pokémon, seus ataques especiais, a região a qual pertence, evoluções e até mesmo o nome. 
+Visando essa possibilidade, o projeto Pokémon Guide foi projetado para preencher essa lacuna, trazendo um guia de informações dos Pokémons da região de Kanto e Johto.
+
+## 4. Usuários
+
+### A pesquisa
+
+Para a pesquisa foi utilizado **Google Forms** visando identificar a idade e gênero dos usuários e quais são os seus interesses em relação ao jogo e quais os itens  mais relevantes para fazer uma pesquisa em nossa aplicação.
 
 Os resultados foram: 
 
@@ -50,7 +61,7 @@ Os resultados foram:
 ![relevants-info](/img-readme/relevants-info.png)
 
 
-## 4. Histórias de usuários
+#### Histórias de usuários
 
 Após a análise das respostas identificamos dois usuários:
 
@@ -62,7 +73,7 @@ Após a análise das respostas identificamos dois usuários:
 
 ![young](/img-readme/young.jpg)
 
-## 5. Protótipo
+## 5. Protótipos
 
 A paleta de cores foi escolhida baseada nas cores principais do logo.
 
