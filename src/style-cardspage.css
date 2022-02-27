@@ -112,7 +112,7 @@ body {
 }
 
 .main_content .calculation_print {
-    display: none;
+    /* display: none; */
 }
 
 /* ESTILIZAÇÃO DOS CARDS */
