@@ -44,22 +44,21 @@
                 <option value="poison">Venenoso</option>
                 <option value="flying">Voador</option>
             </select>
+            <select class="rarity_filter" id="rarityFilter">
+                <option value disabled selected>Raridade</option>
+                <option value="legendary">Legendário</option>
+                <option value="mythic">Mítico</option>
+                <option value="normal">Normal</option>
+            </select>
             <select class="region_filter" id="regionFilter">
                 <option value disabled selected>Região de origem</option>
-                <option value="kanto">Kanto</option>
                 <option value="johto">Johto</option>
-            </select>
-            <select class="size_filter" id="sizeFilter">
-                <option value disabled selected>Tamanho</option>
-                <option value="height">Altura</option>
-                <option value="weight">Peso</option>
+                <option value="kanto">Kanto</option>
             </select>
             <select class="order_filter" id="orderFilter">
                 <option value disabled selected>Ordenar</option>
                 <option value="a-z">A - Z</option>
                 <option value="z-a">Z - A</option>
-                <option value="strong">Fortes - Fracos</option>
-                <option value="weak">Fracos - Fortes</option>
             </select>
             <input type="text" placeholder="Nome do Pokémon" id="nameFilter">
             <button class="clear_button" id="clearButton">Limpar</button>

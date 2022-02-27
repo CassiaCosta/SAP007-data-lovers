@@ -1,9 +1,9 @@
-import { orderFilter, regionFilter, searchName, typeFilter } from './data.js';
+import { orderFilter, rarityFilter, regionFilter, searchName, typeFilter } from './data.js';
 import data from './data/pokemon/pokemon.js';
 
 
 let selectType = document.getElementById('typeFilter');
-// let selectSize = document.getElementById('sizeFilter');
+let selectRarity = document.getElementById('rarityFilter');
 let selectRegion = document.getElementById('regionFilter');
 let selectOrder = document.getElementById('orderFilter');
 let inputName = document.getElementById('nameFilter');
@@ -44,9 +44,9 @@ function searchByType() {
     return showPokemon(typeFilter(data.pokemon, selectType.value))
 }
 
-// function searchBySize() {
-//     return sizeFilter
-// }
+function searchByRarity() {
+    return showPokemon(rarityFilter(data.pokemon, selectRarity.value))
+}
 
 function searchByRegion() {
     return showPokemon(regionFilter(data.pokemon, selectRegion.value))
@@ -62,7 +62,7 @@ function searchByName() {
 
 function cleanFilters() {
     selectType.value = ""
-    // selectSize.value = ""
+    selectRarity.value = ""
     selectRegion.value = ""
     selectOrder.value = ""
     inputName.value = ""
@@ -71,7 +71,7 @@ function cleanFilters() {
 
 
 selectType.addEventListener('change', searchByType);
-// selectSize.addEventListener('change', searchBySize);
+selectRarity.addEventListener('change', searchByRarity);
 selectRegion.addEventListener('change', searchByRegion);
 selectOrder.addEventListener('change', searchByOrder);
 inputName.addEventListener('keypress', searchByName);
