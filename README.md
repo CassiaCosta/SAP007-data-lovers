@@ -1,37 +1,24 @@
-# POKÉMON GO - Data Lovers
+# POKÉMON GUIDE - Data Lovers
 
 Projeto desenvolvido com o objetivo  de organizar, filtrar e buscar dados para facilitar a necessidade de pesquisa do usuário.
 
-![gif](/img-readme/giphy.gif)
-
 ## Índice 
  
-- [1. Preâmbulo](#1-preâmbulo) 
-- [2. Resumo do Projeto](#2-resumo-projeto) 
-- [3. Pesquisa](#3-pesquisa)
-- [4. Histórias de Usuários](#4-histórias-de-usuário)
-- [5. Protótipo](#5-prototipo)
-- [6. Teste de Usabilidade](#6-teste-de-usabilidade)
+- [1. Introdução](#1-introdução)
+- [2. Resumo do projeto](#2-resumo-projeto)
+- [3. O problema vs A solução](#3-o-problema-vs-a-solução)
+- [4. Usuários](#4-usuários)
+- [5. Protótipos](#5-protótipos)
+- [6. Testes de Usabilidade](#6-testes-de-usabilidade)
+- [7. Objetivos de aprendizagem](#7-objetivos-de-aprendizagem)
+- [8. Linguagens utilizadas](#8-linguagens-utilizadas)
 
 ---
 
-## 1. Preâmbulo
+## 1. Introdução
 
-Segundo a
-[Forbes](https://www.forbes.com/sites/bernardmarr/2018/05/21/how-much-data-do-we-create-every-day-the-mind-blowing-stats-everyone-should-read)
-90% dos dados que existem hoje foram gerados durante os últimos dois anos. A
-cada dia geramos 2.5 milhões de terabytes de dados, uma cifra sem precedentes.
-
-Apesar disso, os dados por si só são de pouca utilidade. Para que essas grandes
-quantidades de dados se convertam em **informação** compreensível para os
-usuários, precisamos entender e processar estes dados. Uma forma simples de
-fazer isso é criando _interfaces_ e _visualizações_.
-
-Na imagem seguinte, você pode ver como os dados que estão na parte esquerda
-podem ser usados para construir a interface amigável e compreensível que está na
-parte direita.
-
-![json-interface](https://lh4.googleusercontent.com/Tn-RPXS26pVvOTdUzRT1KVaJ-_QbFs9SpcGLxSPE43fgbHaXtFgMUInuDt7kV41DkT1j8Tt29V0LxQW7SMtC6digOIhfTXSBKdwI08wUwhD3RAqlwy0hjfmhZ2BFe91mtmCSEqysfgk)
+Ao jogar Pokémon GO o usuário interage com um mapa baseado no mundo real (inicialmente o Google Maps e atualmente o OpenStreetMap). O jogador se localiza e procura Pokémon por meio desse mapa. À medida que ele se desloca, o aplicativo vibra para avisar sobre a presença das criaturas virtuais pelo caminho. Ao tocar a tela do smartphone é possível visualizar o Pokémon no mesmo local onde o jogador está, pois, o jogo sobrepõe à visualização da câmara a imagem do Pokémon e simula que ele está no local onde o jogador se encontra, semelhantemente à realidade virtual. Para capturar o monstrinho.
+Pensando nos jogadores, e até mesmo nos fãs do anime, foi proposto o desenvolvimento desse projeto que é capaz de, através de um banco de dados, extrtair informações sobre diversos Pokémons.
 
 ## 2. Resumo do projeto
 
