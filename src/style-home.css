@@ -306,7 +306,7 @@ body {
     }
 }
 
-@media (min-width: 425px) {
+@media (max-width: 425px) {
     /* BACKGROUND INICIAL */
     .main-content::before {
         height: 600px;
@@ -338,14 +338,14 @@ body {
     }
 }
 
-@media (min-width: 576px) {
+@media (max-width: 576px) {
     .footer_navigation .footer_buttonsDownload button img {
         height: 40px;
         margin-left: 110px;
     }
 }
 
-@media (min-width: 768px) {
+@media (max-width: 768px) {
     .footer_navigation .footer_links {
         margin-left: 0;
     }
