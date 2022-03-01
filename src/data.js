@@ -14,15 +14,34 @@ export const regionFilter = (data, region) => {
 }
 
 export const orderFilter = (data, chosenOrder) => {
-    const filterOrder = data.sort((a, b) => {
+    const alphabeticalOrder = data.sort((a, b) => {
         return (a.name > b.name) ? 1 : ((b.name > a.name) ? -1 : 0)
     })
-    switch(chosenOrder) {
-        case "a-z":
-            return filterOrder
-        case "z-a":
-            return filterOrder.reverse()
+    const orderByHeight = data.sort((a, b) => {
+        return (a.size["height"] > b.size["height"] ? 1 : ((b.size["height"] > a.size["height"] ? -1 : 0)))
+    })
+    const orderByWeight = data.sort((a, b) => {
+        return (a.size["weight"] > b.size["weight"] ? 1 : ((b.size["weight"] > a.size["weight"] ? -1 : 0)))
+    })
+    if(chosenOrder == "a-z") {
+        return alphabeticalOrder
+    } else if(chosenOrder == "z-a") {
+        return alphabeticalOrder.reverse()
+    } else if(chosenOrder == "shortHigh") {
+        return orderByHeight
+    } else if(chosenOrder == "highShort") {
+        return orderByHeight.reverse()
+    } else if(chosenOrder == "lightHeavy") {
+        return orderByWeight
+    } else {
+        return orderByWeight.reverse()
     }
+    // switch(chosenOrder) {
+    //     case "a-z":
+    //         return filterOrder
+    //     case "z-a":
+    //         return filterOrder.reverse()
+    // }
 }
 
 export const searchName = (data, name) => {

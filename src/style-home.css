@@ -1,3 +1,14 @@
+:root {
+    /* --default-font: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana,
+        sans-serif; */
+    --default-font: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    --default-primary-font-color: white;
+    --default-secondary-font-color: #0c1c3e;
+    --default-header-footer-color: #0c1c3e;
+    --default-background-color: #1d4396;
+    --default-yellow: rgb(255, 203, 8);
+}
+
 /* CONFIGURAÇÃO GERAL */
 
 * {
@@ -7,45 +18,147 @@
 }
 
 body {
-    background-color: #050d1f;
-    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--default-background-color);
+    font-family: var(--default-font);
 }
 
 /* ESTILIZAÇÃO DO HEADER */
 
-.header_navigation .nav_bar {
-    height: 75px;
+.header-navigation .nav-bar {
+    height: 70px;
     width: 100%;
-    background-color: #0c1c3e;
+    background-color: var(--default-header-footer-color);
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    justify-content: space-between;
 }
 
-.header_navigation .nav_bar .nav_bar_img {
-    height: 85px;
-    width: 130px;
-    margin-top: 22px;
-}
-
-.header_navigation .nav_bar .nav_bar_buttonLogo {
+.header-navigation .nav-bar .button-logo {
     background: none;
+    margin-top: 3px;
+    margin-left: 20px;
 }
 
-.header_navigation .nav_bar a {
+.header-navigation .nav-bar .button-logo .nav-bar-img {
+    height: 80px;
+}
+
+.header-navigation .nav-bar .navbar-menu {
+    margin-top: 5px;
+    margin-right: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.header-navigation .nav-bar .navbar-menu .hamburguer-menu .checkbox-menu {
+    opacity: 0;
+}
+
+.header-navigation .nav-bar .navbar-menu .hamburguer-menu label {
+    cursor: pointer;
+    position: relative;
+    display: block;
+    height: 20px;
+    width: 35px;
+}
+
+.header-navigation .nav-bar .navbar-menu .hamburguer-menu label span {
+    position: absolute;
+    display: block;
+    height: 5px;
+    width: 100%;
+    border-radius: 30px;
+    background: white;
+    transition: 0.25s ease-in-out;
+}
+
+.header-navigation .nav-bar .navbar-menu .hamburguer-menu label span:nth-child(1) {
+    top: 0;
+}
+
+.header-navigation .nav-bar .navbar-menu .hamburguer-menu label span:nth-child(2) {
+    top: 8px;
+}
+
+.header-navigation .nav-bar .navbar-menu .hamburguer-menu label span:nth-child(3) {
+    top: 16px;
+}
+
+.header-navigation .nav-bar .navbar-menu .hamburguer-menu #checkbox-menu:checked + label span:nth-child(1) {
+    transform: rotate(-45deg);
+    top: 8px;
+}
+
+.header-navigation .nav-bar .navbar-menu .hamburguer-menu #checkbox-menu:checked + label span:nth-child(2) {
+    opacity: 0;
+}
+
+.header-navigation .nav-bar .navbar-menu .hamburguer-menu #checkbox-menu:checked + label span:nth-child(3) {
+    transform: rotate(45deg);
+    top: 8px;
+}
+
+.header-navigation .nav-bar .navbar-menu .menu-item.hide {
+    display: none;
+}
+
+.header-navigation .nav-bar .navbar-menu .menu-list {
+    margin-top: 30px;
+    width: 250px;
+    background-color: var(--default-header-footer-color);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    z-index: 1;
+}
+
+.header-navigation .nav-bar .navbar-menu .menu-list .menu-item {
+    padding: 15px 10px 15px 0;
+    list-style: none;
+}
+
+.header-navigation .nav-bar .navbar-menu .menu-list .menu-item:hover {
+    background-color: var(--default-background-color);
+}
+
+.header-navigation .nav-bar .navbar-menu .menu-list .menu-item:nth-child(1) {
+    border-radius: 10px 10px 0 0;
+}
+
+.header-navigation .nav-bar .navbar-menu .menu-list .menu-item:nth-child(4) {
+    border-radius: 0 0 10px 10px;
+}
+
+.header-navigation .nav-bar .navbar-menu .menu-list .menu-item:nth-child(1) a {
+    padding: 15px 0 15px 120px;
+}
+
+.header-navigation .nav-bar .navbar-menu .menu-list .menu-item:nth-child(2) a {
+    padding: 15px 0 15px 190px;
+}
+
+.header-navigation .nav-bar .navbar-menu .menu-list .menu-item:nth-child(3) a {
+    padding: 15px 0 15px 57px;
+}
+
+.header-navigation .nav-bar .navbar-menu .menu-list .menu-item:nth-child(4) a {
+    padding: 15px 0 15px 71px;
+}
+
+.header-navigation .nav-bar a { 
     text-decoration: none;
     font-size: 20px;
     color: white;
 }
 
-.header_navigation .nav_bar a:hover {
-    font-size: 21px;
-    color: yellow;
+.header-navigation .nav-bar a:hover {
+    color: var(--default-yellow);
 }
 
 /* CONTEÚDO PRINCIAL */
 
-.main_content::before {
+.main-content::before {
     content: " ";
     background-image: url(/img/background-initial.png);
     background-size: cover;
@@ -59,51 +172,53 @@ body {
     z-index: -1;
 }
 
-.main_content {
-    height: 82vh;
-    width: 100%;
+.main-content {
+    /* height: 80vh; */
     color: white;
     text-shadow: 2px 2px 2px rgb(0 0 0 / 100%);
     display: grid;
-    align-items: center;
-    justify-content: center;
     text-align: center;
     position: relative;
 }
 
-.main_content .main_welcome h1 {
-    font-size: 36px;
+.main-content .main-welcome h1 {
+    font-size: 35px;
     line-height: 50px;
     margin: 55px;
 }
 
-.main_content .main_welcome h3 {
+.main-content .main-welcome h3 {
     font-size: 17px;
 }
 
-.main_content .logo img {
+.main-content .logo img {
     margin-top: 30px;
     height: 180px;
     width: 275px;
 }
 
-.main_content .button_initial button {
+.main-content .button-initial button {
     font-size: 20px;
     height: 40px;
     width: 150px;
     border-radius: 50px;
     box-shadow: 3px 3px 3px black;
-    background-color: #0c1c3e;
+    background-color: var(--default-secondary-font-color);
 }
 
-.main_content .button_initial button:hover {
-    background-color: #050d1f;
+.main-content .button-initial button:hover {
+    background-color: var(--default-background-color);
 }
 
-.main_content .button_initial a {
+.main-content .button-initial a {
     text-decoration: none;
     color: white;
     padding: 10px 45px;
+}
+.main-content .button-initial a:hover {
+    font-size: 22px;
+    font-weight: bold;
+    color: var(--default-yellow);
 }
 
 /* ESTILIZAÇÃO DO FOOTER */
@@ -139,4 +254,106 @@ body {
 
 .footer_navigation .footer_buttonsDownload button {
     background-color: #0c1c3e;
+}
+
+/* // RESPONSIVIDADE */
+
+@media (min-width: 320px) and (max-width: 375px) {
+    /* BACKGROUND INICIAL */
+    .main-content::before {
+        width: 400px;
+    }
+    /* HEADER */
+    .header-navigation .nav-bar {
+        height: 70px;
+        width: 400px;
+    }
+    .header-navigation .nav-bar .navbar-menu .hamburguer-menu {
+        padding-right: 20px;
+    }
+    /* CONTEÚDO PRINCIPAL */
+    .main-content .main-welcome {
+        margin-top: 36px;
+        margin-left: 45px;
+    }
+    .main-content .main-welcome h1 {
+        font-size: 35px;
+        line-height: 35px;
+    }
+    .main-content .logo img {
+        margin-top: 25px;
+        margin-left: 30px;
+        height: 130px;
+        width: 210px;
+    }
+    .main-content .button-initial button {
+        margin-left: 35px;
+    }
+    /* FOOTER */
+    .footer_navigation {
+        width: 400px;
+        margin-top: 130px;
+    }
+    .footer_navigation .footer_links {
+        margin-left: 10px;
+    }
+    .footer_navigation .footer_buttonsDownload button img {
+    height: 35px;
+    margin-left: 35px;
+    }
+    .footer_navigation .footer_githubLink a img {
+        margin-right: 10px;
+    }
+}
+
+@media (min-width: 425px) {
+    /* BACKGROUND INICIAL */
+    .main-content::before {
+        height: 600px;
+    }
+    /* CONTEÚDO PRINCIPAL */
+    .main-content .logo img {
+        margin-top: 40px;
+        margin-left: 10px;
+        height: 130px;
+        width: 210px;
+    }
+    .main-content .button-initial button {
+        margin-top: 15px;
+        margin-left: 10px;
+    }
+    /* FOOTER */
+    .footer_navigation {
+        margin-top: 60px;
+    }
+    .footer_navigation .footer_links {
+        margin-left: 10px;
+    }
+    .footer_navigation .footer_buttonsDownload button img {
+        height: 35px;
+        margin-left: 50px;
+    }
+    .footer_navigation .footer_githubLink a img {
+        margin-right: 10px;
+    }
+}
+
+@media (min-width: 576px) {
+    .footer_navigation .footer_buttonsDownload button img {
+        height: 40px;
+        margin-left: 110px;
+    }
+}
+
+@media (min-width: 768px) {
+    .footer_navigation .footer_links {
+        margin-left: 0;
+    }
+    .footer_navigation .footer_buttonsDownload button img {
+        height: 45px;
+        margin-left: 0;
+    }
+    .footer_navigation .footer_githubLink a img {
+        margin-right: 0;
+    }
 }
