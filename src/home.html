@@ -3,41 +3,61 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Pokémon Guide</title>
   <link rel="shortcut icon" href="/img/Poke_icon.png" type="image/x-icon">
   <link rel="stylesheet" href="style-home.css" />
 </head>
 
 <body>
-  <header class="header_navigation">
-    <nav class="nav_bar">
-      <button class="nav_bar_buttonLogo">
+  <header class="header-navigation">
+    <nav class="nav-bar">
+      <button class="button-logo">
         <a href="#">
-          <img class="nav_bar_img" src="/img/logo.png" alt="Logo da página">
+          <img class="nav-bar-img" src="/img/logo.png" alt="Logo da página">
         </a>
       </button>
-      <a href="#">Página inicial</a>
-      <a href="/src/about.html">Sobre</a>
-      <a href="https://www.pokemon.com/br/" target="_blank">Site oficial Pokémon</a>
-      <a href="https://pokemongolive.com/pt_br/" target="_blank">Site oficial do jogo</a>
+      <div class="navbar-menu">
+        <div class="hamburguer-menu">
+          <input type="checkbox" class="checkbox-menu" id="checkbox-menu">
+          <label for="checkbox-menu">
+              <span></span>
+              <span></span>
+              <span></span>
+          </label>
+      </div>
+        <ul class="menu-list" id="menu-list">
+          <li class="menu-item hide">
+            <a href="#">Página inicial</a>
+          </li>
+          <li class="menu-item hide">
+            <a href="/src/about.html">Sobre</a>
+          </li>
+          <li class="menu-item hide">
+            <a href="https://www.pokemon.com/br/" target="_blank">Site oficial Pokémon</a>
+          </li>
+          <li class="menu-item hide">
+            <a href="https://pokemongolive.com/pt_br/" target="_blank">Site oficial do jogo</a>
+          </li>
+        </ul>
+      </div>
     </nav>
   </header>
 
-  <div class="main_content">
-      <section class="main_welcome">
-        <h1>Sejam bem-vindes, <br> Treinadores!</h1>
-        <h3>Saibam mais sobre os Pokémons! <br> Pokémon Guide funciona como um guia que pode te ajudar a pesquisar os
-          tipos de Pokémons, <br> os mais fortes, suas fraquezas
-          e muito mais!</h3>
-      </section>
-      <section class="logo">
-        <img src="/img/logo.png" alt="Logo da páginna">
-      </section>
-      <section class="button_initial">
-        <button>
-          <a href="/src/cardspage.html">Iniciar</a>
-        </button>
-      </section>
+  <div class="main-content">
+    <section class="main-welcome">
+      <h1>Sejam bem-vindes,<br>Treinadores!</h1>
+      <h3>Saibam mais sobre os Pokémons!<br>Pokémon Guide funciona como um guia que pode ajudar a pesquisar os
+        tipos de Pokémons.<br> Saibam quais são os mais fortes, suas fraquezas e muito mais!</h3>
+    </section>
+    <section class="logo">
+      <img src="/img/logo.png" alt="Logo da páginna">
+    </section>
+    <section class="button-initial">
+      <button>
+        <a href="/src/cardspage.html">Iniciar</a>
+      </button>
+    </section>
   </div>
 
   <footer class="footer_navigation">

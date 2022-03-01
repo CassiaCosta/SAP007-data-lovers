@@ -1,18 +1,30 @@
 import { orderFilter, rarityFilter, regionFilter, searchName, typeFilter } from './data.js';
 import data from './data/pokemon/pokemon.js';
 
+// const buttonMenu = document.querySelector(".checkbox-menu");
+// buttonMenu.addEventListener('click', () => {
+//     const options = document.querySelectorAll(".menu-item");
+//     options.forEach(item => { 
+//         item.classList.toggle("hide");
+//     })
+// });
+
+let buttonMenu = document.querySelector(".checkbox-menu");
 
 let selectType = document.getElementById('typeFilter');
 let selectRarity = document.getElementById('rarityFilter');
 let selectRegion = document.getElementById('regionFilter');
 let selectOrder = document.getElementById('orderFilter');
 let inputName = document.getElementById('nameFilter');
-
 let clearButton = document.getElementById('clearButton');
-
 let calculationBar = document.getElementById('calculation');
 
-// FUNÇÃO DE MOSTRAR OS CARDS
+function showHideMenu() {
+    const items = document.querySelectorAll(".menu-item");
+    items.forEach(item => { 
+        item.classList.toggle("hide");
+    })
+}
 
 function showPokemon(data) {
     document.getElementById('pokemonList').innerHTML = data.map((item) => `
@@ -39,9 +51,6 @@ function showPokemon(data) {
     calculationBar.innerHTML = "Você está vendo todos os cards!"
 }
 
-showPokemon(data.pokemon);
-
-
 function searchByType() {
     return showPokemon(typeFilter(data.pokemon, selectType.value))
 }
@@ -63,19 +72,14 @@ function searchByName() {
 }
 
 function cleanFilters() {
-    selectType.value = ""
-    selectRarity.value = ""
-    selectRegion.value = ""
-    selectOrder.value = ""
-    inputName.value = ""
-    showPokemon(data.pokemon)
+    window.location.reload()
 }
 
-
+buttonMenu.addEventListener('click', showHideMenu);
+showPokemon(data.pokemon);
 selectType.addEventListener('change', searchByType);
 selectRarity.addEventListener('change', searchByRarity);
 selectRegion.addEventListener('change', searchByRegion);
 selectOrder.addEventListener('change', searchByOrder);
 inputName.addEventListener('keypress', searchByName);
-
 clearButton.addEventListener('click', cleanFilters);

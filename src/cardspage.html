@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Pokémon Guide</title>
     <link rel="shortcut icon" href="/img/Poke_icon.png" type="image/x-icon">
     <link rel="stylesheet" href="style-cardspage.css" />
@@ -59,6 +60,10 @@
                 <option value disabled selected>Ordenar</option>
                 <option value="a-z">A - Z</option>
                 <option value="z-a">Z - A</option>
+                <option value="shortHigh">Baixo - Alto</option>
+                <option value="highShort">Alto - Baixo</option>
+                <option value="lightHeavy">Leve - Pesado</option>
+                <option value="heavyLight">Pesado - Leve</option>
             </select>
             <input type="text" placeholder="Nome do Pokémon" id="nameFilter">
             <button class="clear_button" id="clearButton">Limpar</button>
@@ -68,6 +73,9 @@
         </section>
 
         <div class="pokemonList" id="pokemonList"></div>
+        <button>
+            <a href="/src/cardspage.html">Topo</a>
+        </button>
     </div>
 
 
