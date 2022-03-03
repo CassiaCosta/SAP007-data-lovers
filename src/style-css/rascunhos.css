@@ -1,14 +1,3 @@
-:root {
-    /* --default-font: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana,
-        sans-serif; */
-    --default-font: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    --default-primary-font-color: white;
-    --default-secondary-font-color: #0c1c3e;
-    --default-header-footer-color: #0c1c3e;
-    --default-background-color: #1d4396;
-    --default-yellow: rgb(255, 203, 8);
-}
-
 /* CONFIGURAÇÃO GERAL */
 
 * {
@@ -260,19 +249,19 @@ body {
 
 @media (min-width: 320px) and (max-width: 375px) {
     /* BACKGROUND INICIAL */
-    .main-content::before {
+    /* .main-content::before {
         width: 400px;
-    }
+    } */
     /* HEADER */
-    .header-navigation .nav-bar {
+    /* .header-navigation .nav-bar {
         height: 70px;
         width: 400px;
     }
     .header-navigation .nav-bar .navbar-menu .hamburguer-menu {
         padding-right: 20px;
-    }
+    } */
     /* CONTEÚDO PRINCIPAL */
-    .main-content .main-welcome {
+    /* .main-content .main-welcome {
         margin-top: 36px;
         margin-left: 45px;
     }
@@ -288,9 +277,9 @@ body {
     }
     .main-content .button-initial button {
         margin-left: 35px;
-    }
+    } */
     /* FOOTER */
-    .footer_navigation {
+    /* .footer_navigation {
         width: 400px;
         margin-top: 130px;
     }
@@ -304,15 +293,15 @@ body {
     .footer_navigation .footer_githubLink a img {
         margin-right: 10px;
     }
-}
+} */
 
-@media (max-width: 425px) {
+/* @media (max-width: 425px) { */
     /* BACKGROUND INICIAL */
-    .main-content::before {
+    /* .main-content::before {
         height: 600px;
-    }
+    } */
     /* CONTEÚDO PRINCIPAL */
-    .main-content .logo img {
+    /* .main-content .logo img {
         margin-top: 40px;
         margin-left: 10px;
         height: 130px;
@@ -321,9 +310,9 @@ body {
     .main-content .button-initial button {
         margin-top: 15px;
         margin-left: 10px;
-    }
+    } */
     /* FOOTER */
-    .footer_navigation {
+    /* .footer_navigation {
         margin-top: 60px;
     }
     .footer_navigation .footer_links {
@@ -336,16 +325,16 @@ body {
     .footer_navigation .footer_githubLink a img {
         margin-right: 10px;
     }
-}
+} */
 
-@media (max-width: 576px) {
+/* @media (max-width: 576px) {
     .footer_navigation .footer_buttonsDownload button img {
         height: 40px;
         margin-left: 110px;
     }
-}
+} */
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
     .footer_navigation .footer_links {
         margin-left: 0;
     }
@@ -356,4 +345,4 @@ body {
     .footer_navigation .footer_githubLink a img {
         margin-right: 0;
     }
-}
+} */

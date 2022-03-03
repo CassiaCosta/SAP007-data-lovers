@@ -1,0 +1,517 @@
+:root {
+    --default-font: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    --default-primary-font-color: white;
+    --default-secondary-font-color: #0c1c3e;
+    --default-header-footer-color: #0c1c3e;
+    --default-background-color: #1d4396;
+    --default-yellow: rgb(255, 203, 8);
+}
+
+/* CONFIGURAÇÃO GERAL */
+
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+body {
+    font-family: var(--default-font);
+    background-color: var(--default-background-color);
+}
+
+/* ESTILIZAÇÃO DO HEADER */
+
+.header-navigation .nav-bar {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-navigation .nav-bar::before {
+    content: " ";
+    background-color: var(--default-header-footer-color);
+    background-size: cover;
+    height: 4.375rem;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    opacity: 0.9;
+    z-index: -1;
+}
+
+.header-navigation .nav-bar .button-logo {
+    background: none;
+    margin-top: 0.188rem;
+    margin-left: 0.60rem;
+    align-self: flex-start;
+}
+
+.header-navigation .nav-bar .button-logo .nav-bar-img {
+    height: 5rem;
+}
+
+.header-navigation .nav-bar .navbar-menu {
+    margin-top: 0.315rem;
+    margin-right: 0.6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.header-navigation .nav-bar .navbar-menu .hamburguer-menu .checkbox-menu {
+    opacity: 0;
+}
+
+.header-navigation .nav-bar .navbar-menu .hamburguer-menu label {
+    height: 1.25rem;
+    width: 2.188rem;
+    display: block;
+    position: relative;
+    cursor: pointer;
+}
+
+.header-navigation .nav-bar .navbar-menu .hamburguer-menu label span {
+    height: 0.313rem;
+    width: 100%;
+    border-radius: 1.875rem;
+    background: white;
+    display: block;
+    position: absolute;
+    transition: 0.25s ease-in-out;
+}
+
+.header-navigation .nav-bar .navbar-menu .hamburguer-menu label span:nth-child(1) {
+    top: 0;
+}
+
+.header-navigation .nav-bar .navbar-menu .hamburguer-menu label span:nth-child(2) {
+    top: 0.5rem;
+}
+
+.header-navigation .nav-bar .navbar-menu .hamburguer-menu label span:nth-child(3) {
+    top: 1rem;
+}
+
+.header-navigation .nav-bar .navbar-menu .hamburguer-menu #checkbox-menu:checked + label span:nth-child(1) {
+    top: 0.5rem;
+    transform: rotate(-45deg);
+}
+
+.header-navigation .nav-bar .navbar-menu .hamburguer-menu #checkbox-menu:checked + label span:nth-child(2) {
+    opacity: 0;
+}
+
+.header-navigation .nav-bar .navbar-menu .hamburguer-menu #checkbox-menu:checked + label span:nth-child(3) {
+    top: 0.5rem;
+    transform: rotate(45deg);
+}
+
+.header-navigation .nav-bar .navbar-menu .menu-item.hide {
+    display: none;
+}
+
+.header-navigation .nav-bar .navbar-menu .menu-list {
+    height: 28.46rem;
+    background-color: var(--default-header-footer-color);
+    border-top: 0.1rem solid gray;
+    border-bottom: 0.1rem solid gray;
+    margin-top: 4.04rem;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: absolute;
+    z-index: 1;
+}
+
+.header-navigation .nav-bar .navbar-menu .menu-list .menu-item {
+    list-style: none;
+    padding: 0.938rem 0.625rem 0.938rem 0;
+}
+
+.header-navigation .nav-bar .navbar-menu .menu-list .menu-item:hover {
+    background-color: var(--default-background-color);
+}
+
+.header-navigation .nav-bar .navbar-menu .menu-list .menu-item:nth-child(1) a {
+    padding: 0.938rem 0 0.938rem 4.4rem;
+}
+
+.header-navigation .nav-bar .navbar-menu .menu-list .menu-item:nth-child(2) a {
+    padding: 0.938rem 0 0.938rem 7.875rem;
+}
+
+.header-navigation .nav-bar .navbar-menu .menu-list .menu-item:nth-child(3) a {
+    padding: 0.938rem 0 0.938rem 1.2rem;
+}
+
+.header-navigation .nav-bar .navbar-menu .menu-list .menu-item:nth-child(4) a {
+    padding: 0.938rem 0 0.938rem 1.938rem;
+}
+
+.header-navigation .nav-bar a { 
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+}
+
+.header-navigation .nav-bar a:hover {
+    color: var(--default-yellow);
+}
+
+/* CONTEÚDO PRINCIAL */
+
+body::before {
+    content: " ";
+    background-image: url(/img/background-initial.png);
+    background-size: cover;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    opacity: 0.6;
+    z-index: -1;
+}
+
+.main-content {
+    color: white;
+    text-shadow: 0.125rem 0.125rem  0.125rem  rgb(0 0 0 / 100%);
+    display: grid;
+    text-align: center;
+    position: relative;
+}
+
+.main-content .main-welcome h1 {
+    font-size:1.588rem;
+    line-height: 2.325rem;
+    margin: 1.538rem;
+}
+
+.main-content .main-welcome h3 {
+    font-size: 0.9rem;
+    padding: 1rem;
+}
+
+.main-content .logo img {
+    height: 7.15rem;
+}
+
+.main-content .button-initial button {
+    font-size: 1.2rem;
+    background-color: var(--default-secondary-font-color);
+    height: 2.3rem;
+    width: 8.375rem;
+    border-radius: 3.125rem;
+    box-shadow: 3px 3px 3px black;
+}
+
+.main-content .button-initial button:hover {
+    background-color: var(--default-background-color);
+}
+
+.main-content .button-initial a {
+    text-decoration: none;
+    color: white;
+    padding: 0.625rem 2.813rem;
+}
+
+.main-content .button-initial a:hover {
+    color: var(--default-yellow);
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+/* ESTILIZAÇÃO DO FOOTER */
+
+.footer_navigation {
+    font-size: 0.838rem;
+    background-color: #0c1c3e;
+    height: 7.9rem;
+    margin-top: 1.79rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footer_navigation .footer_links {
+    display: grid;
+    line-height: 1.113rem;
+    margin-left: 0.5rem;
+}
+
+.footer_navigation .footer_links a {
+    color: gray;
+    text-decoration: none;
+}
+
+.footer_navigation .footer_links a:hover {
+    color: yellow;
+}
+
+.footer_navigation .footer_buttonsDownload button {
+    margin-right: -1rem;
+}
+
+.footer_navigation .footer_buttonsDownload button img {
+    height: 1.9rem;
+}
+
+.footer_navigation .footer_githubLink a img {
+    height: 2rem;
+    margin-right: 0.5rem;
+}
+
+.footer_navigation .footer_buttonsDownload button {
+    background-color: #0c1c3e;
+}
+
+
+/* ESTILIZAÇÃO DO HEADER */
+
+/* .header-navigation .nav-bar {
+    height: 4.375rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-navigation .nav-bar::before {
+    content: " ";
+    background-color: var(--default-header-footer-color);
+    background-size: cover;
+    position: absolute;
+    height: 4.375rem;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0.9;
+    z-index: -1;
+}
+
+.header-navigation .nav-bar .button-logo {
+    background: none;
+    margin-top: 0.188rem;
+    margin-left: 1.25rem;
+}
+
+.header-navigation .nav-bar .button-logo .nav-bar-img {
+    height: 5rem;
+}
+
+.header-navigation .nav-bar .navbar-menu {
+    margin-top: 0.313rem;
+    margin-right: 1.563rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+} */
+
+/* .header-navigation .nav-bar .navbar-menu .hamburguer-menu .checkbox-menu {
+    opacity: 0;
+}
+
+.header-navigation .nav-bar .navbar-menu .hamburguer-menu label {
+    cursor: pointer;
+    position: relative;
+    display: block;
+    height: 1.25rem;
+    width: 2.188rem;
+}
+
+.header-navigation .nav-bar .navbar-menu .hamburguer-menu label span {
+    position: absolute;
+    display: block;
+    height: 0.313rem;
+    width: 100%;
+    border-radius: 1.875rem;
+    background: white;
+    transition: 0.25s ease-in-out;
+}
+
+.header-navigation .nav-bar .navbar-menu .hamburguer-menu label span:nth-child(1) {
+    top: 0;
+}
+
+.header-navigation .nav-bar .navbar-menu .hamburguer-menu label span:nth-child(2) {
+    top: 0.5rem;
+}
+
+.header-navigation .nav-bar .navbar-menu .hamburguer-menu label span:nth-child(3) {
+    top: 1rem;
+}
+
+.header-navigation .nav-bar .navbar-menu .hamburguer-menu #checkbox-menu:checked + label span:nth-child(1) {
+    transform: rotate(-45deg);
+    top: 0.5rem;
+}
+
+.header-navigation .nav-bar .navbar-menu .hamburguer-menu #checkbox-menu:checked + label span:nth-child(2) {
+    opacity: 0;
+}
+
+.header-navigation .nav-bar .navbar-menu .hamburguer-menu #checkbox-menu:checked + label span:nth-child(3) {
+    transform: rotate(45deg);
+    top: 0.5rem;
+}
+
+.header-navigation .nav-bar .navbar-menu .menu-item.hide {
+    display: none;
+}
+
+.header-navigation .nav-bar .navbar-menu .menu-list {
+    margin-top: 1.875rem;
+    width: 15.625rem;
+    background-color: var(--default-header-footer-color);
+    border-radius: 0.625rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    z-index: 1;
+}
+
+.header-navigation .nav-bar .navbar-menu .menu-list .menu-item {
+    padding: 0.938rem 0.625rem 0.938rem 0;
+    list-style: none;
+}
+
+.header-navigation .nav-bar .navbar-menu .menu-list .menu-item:hover {
+    background-color: var(--default-background-color);
+}
+
+.header-navigation .nav-bar .navbar-menu .menu-list .menu-item:nth-child(1) {
+    border-radius: 0.625rem 0.625rem 0 0;
+}
+
+.header-navigation .nav-bar .navbar-menu .menu-list .menu-item:nth-child(4) {
+    border-radius: 0 0 0.625rem 0.625rem;
+}
+
+.header-navigation .nav-bar .navbar-menu .menu-list .menu-item:nth-child(1) a {
+    padding: 0.938rem 0 0.938rem 7.5rem;
+}
+
+.header-navigation .nav-bar .navbar-menu .menu-list .menu-item:nth-child(2) a {
+    padding: 0.938rem 0 0.938rem 11.875rem;
+}
+
+.header-navigation .nav-bar .navbar-menu .menu-list .menu-item:nth-child(3) a {
+    padding: 0.938rem 0 0.938rem 3.563rem;
+}
+
+.header-navigation .nav-bar .navbar-menu .menu-list .menu-item:nth-child(4) a {
+    padding: 0.938rem 0 0.938rem 4.438rem;
+} */
+
+/* .header-navigation .nav-bar a { 
+    text-decoration: none;
+    font-size: 1.25rem;
+    color: white;
+}
+
+.header-navigation .nav-bar a:hover {
+    color: var(--default-yellow);
+} */
+
+/* CONTEÚDO PRINCIAL */
+
+/* body::before {
+    content: " ";
+    background-image: url(/img/background-initial.png);
+    background-size: cover;
+    position: absolute;
+    height: 43.75rem;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0.6;
+    z-index: -1;
+}
+
+.main-content {
+    height: 80vh;
+    color: white;
+    text-shadow: 0.125rem 0.125rem  0.125rem  rgb(0 0 0 / 100%);
+    display: grid;
+    text-align: center;
+    position: relative;
+}
+
+.main-content .main-welcome h1 {
+    font-size: 2.188rem;
+    line-height: 3.125rem;
+    margin: 3.438rem;
+}
+
+.main-content .main-welcome h3 {
+    font-size: 1.063rem;
+}
+
+.main-content .logo img {
+    margin-top: 1.875rem;
+    height: 11.25rem;
+    width: 17.188rem;
+}
+
+.main-content .button-initial button {
+    font-size: 1.25rem;
+    height: 2.5rem;
+    width: 9.375rem;
+    border-radius: 3.125rem;
+    box-shadow: 3px 3px 3px black;
+    background-color: var(--default-secondary-font-color);
+}
+
+.main-content .button-initial button:hover {
+    background-color: var(--default-background-color);
+}
+
+.main-content .button-initial a {
+    text-decoration: none;
+    color: white;
+    padding: 0.625rem 2.813rem;
+}
+.main-content .button-initial a:hover {
+    font-size: 1.375rem;
+    font-weight: bold;
+    color: var(--default-yellow);
+} */
+
+/* ESTILIZAÇÃO DO FOOTER */
+
+/* .footer_navigation {
+    font-size: 0.938rem;
+    height: 7.5rem;
+    margin-top: 100px;
+    background-color: #0c1c3e;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footer_navigation .footer_links {
+    display: grid;
+    line-height: 1.313rem;
+}
+
+.footer_navigation .footer_links a {
+    text-decoration: none;
+    color: gray;
+}
+
+.footer_navigation .footer_links a:hover {
+    color: yellow;
+}
+
+.footer_navigation .footer_buttonsDownload button img,
+.footer_navigation .footer_githubLink a img {
+    height: 3.125rem;
+}
+
+.footer_navigation .footer_buttonsDownload button {
+    background-color: #0c1c3e;
+} */
