@@ -1,15 +1,5 @@
-import { orderFilter, rarityFilter, regionFilter, searchName, typeFilter } from './data.js';
-import data from './data/pokemon/pokemon.js';
-
-// const buttonMenu = document.querySelector(".checkbox-menu");
-// buttonMenu.addEventListener('click', () => {
-//     const options = document.querySelectorAll(".menu-item");
-//     options.forEach(item => { 
-//         item.classList.toggle("hide");
-//     })
-// });
-
-let buttonMenu = document.querySelector(".checkbox-menu");
+import { alphabeticalFilter, heightFilter, rarityFilter, regionFilter, searchName, typeFilter, weightFilter, } from './data.js';
+import data from '../data/pokemon/pokemon.js';
 
 let selectType = document.getElementById('typeFilter');
 let selectRarity = document.getElementById('rarityFilter');
@@ -18,13 +8,6 @@ let selectOrder = document.getElementById('orderFilter');
 let inputName = document.getElementById('nameFilter');
 let clearButton = document.getElementById('clearButton');
 let calculationBar = document.getElementById('calculation');
-
-function showHideMenu() {
-    const items = document.querySelectorAll(".menu-item");
-    items.forEach(item => { 
-        item.classList.toggle("hide");
-    })
-}
 
 function showPokemon(data) {
     document.getElementById('pokemonList').innerHTML = data.map((item) => `
@@ -63,8 +46,16 @@ function searchByRegion() {
     return showPokemon(regionFilter(data.pokemon, selectRegion.value))
 }
 
-function searchByOrder() {
-    return showPokemon(orderFilter(data.pokemon, selectOrder.value))
+function searchByOrderAlphabetical() {
+    return showPokemon(alphabeticalFilter(data.pokemon, selectOrder.value))
+}
+
+function searchByHeightOrder() {
+    return showPokemon(heightFilter(data.pokemon, selectOrder.value))
+}
+
+function searchByWeightOrder() {
+    return showPokemon(weightFilter(data.pokemon, selectOrder.value))
 }
 
 function searchByName() {
@@ -75,11 +66,12 @@ function cleanFilters() {
     window.location.reload()
 }
 
-buttonMenu.addEventListener('click', showHideMenu);
 showPokemon(data.pokemon);
 selectType.addEventListener('change', searchByType);
 selectRarity.addEventListener('change', searchByRarity);
 selectRegion.addEventListener('change', searchByRegion);
-selectOrder.addEventListener('change', searchByOrder);
+selectOrder.addEventListener('change', searchByOrderAlphabetical);
+selectOrder.addEventListener('change', searchByHeightOrder);
+selectOrder.addEventListener('change', searchByWeightOrder);
 inputName.addEventListener('keypress', searchByName);
 clearButton.addEventListener('click', cleanFilters);
