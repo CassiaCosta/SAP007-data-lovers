@@ -5,39 +5,60 @@
     <meta charset="UTF-8">
     <title>Pokémon Guide</title>
     <link rel="shortcut icon" href="/img/Poke_icon.png" type="image/x-icon">
-    <link rel="stylesheet" href="style-about.css" />
+    <link rel="stylesheet" href="/src/style-css/style-about.css" />
 </head>
 
 <body>
-    <header class="header_navigation">
-        <nav class="nav_bar">
-            <button class="nav_bar_buttonLogo">
+    <header class="header-navigation">
+        <nav class="nav-bar">
+            <button class="button-logo">
                 <a href="/src/home.html">
-                    <img class="nav_bar_img" src="/img/logo.png" alt="Logo da página">
+                    <img class="nav-bar-img" src="/img/logo.png" alt="Logo da página">
                 </a>
             </button>
-            <a href="/src/home.html">Página inicial</a>
-            <a href="#">Sobre</a>
-            <a href="https://www.pokemon.com/br/" target="_blank">Site oficial Pokémon</a>
-            <a href="https://pokemongolive.com/pt_br/" target="_blank">Site oficial do jogo</a>
+            <div class="navbar-menu">
+                <div class="hamburguer-menu">
+                    <input type="checkbox" class="checkbox-menu" id="checkbox-menu">
+                    <label for="checkbox-menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </label>
+                </div>
+                <ul class="menu-list" id="menu-list">
+                    <li class="menu-item hide">
+                        <a href="/src/home.html">Página inicial</a>
+                    </li>
+                    <li class="menu-item hide">
+                        <a href="https://www.pokemon.com/br/" target="_blank">Site oficial Pokémon</a>
+                    </li>
+                    <li class="menu-item hide">
+                        <a href="https://pokemongolive.com/pt_br/" target="_blank">Site oficial do jogo</a>
+                    </li>
+                </ul>
+            </div>
         </nav>
     </header>
 
-    <div class="main_content">
+    <div class="main-content">
         <section class="description">
-            <p><b>Pokémon Guide</b> foi desenvolvido pensando nos fãs e jogadores de Pokémon Go, para ajudar como um guia 
+            <p><b>Pokémon Guide</b> foi desenvolvido pensando nos fãs e jogadores de Pokémon Go, para ajudar como um
+                guia
                 que contenha as informações principais e essênciais sobre os Pokémons.</p>
             <p>Aqui vocês encontram uma "ficha técnica" contendo informações como: os tipos de Pokémons, indo dos
-                normais aos mais raros; a região de origem de cada um; quais são os mais resistentes a certos tipos de 
-                poderes e também suas fraquezas; tamanho; ataques especiais; quais são os mais fáceis de capturar e quais 
-                tem maior chance de fuga; sobre os ovos e desova; e as próximas evoluções assim como as evoluções anteriores.</p>
-            <p><b>Pokémon Guide</b> te ajudará a descobrir quais são seus pokémons favoritos e quais não poderão faltar em
+                normais aos mais raros; a região de origem de cada um; quais são os mais resistentes a certos tipos de
+                poderes e também suas fraquezas; tamanho; ataques especiais; quais são os mais fáceis de capturar e
+                quais
+                tem maior chance de fuga; sobre os ovos e desova; e as próximas evoluções assim como as evoluções
+                anteriores.</p>
+            <p><b>Pokémon Guide</b> te ajudará a descobrir quais são seus pokémons favoritos e quais não poderão faltar
+                em
                 sua lista de captura!</p>
         </section>
 
         <section class="explanation">
             <h1>Instruções:</h1>
-            <p>Após clicar o botão "Iniciar" na página inicial do <i>site</i>, você será redirecionado para a página de 
+            <p>Após clicar o botão "Iniciar" na página inicial do <i>site</i>, você será redirecionado para a página de
                 cards, onde uma barra de perquisa estará ao seu dispor.</p>
             <p>FIltre por; tipo de pokémon, tamanho (altura ou peso), região de origem (Kanto ou Johto) e escolha a
                 ordem que queira ver os cards.</p>
@@ -45,10 +66,10 @@
                 gerais sobre determinado pokémon.</p>
         </section>
 
-        <section class="explanation_cards">
-            <h1 class="title_explanation">Os cards funcionam da seguinte forma:</h1>
+        <!-- <section class="explanation-cards">
+            <h1 class="title-explanation">Os cards funcionam da seguinte forma:</h1>
             <div class="cards">
-                <section class="explanation_front">
+                <section class="explanation-front">
                     <h2>Frente do Card:</h2>
                     <br>
                     <h4>Número do Pokémon</h4>
@@ -62,13 +83,13 @@
                 <picture>
                     <img src="/img/icon-arrows.png" alt="Flechas de rotatividade">
                 </picture>
-                <section class="explanation_back">
+                <section class="explanation-back">
                     <h2>Verso do Card:</h2>
                     <br>
                     <h4>Mais informações <br> sobre <br> o Pokémon</h4>
                 </section>
             </div>
-        </section>
+        </section> -->
 
         <section class="aboutGames">
             <h1>Pokémon (série de jogos eletrônicos)</h1>
@@ -89,7 +110,8 @@
             <p>A série animada Pokémon é dividida em sete séries cronologicamente sequenciais no Japão, divididas pela
                 versão da série de videogames da qual o anime se inspira: a série original (Ouro e Prata), a série Rubi
                 & Safira, a série Diamante & Pérola, a série Preto & Branco, a série XY, a série Sol & Lua e a série
-                Jornadas. Nas transmissões internacionais, essas sete séries são divididas em 24 temporadas separadas.</p>
+                Jornadas. Nas transmissões internacionais, essas sete séries são divididas em 24 temporadas separadas.
+            </p>
             <p>A série de anime Pokémon foi amplamente creditada por permitir que o anime se tornasse mais popular e
                 familiar em todo o mundo, especialmente nos Estados Unidos, onde os dois filmes de anime de maior
                 bilheteria são ambos filmes "Pokémon". Também foi considerado um dos primeiros animes da televisão a
@@ -98,14 +120,14 @@
         </section>
     </div>
 
-    <footer class="footer_navigation">
-        <section class="footer_links">
+    <footer class="footer-navigation">
+        <section class="footer-links">
             <a href="/src/home.html">Página inicial</a>
             <a href="https://www.pokemon.com/br/" target="_blank">Site oficial Pokémon</a>
             <a href="https://pokemongolive.com/pt_br/" target="_blank">Site oficial do jogo</a>
         </section>
 
-        <section class="footer_buttonsDownload">
+        <section class="footer-buttonsDownload">
             <button>
                 <a href="https://play.google.com/store/apps/details?id=com.nianticlabs.pokemongo" target="_blank">
                     <img src="/img/googleplay-button.png" alt="Logo de Download Google Play">
@@ -118,12 +140,14 @@
             </button>
         </section>
 
-        <section class="footer_githubLink">
+        <section class="footer-githubLink">
             <a href="https://github.com/CassiaCosta" target="_blank">
                 <img src="/img/GitHub-Emblem.png" alt="Logo GitHub">
             </a>
         </section>
     </footer>
+
+    <script src="/src/settings-js/settings.js" type="module"></script>
 </body>
 
 </html>

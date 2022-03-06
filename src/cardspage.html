@@ -10,17 +10,37 @@
 </head>
 
 <body>
-    <header class="header_navigation">
-        <nav class="nav_bar">
-            <button class="nav_bar_buttonLogo">
+    <header class="header-navigation">
+        <nav class="nav-bar">
+            <button class="button-logo">
                 <a href="/src/home.html">
-                    <img class="nav_bar_img" src="/img/logo.png" alt="Logo da página">
+                    <img class="nav-bar-img" src="/img/logo.png" alt="Logo da página">
                 </a>
             </button>
-            <a href="/src/home.html">Página inicial</a>
-            <a href="/src/about.html">Sobre</a>
-            <a href="https://www.pokemon.com/br/" target="_blank">Site oficial Pokémon</a>
-            <a href="https://pokemongolive.com/pt_br/" target="_blank">Site oficial do jogo</a>
+            <div class="navbar-menu">
+                <div class="hamburguer-menu">
+                    <input type="checkbox" class="checkbox-menu" id="checkbox-menu">
+                    <label for="checkbox-menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </label>
+                </div>
+                <ul class="menu-list" id="menu-list">
+                    <li class="menu-item hide">
+                        <a href="/src/home.html">Página inicial</a>
+                    </li>
+                    <li class="menu-item hide">
+                        <a href="/src/about.html">Sobre</a>
+                    </li>
+                    <li class="menu-item hide">
+                        <a href="https://www.pokemon.com/br/" target="_blank">Site oficial Pokémon</a>
+                    </li>
+                    <li class="menu-item hide">
+                        <a href="https://pokemongolive.com/pt_br/" target="_blank">Site oficial do jogo</a>
+                    </li>
+                </ul>
+            </div>
         </nav>
     </header>
 
@@ -80,6 +100,7 @@
 
 
     <script src="/src/settings-js/main.js" type="module"></script>
+    <script src="/src/settings-js/settings.js" type="module"></script>
 </body>
 
 </html>
