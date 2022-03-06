@@ -1,3 +1,13 @@
+:root {
+    --default-font: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+    --default-primary-font-color: white;
+    --default-secondary-font-color: #0c1c3e;
+    --default-footer-font-color: gray;
+    --default-header-footer-color: #0c1c3e;
+    --default-background-color: #1d4396;
+    --default-yellow: rgb(255, 203, 8);
+}
+
 /* CONFIGURAÇÃO GERAL */
 
 * {
@@ -7,72 +17,187 @@
 }
 
 body {
-    background-color: #0c1c3e;
-    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--default-background-color);
+    font-family: var(--default-font);
 }
 
 /* ESTILIZAÇÃO DO HEADER */
 
-.header_navigation .nav_bar {
-    height: 75px;
-    width: 100%;
-    background-color: #0c1c3e;
+.header-navigation .nav-bar {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    top: 0;
 }
 
-.header_navigation .nav_bar .nav_bar_img {
-    height: 85px;
-    width: 130px;
-    margin-top: 22px;
+.header-navigation .nav-bar::before {
+    content: " ";
+    background-color: var(--default-header-footer-color);
+    background-size: cover;
+    height: 4.375rem;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    opacity: 0.9;
 }
 
-.header_navigation .nav_bar .nav_bar_buttonLogo {
+.header-navigation .nav-bar .button-logo {
     background: none;
+    margin-top: 0.188rem;
+    margin-left: 0.6rem;
+    align-self: flex-start;
+    z-index: 1;
 }
 
-.header_navigation .nav_bar a {
+.header-navigation .nav-bar .button-logo .nav-bar-img {
+    height: 5rem;
+}
+
+.header-navigation .nav-bar .navbar-menu {
+    margin-top: 0.315rem;
+    margin-right: 0.6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.header-navigation .nav-bar .navbar-menu .hamburguer-menu .checkbox-menu {
+    opacity: 0;
+}
+
+.header-navigation .nav-bar .navbar-menu .hamburguer-menu label {
+    height: 1.25rem;
+    width: 2.188rem;
+    display: block;
+    position: relative;
+    cursor: pointer;
+}
+
+.header-navigation .nav-bar .navbar-menu .hamburguer-menu label span {
+    height: 0.313rem;
+    width: 100%;
+    border-radius: 1.875rem;
+    background: var(--default-primary-font-color);
+    display: block;
+    position: absolute;
+    transition: 0.25s ease-in-out;
+}
+
+.header-navigation .nav-bar .navbar-menu .hamburguer-menu label span:nth-child(1) {
+    top: 0;
+}
+
+.header-navigation .nav-bar .navbar-menu .hamburguer-menu label span:nth-child(2) {
+    top: 0.5rem;
+}
+
+.header-navigation .nav-bar .navbar-menu .hamburguer-menu label span:nth-child(3) {
+    top: 1rem;
+}
+
+.header-navigation .nav-bar .navbar-menu .hamburguer-menu #checkbox-menu:checked + label span:nth-child(1) {
+    top: 0.5rem;
+    transform: rotate(-45deg);
+}
+
+.header-navigation .nav-bar .navbar-menu .hamburguer-menu #checkbox-menu:checked + label span:nth-child(2) {
+    opacity: 0;
+}
+
+.header-navigation .nav-bar .navbar-menu .hamburguer-menu #checkbox-menu:checked + label span:nth-child(3) {
+    top: 0.5rem;
+    transform: rotate(45deg);
+}
+
+.header-navigation .nav-bar .navbar-menu .menu-item.hide {
+    display: none;
+}
+
+.header-navigation .nav-bar .navbar-menu .menu-list::before {
+    content: " ";
+    background-color: var(--default-header-footer-color);
+    border-top: 0.1rem solid var(--default-footer-font-color);
+    border-bottom: 0.1rem solid var(--default-footer-font-color);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    opacity: 0.9;
+    z-index: -1;
+}
+
+.header-navigation .nav-bar .navbar-menu .menu-list {
+    height: 34.2rem;
+    margin-top: 4.04rem;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: absolute;
+    z-index: 1;
+}
+
+.header-navigation .nav-bar .navbar-menu .menu-list .menu-item {
+    list-style: none;
+    padding: 0.938rem 0.625rem 0.938rem 73.65rem;
+}
+
+/* .header-navigation .nav-bar .navbar-menu .menu-list .menu-item:nth-child(1) a {
+    padding: 0.938rem 0 0.938rem 8rem;
+} */
+
+/* .header-navigation .nav-bar .navbar-menu .menu-list .menu-item:nth-child(2) a {
+    padding: 0.938rem 0 0.938rem 4rem;
+} */
+
+/* .header-navigation .nav-bar .navbar-menu .menu-list .menu-item:nth-child(3) a {
+    padding: 0.938rem 0 0.938rem 5rem;
+} */
+
+.header-navigation .nav-bar a {
     text-decoration: none;
-    font-size: 20px;
-    color: white;
+    color: var(--default-primary-font-color);
+    font-size: 1.1rem;
 }
 
-.header_navigation .nav_bar a:hover {
-    font-size: 21px;
-    color: yellow;
+.header-navigation .nav-bar a:hover {
+    color: var(--default-yellow);
 }
 
 /* ESTILIZAÇÃO DO BACKGROUND */
 
-.main_content::before {
+.main-content::before {
     content: " ";
     background-image: url(/img/background_sky.jpeg);
     background-size: cover;
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
-    left: 0px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
     position: fixed;
     z-index: -1;
     opacity: 0.5;
 }
 /* CONTÊINER DE INFORMAÇÕES */
 
-.main_content {
-    font-size: 20px;
-    color: #0c1c3e;
+.main-content {
+    font-size: 1.2rem;
+    color: var(--default-secondary-font-color);
     width: 70%;
-    background-color: white;
+    background-color: var(--default-primary-font-color);
     border-radius: 10px;
     padding: 50px;
-    margin: 50px auto 50px auto;
+    margin: 5.8rem auto 0.5rem auto;
 }
 
-.main_content .description,
-.main_content .explanation,
-.main_content .aboutGames,
-.main_content .aboutAnime {
+.main-content .description,
+.main-content .explanation,
+.main-content .aboutGames,
+.main-content .aboutAnime {
     line-height: 32px;
     margin-top: 30px;
     margin-bottom: 35px;
@@ -80,72 +205,77 @@ body {
 
 /* CONTÊINER DE EXPLICAÇÃO DOS CARDS */
 
-.main_content .explanation_cards {
-    height: 300px;
+/* .main-content .explanation-cards {
+    height: 18.75rem;
     margin: auto;
     text-align: center;
     opacity: 0.8;
 }
 
-.main_content .explanation_cards .title_explanation {
+.main-content .explanation-cards .title-explanation {
     height: 50px;
 }
 
-.main_content .explanation_cards .cards {
+.main-content .explanation-cards .cards {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.main_content .explanation_cards .cards .explanation_front,
-.main_content .explanation_cards .cards .explanation_back {
+.main-content .explanation-cards .cards .explanation-front,
+.main-content .explanation-cards .cards .explanation-back {
     font-size: 13px;
-    background-color: rgb(255, 203, 8);
-    height: 240px;
-    width: 170px;
+    background-color: var(--default-yellow);
+    height: 15rem;
+    width: 10.625rem;
     border-radius: 30px;
 }
 
-.main_content .explanation_cards picture img {
+.main-content .explanation-cards picture img {
     width: 70px;
     margin: 20px;
 }
 
-.main_content .explanation_cards .cards .explanation_front h2,
-.main_content .explanation_cards .cards .explanation_back h2 {
-    margin-top: 50px;
-}
+.main-content .explanation-cards .cards .explanation-front h2,
+.main-content .explanation-cards .cards .explanation-back h2 {
+    margin-top: 3.125rem;
+} */
 
 /* ESTILIZAÇÃO DO FOOTER */
 
-.footer_navigation {
-    font-size: 15px;
-    height: 120px;
-    background-color: #0c1c3e;
+.footer-navigation {
+    font-size: 1rem;
+    background-color: var(--default-header-footer-color);
+    height: 6.2rem;
+    margin-top: 1.5rem;
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
 
-.footer_navigation .footer_links {
+.footer-navigation .footer-links {
     display: grid;
-    line-height: 21px;
+    line-height: 1.3rem;
 }
 
-.footer_navigation .footer_links a {
-    text-decoration: none;
+.footer-navigation .footer-links a {
     color: gray;
+    text-decoration: none;
 }
 
-.footer_navigation .footer_links a:hover {
-    color: yellow;
+.footer-navigation .footer-links a:hover {
+    color: var(--default-yellow);
 }
 
-.footer_navigation .footer_buttonsDownload button img,
-.footer_navigation .footer_githubLink a img {
-    height: 50px;
+.footer-navigation .footer-buttonsDownload button {
+    margin-right: 1.5rem;
+    background-color: var(--default-header-footer-color);
 }
 
-.footer_navigation .footer_buttonsDownload button {
-    background-color: #0c1c3e;
+.footer-navigation .footer-buttonsDownload button img {
+    height: 2.5rem;
+}
+
+.footer-navigation .footer-githubLink a img {
+    height: 3rem;
 }
