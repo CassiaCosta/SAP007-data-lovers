@@ -1,4 +1,4 @@
-import { alphabeticalFilter, heightFilter, rarityFilter, regionFilter, searchName, typeFilter, weightFilter, } from './data.js';
+import { aggregateCalculation, alphabeticalFilter, heightFilter, rarityFilter, regionFilter, searchName, typeFilter, weightFilter, } from './data.js';
 import data from '../data/pokemon/pokemon.js';
 
 let selectType = document.getElementById('typeFilter');
@@ -66,8 +66,15 @@ function cleanFilters() {
     window.location.reload()
 }
 
+function filterPercentage() {
+    const calcType = searchByType.value;
+    let result = aggregateCalculation(data.pokemon, calcType);
+    calculationBar.innerHTML = `Este tipo de Pokémon representa ${result}% do total`
+}
+
 showPokemon(data.pokemon);
 selectType.addEventListener('change', searchByType);
+selectType.addEventListener('change', filterPercentage);
 selectRarity.addEventListener('change', searchByRarity);
 selectRegion.addEventListener('change', searchByRegion);
 selectOrder.addEventListener('change', searchByOrderAlphabetical);

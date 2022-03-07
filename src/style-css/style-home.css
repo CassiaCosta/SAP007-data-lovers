@@ -124,6 +124,7 @@ body {
     position: absolute;
     opacity: 0.9;
     z-index: -1;
+    box-sizing: inherit;
 }
 
 .header-navigation .nav-bar .navbar-menu .menu-list {

@@ -50,3 +50,8 @@ export const searchName = (data, name) => {
     const filterName = data.filter(pokemonName => pokemonName.name.includes(name))
     return filterName
 }
+
+export const aggregateCalculation = (data, filterCalculation) => {
+    const calcPerc = data.filter((item) => item.type.includes(filterCalculation));
+    return Math.round((calcPerc.length / data.length) * 100);
+};
