@@ -51,7 +51,7 @@ export const searchName = (data, name) => {
     return filterName
 }
 
-export const aggregateCalculation = (data, filterCalculation) => {
-    const calcPerc = data.filter((item) => item.type.includes(filterCalculation));
-    return Math.round((calcPerc.length / data.length) * 100);
+export const calculos = (total, portion) => {
+    const porcentagem = Math.round((portion * 100) / total)
+    return porcentagem
 };

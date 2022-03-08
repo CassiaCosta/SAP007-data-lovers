@@ -308,10 +308,19 @@ body {
 }
 
 /* BOTÃO TOP */
-.main_content .button-top {
-    position: fixed;
+.main_content {
     display: flex;
-    justify-content: start;
-    align-items: flex-start;
-    /* z-index: 1; */
+    flex-direction: column;
+}
+
+.button-top {
+    background: none;
+    margin-right: 1rem;
+    position: fixed;
+    bottom: 1.25rem;
+    right: 1.25rem;
+}
+
+.button-top img {
+    height: 3.5rem;
 }
