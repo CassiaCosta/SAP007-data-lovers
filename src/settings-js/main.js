@@ -1,4 +1,4 @@
-import { alphabeticalFilter, heightFilter, rarityFilter, regionFilter, searchName, typeFilter, weightFilter, } from './data.js';
+import { alphabeticalFilter, calculos, heightFilter, rarityFilter, regionFilter, searchName, typeFilter, weightFilter, } from './data.js';
 import data from '../data/pokemon/pokemon.js';
 
 let selectType = document.getElementById('typeFilter');
@@ -8,6 +8,7 @@ let selectOrder = document.getElementById('orderFilter');
 let inputName = document.getElementById('nameFilter');
 let clearButton = document.getElementById('clearButton');
 let calculationBar = document.getElementById('calculation');
+let buttonTop = document.getElementById('buttonTop');
 
 function showPokemon(data) {
     document.getElementById('pokemonList').innerHTML = data.map((item) => `
@@ -31,11 +32,16 @@ function showPokemon(data) {
             </section>
     </div>
     `).join('')
-    calculationBar.innerHTML = "Você está vendo todos os cards!"
+    // calculationBar.innerHTML = `Você está vendo todos os cards!`
 }
 
-function searchByType() {
-    return showPokemon(typeFilter(data.pokemon, selectType.value))
+function searchByType(e) {
+    const resultEspecie = typeFilter(data.pokemon, e.target.value)
+    // const porcentagemEspecie = `${calculos(data.pokemon.length, resultEspecie.length)}% dos personagens`
+    calculationBar.innerHTML = `Este tipo de pokémon representa ${calculos(data.pokemon.length, resultEspecie.length)}% 
+        do total`
+    // filtroPorcentagem(porcentagemEspecie)
+    return showPokemon(resultEspecie)
 }
 
 function searchByRarity() {
@@ -66,6 +72,10 @@ function cleanFilters() {
     window.location.reload()
 }
 
+// function filtroPorcentagem(data) {
+//     calculationBar.innerHTML = `Essa categoria representa ${data}`
+// }
+
 showPokemon(data.pokemon);
 selectType.addEventListener('change', searchByType);
 selectRarity.addEventListener('change', searchByRarity);
@@ -75,3 +85,8 @@ selectOrder.addEventListener('change', searchByHeightOrder);
 selectOrder.addEventListener('change', searchByWeightOrder);
 inputName.addEventListener('keypress', searchByName);
 clearButton.addEventListener('click', cleanFilters);
+buttonTop.addEventListener('click', scrollToTop)
+
+function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}

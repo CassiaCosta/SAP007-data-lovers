@@ -306,3 +306,21 @@ body {
 .main_content .pokemonList .cards .back_cards .heightPokemon {
     padding: 10px 0 10px 0;
 }
+
+/* BOTÃO TOP */
+.main_content {
+    display: flex;
+    flex-direction: column;
+}
+
+.button-top {
+    background: none;
+    margin-right: 1rem;
+    position: fixed;
+    bottom: 1.25rem;
+    right: 1.25rem;
+}
+
+.button-top img {
+    height: 3.5rem;
+}

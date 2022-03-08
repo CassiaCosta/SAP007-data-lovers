@@ -50,3 +50,8 @@ export const searchName = (data, name) => {
     const filterName = data.filter(pokemonName => pokemonName.name.includes(name))
     return filterName
 }
+
+export const calculos = (total, portion) => {
+    const porcentagem = Math.round((portion * 100) / total)
+    return porcentagem
+};
