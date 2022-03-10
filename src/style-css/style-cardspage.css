@@ -364,7 +364,7 @@ body {
     .main-content .section-search input,
     .main-content .section-search button {
         font-size: 12px;
-        height: 40px;
+        height: 30px;
         width: 110px;
     }
     /* BARRA DO CÁLCULO AGREGADO */
@@ -392,13 +392,6 @@ body {
         border-radius: 0;
         display: grid;
         grid-template-columns: auto auto auto;
-    }
-    .main-content .section-search select,
-    .main-content .section-search input,
-    .main-content .section-search button {
-        font-size: 12px;
-        height: 30px;
-        width: 110px;
     }
     /* BARRA DO CÁLCULO AGREGADO */
     .main-content .calculation-print {

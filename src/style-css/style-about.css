@@ -157,7 +157,6 @@ body {
 /* BARRA DE OPÇÕES */
 
 .navbar-options {
-    font-size: 20px;
     height: 60px;
     width: 100%;
     border-radius: 50px;
@@ -168,7 +167,7 @@ body {
 }
 
 .navbar-options button {
-    font-size: 15px;
+    font-size: 18px;
     height: 40px;
     width: 150px;
     background: none;
@@ -179,23 +178,8 @@ body {
 .navbar-options button:hover,
 .navbar-options button:focus,
 .navbar-options button.active {
-    font-size: 16px;
+    font-size: 19px;
     color: var(--bar-hover-color-over);
-}
-
-.navbar-options .iniciarBusca {
-    background-color: var(--default-header-footer-color);
-    border-radius: 50px;
-}
-
-.navbar-options .iniciarBusca:hover {
-    font-size: 15px;
-    background-color: var(--default-button-hover-color);
-}
-
-.navbar-options .iniciarBusca a {
-    color: var(--default-primary-font-color);
-    text-decoration: none;
 }
 
 /* ESTILIZAÇÃO DO BACKGROUND */
@@ -233,7 +217,6 @@ body {
 }
 
 .main-content .description {
-    /* display: none; */
     display: block;
 }
 
@@ -331,10 +314,6 @@ body {
 }
 
 @media screen and (max-width: 560px) {
-    /* BARRA DE OPÇÕES */
-    .navbar-options .iniciarBusca {
-        display: none;
-    }
     /* CONTÊINER DE INFORMAÇÕES */
     .main-content {
         font-size: 0.9rem;
@@ -379,7 +358,6 @@ body {
     /* CONTÊINER DE INFORMAÇÕES */
     .main-content {
         font-size: 0.83rem;
-        /* height: 22.6rem; */
         width: 75%;
     }
     .main-content section p,
