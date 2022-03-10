@@ -47,6 +47,15 @@
     <div class="main-content">
         <section class="section-search">
             <p>Buscar por: </p>
+            <select class="order-filter" id="orderFilter">
+                <option value disabled selected>Ordenar</option>
+                <option value="a-z">A - Z</option>
+                <option value="z-a">Z - A</option>
+                <option value="shortHigh">Baixo - Alto</option>
+                <option value="highShort">Alto - Baixo</option>
+                <option value="lightHeavy">Leve - Pesado</option>
+                <option value="heavyLight">Pesado - Leve</option>
+            </select>
             <select class="type-filter" id="typeFilter">
                 <option value disabled selected>Tipo</option>
                 <option value="water">Água</option>
@@ -75,15 +84,6 @@
                 <option value disabled selected>Região de origem</option>
                 <option value="johto">Johto</option>
                 <option value="kanto">Kanto</option>
-            </select>
-            <select class="order-filter" id="orderFilter">
-                <option value disabled selected>Ordenar</option>
-                <option value="a-z">A - Z</option>
-                <option value="z-a">Z - A</option>
-                <option value="shortHigh">Baixo - Alto</option>
-                <option value="highShort">Alto - Baixo</option>
-                <option value="lightHeavy">Leve - Pesado</option>
-                <option value="heavyLight">Pesado - Leve</option>
             </select>
             <input type="text" placeholder="Nome do Pokémon" id="nameFilter">
             <button type="reset" class="clear-button" id="clearButton">Limpar</button>
