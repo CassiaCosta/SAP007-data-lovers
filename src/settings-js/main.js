@@ -1,4 +1,4 @@
-import { alphabeticalFilter, calculos, heightFilter, rarityFilter, regionFilter, searchName, typeFilter, weightFilter, } from './data.js';
+import { alphabeticalFilter, calculos, heightFilter, rarityFilter, regionFilter, searchName, typeFilter, weightFilter } from './data.js';
 import data from '../data/pokemon/pokemon.js';
 
 let selectType = document.getElementById('typeFilter');
@@ -43,31 +43,50 @@ function searchByType(e) {
 
 function searchByRarity(e) {
     const resultRarity = rarityFilter(data.pokemon, e.target.value)
-    calculationBar.innerHTML = `Este tipo de pokémon representa ${calculos(data.pokemon.length, resultRarity.length)}% 
+    calculationBar.innerHTML = `Esta raridade de pokémon representa ${calculos(data.pokemon.length, resultRarity.length)}% 
         do total`
     return showPokemon(resultRarity)
 }
 
 function searchByRegion(e) {
     const resultRegion = regionFilter(data.pokemon, e.target.value)
-    calculationBar.innerHTML = `Este tipo de pokémon representa ${calculos(data.pokemon.length, resultRegion.length)}% 
-        do total`
+    calculationBar.innerHTML = `${calculos(data.pokemon.length, resultRegion.length)}% do Pokémons pertencem a esta região`
     return showPokemon(resultRegion)
 }
 
 function searchByOrderAlphabetical() {
+    if(selectOrder.value == "a-z") {
+        calculationBar.innerHTML = `Pokémons ordenados de A à Z`
+    } else if(selectOrder.value == "z-a") {
+        calculationBar.innerHTML = `Pokémons ordenados de Z à A`
+    }
     return showPokemon(alphabeticalFilter(data.pokemon, selectOrder.value))
 }
 
 function searchByHeightOrder() {
+    if(selectOrder.value == "shortHigh") {
+        calculationBar.innerHTML = `Pokémons ordenados do mais baixo para o mais alto`
+    } else if(selectOrder.value == "highShort") {
+        calculationBar.innerHTML = `Pokémons ordenados do mais alto para o mais baixo`
+    }
     return showPokemon(heightFilter(data.pokemon, selectOrder.value))
 }
 
 function searchByWeightOrder() {
+    if(selectOrder.value == "lightHeavy") {
+        calculationBar.innerHTML = `Pokémons ordenados do mais leve para o mais pesado`
+    } else if(selectOrder.value == "heavyLight") {
+        calculationBar.innerHTML = `Pokémons ordenados do mais pesado para o mais leve`
+    }
     return showPokemon(weightFilter(data.pokemon, selectOrder.value))
 }
 
 function searchByName() {
+    if(inputName.value !== ""){
+        calculationBar.innerHTML = `Pesquisa por nome...`
+    } else if(inputName.value == "") {
+        calculationBar.innerHTML = `Você está vendo todos os Pokémons!`
+    }
     return showPokemon(searchName(data.pokemon, inputName.value))
 }
 
