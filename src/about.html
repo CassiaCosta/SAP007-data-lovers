@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Pokémon Guide</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="/img/Poke_icon.png" type="image/x-icon">
     <link rel="stylesheet" href="/src/style-css/style-about.css" />
 </head>
@@ -40,8 +41,14 @@
         </nav>
     </header>
 
+    <section class="navbar-options">
+        <button class="descricao" id="btnDescription">Descrição</button>
+        <button class="instrucoes" id="btnExplanation">Instruções</button>
+        <button class="sobreJogo" id="btnAboutGames">Sobre os jogos</button>
+        <button class="sobreAnime" id="btnAboutAnime">Sobre o anime</button>
+    </section>
     <div class="main-content">
-        <section class="description">
+        <section class="description" id="description">
             <p><b>Pokémon Guide</b> foi desenvolvido pensando nos fãs e jogadores de Pokémon Go, para ajudar como um
                 guia
                 que contenha as informações principais e essênciais sobre os Pokémons.</p>
@@ -56,7 +63,7 @@
                 sua lista de captura!</p>
         </section>
 
-        <section class="explanation">
+        <section class="explanation" id="explanation">
             <h1>Instruções:</h1>
             <p>Após clicar o botão "Iniciar" na página inicial do <i>site</i>, você será redirecionado para a página de
                 cards, onde uma barra de perquisa estará ao seu dispor.</p>
@@ -66,32 +73,7 @@
                 gerais sobre determinado pokémon.</p>
         </section>
 
-        <!-- <section class="explanation-cards">
-            <h1 class="title-explanation">Os cards funcionam da seguinte forma:</h1>
-            <div class="cards">
-                <section class="explanation-front">
-                    <h2>Frente do Card:</h2>
-                    <br>
-                    <h4>Número do Pokémon</h4>
-                    <h4>+</h4>
-                    <h4>Imagem do Pokémon</h4>
-                    <h4>+</h4>
-                    <h4>Nome do Pokémon</h4>
-                    <h4>+</h4>
-                    <h4>Mais infos</h4>
-                </section>
-                <picture>
-                    <img src="/img/icon-arrows.png" alt="Flechas de rotatividade">
-                </picture>
-                <section class="explanation-back">
-                    <h2>Verso do Card:</h2>
-                    <br>
-                    <h4>Mais informações <br> sobre <br> o Pokémon</h4>
-                </section>
-            </div>
-        </section> -->
-
-        <section class="aboutGames">
+        <section class="aboutGames" id="aboutGames">
             <h1>Pokémon (série de jogos eletrônicos)</h1>
             <p>Pokémon é uma série de jogos eletrônicos desenvolvidos pela Game Freak e publicados pela Nintendo como
                 parte da franquia de mídia Pokémon. Lançado pela primeira vez em 1996 no Japão para o console Game Boy,
@@ -104,7 +86,7 @@
                 atrás da própria franquia da Nintendo Mario.</p>
         </section>
 
-        <section class="aboutAnime">
+        <section class="aboutAnime" id="aboutAnime">
             <h1>Pokémon (anime)</h1>
             <p>Pokémon é uma série de anime kodomomuke da franquia Pokémon.</p>
             <p>A série animada Pokémon é dividida em sete séries cronologicamente sequenciais no Japão, divididas pela
@@ -123,8 +105,8 @@
     <footer class="footer-navigation">
         <section class="footer-links">
             <a href="/src/home.html">Página inicial</a>
-            <a href="https://www.pokemon.com/br/" target="_blank">Site oficial Pokémon</a>
-            <a href="https://pokemongolive.com/pt_br/" target="_blank">Site oficial do jogo</a>
+            <a href="https://www.pokemon.com/br/" target="_blank">Site Pokémon</a>
+            <a href="https://pokemongolive.com/pt_br/" target="_blank">Site do jogo</a>
         </section>
 
         <section class="footer-buttonsDownload">
