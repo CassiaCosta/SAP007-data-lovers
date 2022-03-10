@@ -50,7 +50,7 @@ function searchByRarity(e) {
 
 function searchByRegion(e) {
     const resultRegion = regionFilter(data.pokemon, e.target.value)
-    calculationBar.innerHTML = `${calculos(data.pokemon.length, resultRegion.length)}% do Pokémons pertencem a esta região`
+    calculationBar.innerHTML = `${calculos(data.pokemon.length, resultRegion.length)}% dos Pokémons pertencem a esta região`
     return showPokemon(resultRegion)
 }
 
@@ -83,7 +83,7 @@ function searchByWeightOrder() {
 
 function searchByName() {
     if(inputName.value !== ""){
-        calculationBar.innerHTML = `Pesquisa por nome...`
+        calculationBar.innerHTML = `Busca por nome...`
     } else if(inputName.value == "") {
         calculationBar.innerHTML = `Você está vendo todos os Pokémons!`
     }

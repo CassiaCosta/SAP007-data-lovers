@@ -217,6 +217,7 @@ body {
 }
 
 .main-content .description {
+    /* display: none; */
     display: block;
 }
 
