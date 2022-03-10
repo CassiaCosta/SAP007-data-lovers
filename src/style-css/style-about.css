@@ -290,7 +290,7 @@ body {
     height: 3rem;
 }
 
-@media screen and (min-width: 992px) and (max-width: 1300px) {
+@media screen and (min-width: 992px) and (max-width: 1300px){
     /* ESTILIZAÇÃO DO BACKGROUND */
     .main-content::before {
         height: 115%;

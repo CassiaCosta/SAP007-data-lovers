@@ -44,10 +44,10 @@
         </nav>
     </header>
 
-    <div class="main_content">
-        <section class="section_search">
+    <div class="main-content">
+        <section class="section-search">
             <p>Buscar por: </p>
-            <select class="type_filter" id="typeFilter">
+            <select class="type-filter" id="typeFilter">
                 <option value disabled selected>Tipo</option>
                 <option value="water">Água</option>
                 <option value="dragon">Dragão</option>
@@ -65,18 +65,18 @@
                 <option value="poison">Venenoso</option>
                 <option value="flying">Voador</option>
             </select>
-            <select class="rarity_filter" id="rarityFilter">
+            <select class="rarity-filter" id="rarityFilter">
                 <option value disabled selected>Raridade</option>
                 <option value="legendary">Legendário</option>
                 <option value="mythic">Mítico</option>
                 <option value="normal">Normal</option>
             </select>
-            <select class="region_filter" id="regionFilter">
+            <select class="region-filter" id="regionFilter">
                 <option value disabled selected>Região de origem</option>
                 <option value="johto">Johto</option>
                 <option value="kanto">Kanto</option>
             </select>
-            <select class="order_filter" id="orderFilter">
+            <select class="order-filter" id="orderFilter">
                 <option value disabled selected>Ordenar</option>
                 <option value="a-z">A - Z</option>
                 <option value="z-a">Z - A</option>
@@ -86,26 +86,17 @@
                 <option value="heavyLight">Pesado - Leve</option>
             </select>
             <input type="text" placeholder="🔎 Nome do Pokémon" id="nameFilter">
-            <button type="reset" class="clear_button" id="clearButton">Limpar</button>
+            <button type="reset" class="clear-button" id="clearButton">Limpar</button>
         </section>
-        <section class="calculation_print">
+        <section class="calculation-print">
             <p id="calculation"></p>
         </section>
 
         <div class="pokemonList" id="pokemonList"></div>
         <button class="button-top" id="buttonTop">
             <img src="/img/icons8-seta-para-recolher-96.png" alt="Seta de topo">
-            <!-- <a href="/src/cardspage.html">
-            </a> -->
         </button>
     </div>
-    <!-- <div class="container-button">
-        <button class="button-top">
-            <a href="/src/cardspage.html">
-                <img src="/img/icons8-seta-para-recolher-96.png" alt="Seta de topo">
-            </a>
-        </button>
-    </div> -->
 
     <script src="/src/settings-js/main.js" type="module"></script>
     <script src="/src/settings-js/settings.js" type="module"></script>
