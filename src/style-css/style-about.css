@@ -1,11 +1,14 @@
 :root {
     --default-font: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+    --default-header-footer-color: #0c1c3e;
+    --default-transparent-header-color: #0c1c3ef1;
+    --default-background-color: #1d4396;
     --default-primary-font-color: white;
     --default-secondary-font-color: #0c1c3e;
     --default-footer-font-color: gray;
-    --default-header-footer-color: #0c1c3e;
-    --default-background-color: #1d4396;
     --default-yellow: rgb(255, 203, 8);
+    --bar-hover-color-over: red;
+    --default-button-hover-color: #050d1f;
 }
 
 /* CONFIGURAÇÃO GERAL */
@@ -16,32 +19,26 @@
     border: 0;
 }
 
+html,
 body {
-    background-color: var(--default-background-color);
+    height: 100%;
+    width: 100%;
+}
+
+body {
     font-family: var(--default-font);
+    background-color: var(--default-background-color);
 }
 
 /* ESTILIZAÇÃO DO HEADER */
 
 .header-navigation .nav-bar {
-    display: flex;
-    justify-content: space-between;
-    position: fixed;
+    background-color: var(--default-header-footer-color);
+    height: 4.375rem;
     width: 100%;
     top: 0;
-}
-
-.header-navigation .nav-bar::before {
-    content: " ";
-    background-color: var(--default-header-footer-color);
-    background-size: cover;
-    height: 4.375rem;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    position: absolute;
-    opacity: 0.9;
+    display: flex;
+    justify-content: space-between;
 }
 
 .header-navigation .nav-bar .button-logo {
@@ -49,7 +46,6 @@ body {
     margin-top: 0.188rem;
     margin-left: 0.6rem;
     align-self: flex-start;
-    z-index: 1;
 }
 
 .header-navigation .nav-bar .button-logo .nav-bar-img {
@@ -57,8 +53,7 @@ body {
 }
 
 .header-navigation .nav-bar .navbar-menu {
-    margin-top: 0.315rem;
-    margin-right: 0.6rem;
+    margin: 0.315rem 0.6rem 0 0;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -77,10 +72,10 @@ body {
 }
 
 .header-navigation .nav-bar .navbar-menu .hamburguer-menu label span {
+    background: var(--default-primary-font-color);
     height: 0.313rem;
     width: 100%;
     border-radius: 1.875rem;
-    background: var(--default-primary-font-color);
     display: block;
     position: absolute;
     transition: 0.25s ease-in-out;
@@ -116,22 +111,11 @@ body {
     display: none;
 }
 
-.header-navigation .nav-bar .navbar-menu .menu-list::before {
-    content: " ";
-    background-color: var(--default-header-footer-color);
+.header-navigation .nav-bar .navbar-menu .menu-list {
+    background-color: var(--default-transparent-header-color);
+    height: 100%;
     border-top: 0.1rem solid var(--default-footer-font-color);
     border-bottom: 0.1rem solid var(--default-footer-font-color);
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    position: absolute;
-    opacity: 0.9;
-    z-index: -1;
-}
-
-.header-navigation .nav-bar .navbar-menu .menu-list {
-    height: 34.2rem;
     margin-top: 4.04rem;
     right: 0;
     display: flex;
@@ -143,29 +127,75 @@ body {
 
 .header-navigation .nav-bar .navbar-menu .menu-list .menu-item {
     list-style: none;
-    padding: 0.938rem 0.625rem 0.938rem 73.65rem;
+    width: 90rem;
+    padding-top: 0.938rem;
+    padding-bottom: 0.938rem;
 }
 
-/* .header-navigation .nav-bar .navbar-menu .menu-list .menu-item:nth-child(1) a {
-    padding: 0.938rem 0 0.938rem 8rem;
-} */
+.header-navigation .nav-bar .navbar-menu .menu-list .menu-item:nth-child(1) a {
+    margin-left: 82.8rem;
+}
 
-/* .header-navigation .nav-bar .navbar-menu .menu-list .menu-item:nth-child(2) a {
-    padding: 0.938rem 0 0.938rem 4rem;
-} */
+.header-navigation .nav-bar .navbar-menu .menu-list .menu-item:nth-child(2) a {
+    margin-left: 79.3rem;
+}
 
-/* .header-navigation .nav-bar .navbar-menu .menu-list .menu-item:nth-child(3) a {
-    padding: 0.938rem 0 0.938rem 5rem;
-} */
+.header-navigation .nav-bar .navbar-menu .menu-list .menu-item:nth-child(3) a {
+    margin-left: 80rem;
+}
 
 .header-navigation .nav-bar a {
     text-decoration: none;
-    color: var(--default-primary-font-color);
     font-size: 1.1rem;
+    color: var(--default-primary-font-color);
 }
 
 .header-navigation .nav-bar a:hover {
     color: var(--default-yellow);
+}
+
+/* BARRA DE OPÇÕES */
+
+.navbar-options {
+    font-size: 20px;
+    height: 60px;
+    width: 100%;
+    border-radius: 50px;
+    background-color: var(--default-primary-font-color);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.navbar-options button {
+    font-size: 15px;
+    height: 40px;
+    width: 150px;
+    background: none;
+    font-weight: bold;
+    text-align: center;
+}
+
+.navbar-options button:hover,
+.navbar-options button:focus,
+.navbar-options button.active {
+    font-size: 16px;
+    color: var(--bar-hover-color-over);
+}
+
+.navbar-options .iniciarBusca {
+    background-color: var(--default-header-footer-color);
+    border-radius: 50px;
+}
+
+.navbar-options .iniciarBusca:hover {
+    font-size: 15px;
+    background-color: var(--default-button-hover-color);
+}
+
+.navbar-options .iniciarBusca a {
+    color: var(--default-primary-font-color);
+    text-decoration: none;
 }
 
 /* ESTILIZAÇÃO DO BACKGROUND */
@@ -174,72 +204,50 @@ body {
     content: " ";
     background-image: url(/img/background_sky.jpeg);
     background-size: cover;
+    height: 112%;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    position: fixed;
+    opacity: 0.6;
+    position: absolute;
     z-index: -1;
-    opacity: 0.5;
 }
+
 /* CONTÊINER DE INFORMAÇÕES */
 
 .main-content {
     font-size: 1.2rem;
     color: var(--default-secondary-font-color);
-    width: 70%;
     background-color: var(--default-primary-font-color);
+    height: 28rem;
+    width: 60%;
     border-radius: 10px;
-    padding: 50px;
-    margin: 5.8rem auto 0.5rem auto;
+    padding: 36px;
+    margin: 1.2rem auto 1.2rem auto;
 }
 
-.main-content .description,
-.main-content .explanation,
-.main-content .aboutGames,
+.main-content section p,
+.main-content section h1 {
+    padding: 10px 50px;
+}
+
+.main-content .description {
+    /* display: none; */
+    display: block;
+}
+
+.main-content .explanation {
+    display: none;
+}
+
+.main-content .aboutGames {
+    display: none;
+}
+
 .main-content .aboutAnime {
-    line-height: 32px;
-    margin-top: 30px;
-    margin-bottom: 35px;
+    display: none;
 }
-
-/* CONTÊINER DE EXPLICAÇÃO DOS CARDS */
-
-/* .main-content .explanation-cards {
-    height: 18.75rem;
-    margin: auto;
-    text-align: center;
-    opacity: 0.8;
-}
-
-.main-content .explanation-cards .title-explanation {
-    height: 50px;
-}
-
-.main-content .explanation-cards .cards {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.main-content .explanation-cards .cards .explanation-front,
-.main-content .explanation-cards .cards .explanation-back {
-    font-size: 13px;
-    background-color: var(--default-yellow);
-    height: 15rem;
-    width: 10.625rem;
-    border-radius: 30px;
-}
-
-.main-content .explanation-cards picture img {
-    width: 70px;
-    margin: 20px;
-}
-
-.main-content .explanation-cards .cards .explanation-front h2,
-.main-content .explanation-cards .cards .explanation-back h2 {
-    margin-top: 3.125rem;
-} */
 
 /* ESTILIZAÇÃO DO FOOTER */
 
@@ -247,10 +255,12 @@ body {
     font-size: 1rem;
     background-color: var(--default-header-footer-color);
     height: 6.2rem;
-    margin-top: 1.5rem;
+    width: 100%;
+    margin-bottom: 0;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    position: absolute;
 }
 
 .footer-navigation .footer-links {
@@ -259,8 +269,8 @@ body {
 }
 
 .footer-navigation .footer-links a {
-    color: gray;
     text-decoration: none;
+    color: var(--default-footer-font-color);
 }
 
 .footer-navigation .footer-links a:hover {
@@ -268,8 +278,8 @@ body {
 }
 
 .footer-navigation .footer-buttonsDownload button {
-    margin-right: 1.5rem;
     background-color: var(--default-header-footer-color);
+    margin-right: 1.5rem;
 }
 
 .footer-navigation .footer-buttonsDownload button img {
@@ -278,4 +288,105 @@ body {
 
 .footer-navigation .footer-githubLink a img {
     height: 3rem;
+}
+
+@media screen and (min-width: 992px) and (max-width: 1300px) {
+    /* ESTILIZAÇÃO DO BACKGROUND */
+    .main-content::before {
+        height: 115%;
+    }
+    /* CONTÊINER DE INFORMAÇÕES */
+    .main-content {
+        font-size: 1rem;
+        height: 22.6rem;
+        width: 80%;
+        padding: 36px;
+        margin: 1.2rem auto 1.2rem auto;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    /* BARRA DE OPÇÕES */
+    .navbar-options button {
+        font-size: 13px;
+        height: 35px;
+        width: 110px;
+    }
+    /* ESTILIZAÇÃO DO BACKGROUND */
+    .main-content::before {
+        height: 115%;
+    }
+    /* CONTÊINER DE INFORMAÇÕES */
+    .main-content {
+        font-size: 1rem;
+        height: 22.6rem;
+        width: 80%;
+        padding: 36px;
+        margin: 1.2rem auto 1.2rem auto;
+    }
+    .main-content section p,
+    .main-content section h1 {
+        padding: 8px 10px;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    /* BARRA DE OPÇÕES */
+    .navbar-options .iniciarBusca {
+        display: none;
+    }
+    /* CONTÊINER DE INFORMAÇÕES */
+    .main-content {
+        font-size: 0.9rem;
+        height: 22.6rem;
+        width: 80%;
+        padding: 36px;
+        margin: 1.2rem auto 1.2rem auto;
+    }
+    .main-content section p,
+    .main-content section h1 {
+        padding: 0.1rem 0;
+    }
+    .main-content section h1 {
+        font-size: 1.2rem;
+    }
+    /* ESTILIZAÇÃO DO FOOTER */
+    .footer-navigation {
+        font-size: 0.7rem;
+    }
+    .footer-navigation .footer-links {
+        line-height: 1rem;
+    }
+    .footer-navigation .footer-buttonsDownload button img {
+        height: 2rem;
+    }
+    .footer-navigation .footer-buttonsDownload button {
+        margin-right: 0;
+        display: flex;
+    }
+    .footer-navigation .footer-githubLink a img {
+        height: 2.5rem;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    /* BARRA DE OPÇÕES */
+    .navbar-options button {
+        font-size: 12px;
+        height: 30px;
+        width: 90px;
+    }
+    /* CONTÊINER DE INFORMAÇÕES */
+    .main-content {
+        font-size: 0.83rem;
+        /* height: 22.6rem; */
+        width: 75%;
+    }
+    .main-content section p,
+    .main-content section h1 {
+        padding: 0.1rem 0;
+    }
+    .main-content section h1 {
+        font-size: 0.9rem;
+    }
 }

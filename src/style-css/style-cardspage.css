@@ -4,6 +4,7 @@
     --default-secondary-font-color: #0c1c3e;
     --default-footer-font-color: gray;
     --default-header-footer-color: #0c1c3e;
+    --default-transparent-header-color: #0c1c3ef1;
     --default-background-color: #1d4396;
     --default-yellow: rgb(255, 203, 8);
 }
@@ -26,7 +27,7 @@ body {
 .header-navigation .nav-bar {
     background-color: var(--default-header-footer-color);
     display: flex;
-    background-size: cover;
+    /* background-size: cover; */
     justify-content: space-between;
     height: 4.375rem;
     width: 100%;
