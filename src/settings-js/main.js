@@ -32,24 +32,27 @@ function showPokemon(data) {
             </section>
     </div>
     `).join('')
-    // calculationBar.innerHTML = `Você está vendo todos os cards!`
 }
 
 function searchByType(e) {
     const resultEspecie = typeFilter(data.pokemon, e.target.value)
-    // const porcentagemEspecie = `${calculos(data.pokemon.length, resultEspecie.length)}% dos personagens`
     calculationBar.innerHTML = `Este tipo de pokémon representa ${calculos(data.pokemon.length, resultEspecie.length)}% 
         do total`
-    // filtroPorcentagem(porcentagemEspecie)
     return showPokemon(resultEspecie)
 }
 
-function searchByRarity() {
-    return showPokemon(rarityFilter(data.pokemon, selectRarity.value))
+function searchByRarity(e) {
+    const resultRarity = rarityFilter(data.pokemon, e.target.value)
+    calculationBar.innerHTML = `Este tipo de pokémon representa ${calculos(data.pokemon.length, resultRarity.length)}% 
+        do total`
+    return showPokemon(resultRarity)
 }
 
-function searchByRegion() {
-    return showPokemon(regionFilter(data.pokemon, selectRegion.value))
+function searchByRegion(e) {
+    const resultRegion = regionFilter(data.pokemon, e.target.value)
+    calculationBar.innerHTML = `Este tipo de pokémon representa ${calculos(data.pokemon.length, resultRegion.length)}% 
+        do total`
+    return showPokemon(resultRegion)
 }
 
 function searchByOrderAlphabetical() {
@@ -72,9 +75,9 @@ function cleanFilters() {
     window.location.reload()
 }
 
-// function filtroPorcentagem(data) {
-//     calculationBar.innerHTML = `Essa categoria representa ${data}`
-// }
+function scrollToTop() {
+    window.scrollTo({top: 0, behavior: 'smooth'});
+}
 
 showPokemon(data.pokemon);
 selectType.addEventListener('change', searchByType);
@@ -83,10 +86,6 @@ selectRegion.addEventListener('change', searchByRegion);
 selectOrder.addEventListener('change', searchByOrderAlphabetical);
 selectOrder.addEventListener('change', searchByHeightOrder);
 selectOrder.addEventListener('change', searchByWeightOrder);
-inputName.addEventListener('keypress', searchByName);
+inputName.addEventListener('input', searchByName);
 clearButton.addEventListener('click', cleanFilters);
 buttonTop.addEventListener('click', scrollToTop)
-
-function scrollToTop() {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-}
