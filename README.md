@@ -68,9 +68,13 @@ Após a análise das respostas identificamos dois usuários:
 
 ![adult](/img-readme/adult.jpg)
 
+Definição de pronto: O site deve mostrar todos os pokémons em cards na tela para que o usuário possa manipulálos como quiser conforme os filtros.
+
 **História 2**
 
 ![young](/img-readme/young.jpg)
+
+Definição de pronto: O site deve ter filtros selects para que o usuário possa fazer a pesquisa por tipo, raridade e região de origem. Além disse deve ter um input para que seja possível fazer pesquisas pelo nome do pokémon e um select para ordenação.
 
 ## 5. Protótipos
 

@@ -13,7 +13,7 @@ let buttonTop = document.getElementById('buttonTop');
 function showPokemon(data) {
     document.getElementById('pokemonList').innerHTML = data.map((item) => `
     <div class="cards">
-        <section class="front-cards">
+        <section class="front-cards" id="frontCards">
             <p class="numberPokemon">${item.num}</p>
             <picture>
                 <img class="image-card" src="${item.img}" alt="imagem do Pokémon">
@@ -24,7 +24,7 @@ function showPokemon(data) {
                 <p class="regionPokemon"> <b>Região:</b> ${item.generation["name"]}</p>
             </div>
             </section>
-            <section class="back-cards">
+            <section class="back-cards" id="backCards">
                 <p class="heightPokemon"> <b> Altura:</b> ${item.size["height"]}</p>
                 <p class="weightPokemon"> <b> Peso: </b> ${item.size["weight"]}</p>
                 <p class="rarityPokemon"> <b>Raridade:</b> ${item["pokemon-rarity"]}</p>
