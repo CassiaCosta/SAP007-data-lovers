@@ -1,24 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <title>Pokémon Guide</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="/img/Poke_icon.png" type="image/x-icon">
-    <link rel="stylesheet" href="/src/style-css/style-about.css" />
+    <link rel="shortcut icon" href="/styles/img/Poke_icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="/styles/shared.css" />
+    <link rel="stylesheet" href="/styles/about.css" />
 </head>
 
 <body>
-    <header class="header-navigation">
+    <header>
         <nav class="nav-bar">
             <button class="button-logo">
-                <a href="/src/home.html">
-                    <img class="nav-bar-img" src="/img/logo.png" alt="Logo da página">
+                <a href="/index.html">
+                    <img class="nav-bar-img" src="/styles/img/logo.png" alt="Logo da página">
                 </a>
             </button>
             <div class="navbar-menu">
-                <div class="hamburguer-menu">
+                <div class="hamburguer-menu"> <!-- ÍCONE DO MENU HAMBÚRGUER -->
                     <input type="checkbox" class="checkbox-menu" id="checkbox-menu">
                     <label for="checkbox-menu">
                         <span></span>
@@ -28,7 +29,7 @@
                 </div>
                 <ul class="menu-list" id="menu-list">
                     <li class="menu-item hide">
-                        <a href="/src/home.html">Página inicial</a>
+                        <a href="/index.html">Página inicial</a>
                     </li>
                     <li class="menu-item hide">
                         <a href="https://www.pokemon.com/br/" target="_blank">Site oficial Pokémon</a>
@@ -104,7 +105,7 @@
 
     <footer class="footer-navigation">
         <section class="footer-links">
-            <a href="/src/home.html">Página inicial</a>
+            <a href="/index.html">Página inicial</a>
             <a href="https://www.pokemon.com/br/" target="_blank">Site Pokémon</a>
             <a href="https://pokemongolive.com/pt_br/" target="_blank">Site do jogo</a>
         </section>
@@ -112,24 +113,24 @@
         <section class="footer-buttonsDownload">
             <button>
                 <a href="https://play.google.com/store/apps/details?id=com.nianticlabs.pokemongo" target="_blank">
-                    <img src="/img/googleplay-button.png" alt="Logo de Download Google Play">
+                    <img src="/styles/img/googleplay-button.png" alt="Logo de Download Google Play">
                 </a>
             </button>
             <button>
                 <a href="https://apps.apple.com/vc/app/pok%C3%A9mon-go/id1094591345" target="_blank">
-                    <img src="/img/appstore-button.png" alt="Logo de Download App Store">
+                    <img src="/styles/img/appstore-button.png" alt="Logo de Download App Store">
                 </a>
             </button>
         </section>
 
         <section class="footer-githubLink">
             <a href="https://github.com/CassiaCosta" target="_blank">
-                <img src="/img/GitHub-Emblem.png" alt="Logo GitHub">
+                <img src="/styles/img/GitHub-Emblem.png" alt="Logo GitHub">
             </a>
         </section>
     </footer>
 
-    <script src="/src/settings-js/settings.js" type="module"></script>
+    <script src="/js/settings.js" type="module"></script>
 </body>
 
 </html>

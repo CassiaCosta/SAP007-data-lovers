@@ -1,24 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Pokémon Guide</title>
-    <link rel="shortcut icon" href="/img/Poke_icon.png" type="image/x-icon">
-    <link rel="stylesheet" href="/src/style-css/style-cardspage.css" />
+    <link rel="shortcut icon" href="/styles/img/Poke_icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="/styles/shared.css" />
+    <link rel="stylesheet" href="/styles/cardspage.css" />
 </head>
 
 <body>
-    <header class="header-navigation">
+    <header>
         <nav class="nav-bar">
             <button class="button-logo">
-                <a href="/src/home.html">
-                    <img class="nav-bar-img" src="/img/logo.png" alt="Logo da página">
+                <a href="/index.html">
+                    <img class="nav-bar-img" src="/styles/img/logo.png" alt="Logo da página">
                 </a>
             </button>
             <div class="navbar-menu">
-                <div class="hamburguer-menu">
+                <div class="hamburguer-menu"> <!-- ÍCONE DO MENU HAMBÚRGUER -->
                     <input type="checkbox" class="checkbox-menu" id="checkbox-menu">
                     <label for="checkbox-menu">
                         <span></span>
@@ -28,10 +29,10 @@
                 </div>
                 <ul class="menu-list" id="menu-list">
                     <li class="menu-item hide">
-                        <a href="/src/home.html">Página inicial</a>
+                        <a href="/index.html">Página inicial</a>
                     </li>
                     <li class="menu-item hide">
-                        <a href="/src/about.html">Sobre</a>
+                        <a href="/about.html">Sobre</a>
                     </li>
                     <li class="menu-item hide">
                         <a href="https://www.pokemon.com/br/" target="_blank">Site oficial Pokémon</a>
@@ -47,7 +48,7 @@
     <div class="main-content">
         <section class="section-search">
             <p>Buscar por: </p>
-            <select class="order-filter" id="orderFilter">
+            <select id="orderFilter">
                 <option value disabled selected>Ordenar</option>
                 <option value="a-z">A - Z</option>
                 <option value="z-a">Z - A</option>
@@ -56,7 +57,7 @@
                 <option value="lightHeavy">Leve - Pesado</option>
                 <option value="heavyLight">Pesado - Leve</option>
             </select>
-            <select class="type-filter" id="typeFilter">
+            <select id="typeFilter">
                 <option value disabled selected>Tipo</option>
                 <option value="water">Água</option>
                 <option value="dragon">Dragão</option>
@@ -74,19 +75,19 @@
                 <option value="poison">Venenoso</option>
                 <option value="flying">Voador</option>
             </select>
-            <select class="rarity-filter" id="rarityFilter">
+            <select id="rarityFilter">
                 <option value disabled selected>Raridade</option>
                 <option value="legendary">Legendário</option>
                 <option value="mythic">Mítico</option>
                 <option value="normal">Normal</option>
             </select>
-            <select class="region-filter" id="regionFilter">
+            <select id="regionFilter">
                 <option value disabled selected>Região de origem</option>
                 <option value="johto">Johto</option>
                 <option value="kanto">Kanto</option>
             </select>
             <input type="text" placeholder="Nome do Pokémon" id="nameFilter">
-            <button type="reset" class="clear-button" id="clearButton">Limpar</button>
+            <button type="reset" id="clearButton">Limpar</button>
         </section>
         <section class="calculation-print">
             <p id="calculation">Você está vendo todos os Pokémons!</p>
@@ -94,12 +95,12 @@
 
         <div class="pokemonList" id="pokemonList"></div>
         <button class="button-top" id="buttonTop">
-            <img src="/img/icons8-seta-para-recolher-96.png" alt="Seta de topo">
+            <img src="/styles/img/icons8-seta-para-recolher-96.png" alt="Seta de topo">
         </button>
     </div>
 
-    <script src="/src/settings-js/main.js" type="module"></script>
-    <script src="/src/settings-js/settings.js" type="module"></script>
+    <script src="/js/main.js" type="module"></script>
+    <script src="/js/settings.js" type="module"></script>
 </body>
 
 </html>
