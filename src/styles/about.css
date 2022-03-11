@@ -11,107 +11,8 @@
     --default-button-hover-color: #050d1f;
 }
 
-/* CONFIGURAÇÃO GERAL */
-
-* {
-    padding: 0;
-    margin: 0;
-    border: 0;
-}
-
-html,
-body {
-    height: 100%;
-    width: 100%;
-}
-
-body {
-    font-family: var(--default-font);
-    background-color: var(--default-background-color);
-}
-
-/* ESTILIZAÇÃO DO HEADER */
-
-.header-navigation .nav-bar {
-    background-color: var(--default-header-footer-color);
-    height: 4.375rem;
-    width: 100%;
-    top: 0;
-    display: flex;
-    justify-content: space-between;
-}
-
-.header-navigation .nav-bar .button-logo {
-    background: none;
-    margin-top: 0.188rem;
-    margin-left: 0.6rem;
-    align-self: flex-start;
-}
-
-.header-navigation .nav-bar .button-logo .nav-bar-img {
-    height: 5rem;
-}
-
-.header-navigation .nav-bar .navbar-menu {
-    margin: 0.315rem 0.6rem 0 0;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-}
-
-.header-navigation .nav-bar .navbar-menu .hamburguer-menu .checkbox-menu {
-    opacity: 0;
-}
-
-.header-navigation .nav-bar .navbar-menu .hamburguer-menu label {
-    height: 1.25rem;
-    width: 2.188rem;
-    display: block;
-    position: relative;
-    cursor: pointer;
-}
-
-.header-navigation .nav-bar .navbar-menu .hamburguer-menu label span {
-    background: var(--default-primary-font-color);
-    height: 0.313rem;
-    width: 100%;
-    border-radius: 1.875rem;
-    display: block;
-    position: absolute;
-    transition: 0.25s ease-in-out;
-}
-
-.header-navigation .nav-bar .navbar-menu .hamburguer-menu label span:nth-child(1) {
-    top: 0;
-}
-
-.header-navigation .nav-bar .navbar-menu .hamburguer-menu label span:nth-child(2) {
-    top: 0.5rem;
-}
-
-.header-navigation .nav-bar .navbar-menu .hamburguer-menu label span:nth-child(3) {
-    top: 1rem;
-}
-
-.header-navigation .nav-bar .navbar-menu .hamburguer-menu #checkbox-menu:checked + label span:nth-child(1) {
-    top: 0.5rem;
-    transform: rotate(-45deg);
-}
-
-.header-navigation .nav-bar .navbar-menu .hamburguer-menu #checkbox-menu:checked + label span:nth-child(2) {
-    opacity: 0;
-}
-
-.header-navigation .nav-bar .navbar-menu .hamburguer-menu #checkbox-menu:checked + label span:nth-child(3) {
-    top: 0.5rem;
-    transform: rotate(45deg);
-}
-
-.header-navigation .nav-bar .navbar-menu .menu-item.hide {
-    display: none;
-}
-
-.header-navigation .nav-bar .navbar-menu .menu-list {
+/* ESTILIZAÇÃO DA LISTA DO MENU */
+.menu-list {
     background-color: var(--default-transparent-header-color);
     height: 100%;
     border-top: 0.1rem solid var(--default-footer-font-color);
@@ -125,37 +26,36 @@ body {
     z-index: 1;
 }
 
-.header-navigation .nav-bar .navbar-menu .menu-list .menu-item {
+.menu-item {
     list-style: none;
     width: 90rem;
     padding-top: 0.938rem;
     padding-bottom: 0.938rem;
 }
 
-.header-navigation .nav-bar .navbar-menu .menu-list .menu-item:nth-child(1) a {
+.menu-item:nth-child(1) a {
     margin-left: 82.8rem;
 }
 
-.header-navigation .nav-bar .navbar-menu .menu-list .menu-item:nth-child(2) a {
+.menu-item:nth-child(2) a {
     margin-left: 79.3rem;
 }
 
-.header-navigation .nav-bar .navbar-menu .menu-list .menu-item:nth-child(3) a {
+.menu-item:nth-child(3) a {
     margin-left: 80rem;
 }
 
-.header-navigation .nav-bar a {
+.nav-bar a {
     text-decoration: none;
     font-size: 1.1rem;
     color: var(--default-primary-font-color);
 }
 
-.header-navigation .nav-bar a:hover {
+.nav-bar a:hover {
     color: var(--default-yellow);
 }
 
 /* BARRA DE OPÇÕES */
-
 .navbar-options {
     height: 60px;
     width: 100%;
@@ -183,10 +83,9 @@ body {
 }
 
 /* ESTILIZAÇÃO DO BACKGROUND */
-
 .main-content::before {
     content: " ";
-    background-image: url(/img/background_sky.jpeg);
+    background-image: url(/styles/img/background_sky.jpeg);
     background-size: cover;
     height: 112%;
     top: 0;
@@ -199,7 +98,6 @@ body {
 }
 
 /* CONTÊINER DE INFORMAÇÕES */
-
 .main-content {
     font-size: 1.2rem;
     color: var(--default-secondary-font-color);
@@ -216,25 +114,24 @@ body {
     padding: 10px 50px;
 }
 
-.main-content .description {
+.description {
     /* display: none; */
     display: block;
 }
 
-.main-content .explanation {
+.explanation {
     display: none;
 }
 
-.main-content .aboutGames {
+.aboutGames {
     display: none;
 }
 
-.main-content .aboutAnime {
+.aboutAnime {
     display: none;
 }
 
 /* ESTILIZAÇÃO DO FOOTER */
-
 .footer-navigation {
     font-size: 1rem;
     background-color: var(--default-header-footer-color);
@@ -247,30 +144,30 @@ body {
     position: absolute;
 }
 
-.footer-navigation .footer-links {
+.footer-links {
     display: grid;
     line-height: 1.3rem;
 }
 
-.footer-navigation .footer-links a {
+.footer-links a {
     text-decoration: none;
     color: var(--default-footer-font-color);
 }
 
-.footer-navigation .footer-links a:hover {
+.footer-links a:hover {
     color: var(--default-yellow);
 }
 
-.footer-navigation .footer-buttonsDownload button {
+.footer-buttonsDownload button {
     background-color: var(--default-header-footer-color);
     margin-right: 1.5rem;
 }
 
-.footer-navigation .footer-buttonsDownload button img {
+.footer-buttonsDownload button img {
     height: 2.5rem;
 }
 
-.footer-navigation .footer-githubLink a img {
+.footer-githubLink a img {
     height: 3rem;
 }
 
@@ -334,17 +231,17 @@ body {
     .footer-navigation {
         font-size: 0.7rem;
     }
-    .footer-navigation .footer-links {
+    .footer-links {
         line-height: 1rem;
     }
-    .footer-navigation .footer-buttonsDownload button img {
+    .footer-buttonsDownload button img {
         height: 2rem;
     }
-    .footer-navigation .footer-buttonsDownload button {
+    .footer-buttonsDownload button {
         margin-right: 0;
         display: flex;
     }
-    .footer-navigation .footer-githubLink a img {
+    .footer-githubLink a img {
         height: 2.5rem;
     }
 }

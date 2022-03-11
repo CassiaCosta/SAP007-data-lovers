@@ -1,16 +1,16 @@
 export const typeFilter = (data, type) => {
-    const filterType = data.filter(pokemonType => pokemonType.type.find(item => item === type) === type)
-    return filterType
+    const filteredType = data.filter(pokemonType => pokemonType.type.find(item => item === type) === type)
+    return filteredType
 }
 
 export const rarityFilter = (data, rarity) => {
-    const filterRarity = data.filter(pokemonRarity => pokemonRarity["pokemon-rarity"] == rarity)
-    return filterRarity
+    const filteredRarity = data.filter(pokemonRarity => pokemonRarity["pokemon-rarity"] == rarity)
+    return filteredRarity
 }
 
 export const regionFilter = (data, region) => {
-    const filterRegion = data.filter(pokemonRegion => pokemonRegion.generation["name"] == region)
-    return filterRegion
+    const filteredRegion = data.filter(pokemonRegion => pokemonRegion.generation["name"] == region)
+    return filteredRegion
 }
 
 export const alphabeticalFilter = (data, chosenOrder) => {

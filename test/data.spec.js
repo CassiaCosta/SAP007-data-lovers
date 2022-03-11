@@ -1,5 +1,5 @@
 import { describe, it, } from 'eslint/lib/rule-tester/rule-tester';
-import { alphabeticalFilter, calculos, heightFilter, rarityFilter, regionFilter, searchName, typeFilter, weightFilter } from '../src/settings-js/data.js';
+import { alphabeticalFilter, calculos, heightFilter, rarityFilter, regionFilter, searchName, typeFilter, weightFilter } from '../src/js/data.js';
 
 const dataPokemon = [{
   "num": "001",
