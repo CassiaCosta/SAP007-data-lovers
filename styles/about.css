@@ -85,7 +85,7 @@
 /* ESTILIZAÇÃO DO BACKGROUND */
 .main-content::before {
     content: " ";
-    background-image: url(/styles/img/background_sky.jpeg);
+    background-image: url(./styles/img/background_sky.jpeg);
     background-size: cover;
     height: 112%;
     top: 0;
@@ -112,23 +112,6 @@
 .main-content section p,
 .main-content section h1 {
     padding: 10px 50px;
-}
-
-.description {
-    /* display: none; */
-    display: block;
-}
-
-.explanation {
-    display: none;
-}
-
-.aboutGames {
-    display: none;
-}
-
-.aboutAnime {
-    display: none;
 }
 
 /* ESTILIZAÇÃO DO FOOTER */
