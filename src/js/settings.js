@@ -4,6 +4,7 @@ buttonMenu.addEventListener('click', () => {
     options.forEach(item => { 
         item.classList.toggle("hide");
     })
+    document.querySelector(".section-search").classList.toggle("expanded");
 });
 
 const buttonDescription = document.getElementById('btnDescription');
@@ -17,9 +18,12 @@ function showAndHideDescription() {
         document.getElementById('aboutAnime').style.display = 'none';
     }
 }
-buttonDescription.addEventListener('click', function() {
-    showAndHideDescription();
-});
+
+if (buttonDescription) {
+    buttonDescription.addEventListener('click', function() {
+        showAndHideDescription();
+    });
+}
 
 const buttonInstruction = document.getElementById('btnExplanation');
 
@@ -33,9 +37,11 @@ function showAndHideInstruction() {
     }
 }
 
-buttonInstruction.addEventListener('click', function() {
-    showAndHideInstruction();
-});
+if (buttonInstruction) {
+    buttonInstruction.addEventListener('click', function() {
+        showAndHideInstruction();
+    });
+}
 
 const buttonGames = document.getElementById('btnAboutGames');
 
@@ -49,23 +55,26 @@ function showAndHideAboutGames() {
     }
 }
 
-buttonGames.addEventListener('click', function() {
-    showAndHideAboutGames();
-});
+if (buttonGames) {
+    buttonGames.addEventListener('click', function() {
+        showAndHideAboutGames();
+    });
+}
 
 const buttonAnime = document.getElementById('btnAboutAnime');
 
 function showAndHideAboutAnime() {
     let anime = document.getElementById('aboutAnime').style.display;
-    if(anime == 'none') {
+    if(anime == 'none') {  
         document.getElementById('description').style.display = 'none';
         document.getElementById('explanation').style.display = 'none';
         document.getElementById('aboutGames').style.display = 'none';
         document.getElementById('aboutAnime').style.display = 'block';
-    } else {
-        document.getElementById('aboutAnime').style.display = 'none';
     }
 }
-buttonAnime.addEventListener('click', function() {
-    showAndHideAboutAnime();
-});
+
+if (buttonAnime) {
+    buttonAnime.addEventListener('click', function() {
+        showAndHideAboutAnime();
+    });
+}
