@@ -111,7 +111,7 @@
 /* ESTILIZAÇÃO DO BACKGROUND */
 .main-content::before {
     content: " ";
-    background-image: url(/styles/img/background_sky.jpeg);
+    background-image: url(./styles/img/background_sky.jpeg);
     background-size: cover;
     top: 0px;
     right: 0px;
