@@ -85,7 +85,7 @@
 /* ESTILIZAÇÃO DO BACKGROUND */
 .main-content::before {
     content: " ";
-    background-image: url(./styles/img/background_sky.jpeg);
+    background-image: url(../styles/img/background_sky.jpeg);
     background-size: cover;
     height: 112%;
     top: 0;

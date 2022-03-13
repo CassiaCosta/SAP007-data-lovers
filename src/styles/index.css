@@ -48,7 +48,7 @@
 /* CONTEÚDO PRINCIAL */
 body::before {
     content: " ";
-    background-image: url(./styles/img/background-initial.png);
+    background-image: url(../styles/img/background-initial.png);
     background-size: cover;
     height: 115%;
     top: 0;
