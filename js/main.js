@@ -12,7 +12,7 @@ let buttonTop = document.getElementById('buttonTop');
 
 function showPokemon(data) {
     document.getElementById('pokemonList').innerHTML = data.map((item) => `
-    <div class="cards">
+    <button aria-label="clique para mais infomacoes" class="cards" onclick="(this.classList.toggle('active'))">
         <section class="front-cards" id="frontCards">
             <p class="numberPokemon">${item.num}</p>
             <picture>
@@ -30,7 +30,7 @@ function showPokemon(data) {
                 <p class="rarityPokemon"> <b>Raridade:</b> ${item["pokemon-rarity"]}</p>
                 <p class="specialAttackPokemon"> <b>Ataque especial:</b> <br> ${item["special-attack"][0].name}</p>
             </section>
-    </div>
+    </button>
     `).join('')
 }
 

@@ -34,7 +34,7 @@
     flex-direction: column;
     align-items: flex-end;
     position: absolute;
-    z-index: 1;
+    z-index: 2;
 }
 
 .menu-item {
@@ -82,6 +82,11 @@
     justify-content: space-evenly;
     align-items: center;
     position: fixed;
+    z-index: 1;
+}
+
+.section-search.expanded {
+    z-index: -1;
 }
 
 .section-search select,
@@ -142,11 +147,13 @@
     justify-content: center;
     text-align: center;
     position: relative;
-    z-index: -1;
 }
 
 .cards {
     top: 10px;
+    color: #000;
+    background: none;
+    
 }
 
 .front-cards,
@@ -162,6 +169,11 @@
     background-color: var(--default-yellow);
     align-content: space-between;
     text-align: center;
+}
+
+.cards.active .front-cards,
+.cards:hover .front-cards {
+    display: none;
 }
 
 .numberPokemon {
@@ -200,6 +212,11 @@
     align-items: center;
     align-content: center;
     display: none;
+}
+
+.cards.active .back-cards,
+.cards:hover .back-cards {
+    display: block;
 }
 
 .weightPokemon,
