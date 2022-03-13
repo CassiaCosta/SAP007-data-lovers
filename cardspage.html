@@ -45,15 +45,6 @@
         </nav>
         <section class="section-search">
             <p>Buscar por: </p>
-            <select id="orderFilter">
-                <option value disabled selected>Ordenar</option>
-                <option value="a-z">A - Z</option>
-                <option value="z-a">Z - A</option>
-                <option value="shortHigh">Baixo - Alto</option>
-                <option value="highShort">Alto - Baixo</option>
-                <option value="lightHeavy">Leve - Pesado</option>
-                <option value="heavyLight">Pesado - Leve</option>
-            </select>
             <select id="typeFilter">
                 <option value disabled selected>Tipo</option>
                 <option value="water">Água</option>
@@ -83,12 +74,21 @@
                 <option value="johto">Johto</option>
                 <option value="kanto">Kanto</option>
             </select>
+            <select id="orderFilter">
+                <option value disabled selected>Ordenar</option>
+                <option value="a-z">A - Z</option>
+                <option value="z-a">Z - A</option>
+                <option value="shortHigh">Baixo - Alto</option>
+                <option value="highShort">Alto - Baixo</option>
+                <option value="lightHeavy">Leve - Pesado</option>
+                <option value="heavyLight">Pesado - Leve</option>
+            </select>
             <input type="text" placeholder="Nome do Pokémon" id="nameFilter">
             <button type="reset" id="clearButton">Limpar</button>
         </section>
     </header>
 
-    <div class="main-content">
+    <main class="main-content">
         <section class="calculation-print">
             <p id="calculation">Você está vendo todos os Pokémons!</p>
         </section>
@@ -97,7 +97,7 @@
         <button class="button-top" id="buttonTop">
             <img src="./styles/img/icons8-seta-para-recolher-96.png" alt="Seta de topo">
         </button>
-    </div>
+    </main>
 
     <script src="./js/main.js" type="module"></script>
     <script src="./js/settings.js" type="module"></script>
