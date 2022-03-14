@@ -16,36 +16,26 @@ export const regionFilter = (data, region) => {
 export const alphabeticalFilter = (data, chosenOrder) => {
     const dataCopy = [...data]
     const alphabeticalOrder = dataCopy.sort((a, b) => {
-        return (a.name > b.name) ? 1 : ((b.name > a.name) ? -1 : 1);
+        return (a.name.localeCompare(b.name));
     })
-    if(chosenOrder == "a-z") {
+    if(chosenOrder === "a-z") {
         return alphabeticalOrder
-    } else if(chosenOrder == "z-a") {
+    } else {
         return alphabeticalOrder.reverse()
     }
 }
 
-export const heightFilter = (data, chosenOrder) => {
+export const sizeFilter = (data, key, chosenOrder) => {
     const dataCopy = [...data]
     const orderByHeight = dataCopy.sort((a, b) => {
-        return (a.size["height"] > b.size["height"] ? 1 : ((b.size["height"] > a.size["height"] ? -1 : 1)))
+        const aSize = Number(a.size[key].replaceAll(/[a-z]/g, '').trim())
+        const bSize = Number(b.size[key].replaceAll(/[a-z]/g, '').trim())
+        return (aSize - bSize)
     })
-    if(chosenOrder == "shortHigh") {
+    if(chosenOrder === "shortHigh" || chosenOrder === "lightHeavy") {
         return orderByHeight
-    } else if(chosenOrder == "highShort") {
+    } else {
         return orderByHeight.reverse()
-    }
-}
-
-export const weightFilter = (data, chosenOrder) => {
-    const dataCopy = [...data]
-    const orderByWeight = dataCopy.sort((a, b) => {
-        return (a.size["weight"] > b.size["weight"] ? 1 : ((b.size["weight"] > a.size["weight"] ? -1 : 1)))
-    })
-    if(chosenOrder == "lightHeavy") {
-        return orderByWeight
-    } else if (chosenOrder == "heavyLight"){
-        return orderByWeight.reverse()
     }
 }
 

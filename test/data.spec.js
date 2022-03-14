@@ -1,5 +1,5 @@
 import { describe, it, } from 'eslint/lib/rule-tester/rule-tester';
-import { alphabeticalFilter, calculos, heightFilter, rarityFilter, regionFilter, searchName, typeFilter, weightFilter } from '../src/js/data.js';
+import { alphabeticalFilter, sizeFilter, calculos, rarityFilter, regionFilter, searchName, typeFilter } from '../src/js/data.js';
 
 const dataPokemon = [{
   "num": "001",
@@ -320,12 +320,12 @@ describe('alphabeticalFilter', () => {
 })
 
 // TESTE DE ORDENAÇÃO POR ALTURA DOS POKÉMONS
-describe('heightFilter', () => {
+describe('sizeFilter', () => {
   it('Ordenação por altura dos pokémons', () => {
-    expect(typeof heightFilter).toBe('function');
+    expect(typeof sizeFilter).toBe('function');
   });
   it('Retorna os pokémons em ordem do mais baixo para mais alto', () => {
-    const typeOrder = heightFilter(orderPokemons, 'shortHigh')
+    const typeOrder = sizeFilter(orderPokemons, "height", 'shortHigh')
     const expected = [{
       "name": "charmander",
       "size": {
@@ -358,7 +358,7 @@ describe('heightFilter', () => {
   });
 
   it('Retorna os pokémons em ordem do mais alto para mais baixo', () => {
-    const typeOrder = heightFilter(orderPokemons, 'highShort')
+    const typeOrder = sizeFilter(orderPokemons, "height", 'highShort')
     const expected = [{
       "name": "venusaur",
       "size": {
@@ -392,12 +392,12 @@ describe('heightFilter', () => {
 })
 
 // TESTE DE ORDENAÇÃO POR PESO DOS POKÉMONS
-describe('weightFilter', () => {
+describe('sizeFilter', () => {
   it('Ordenação por peso dos pokémons', () => {
-    expect(typeof weightFilter).toBe('function');
+    expect(typeof sizeFilter).toBe('function');
   });
   it('Retorna os pokémons do mais leve para o mais pesado', () => {
-    const typeOrder = weightFilter(orderPokemons, 'lightHeavy')
+    const typeOrder = sizeFilter(orderPokemons, "weight", 'lightHeavy')
     const expected = [{
       "name": "bulbasaur",
       "size": {
@@ -430,8 +430,8 @@ describe('weightFilter', () => {
   });
 
   it('Retorna os pokémons do mais pesado para o mais leve', () => {
-    const typeOrder = weightFilter(orderPokemons, 'heavyLight')
-    const expected = [    {
+    const typeOrder = sizeFilter(orderPokemons, "weight", 'heavyLight')
+    const expected = [{
       "name": "venusaur",
       "size": {
         "height": "2.01 m",
