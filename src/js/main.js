@@ -23,13 +23,13 @@ function showPokemon(data) {
                 <p class="typePokemon"> <b>Tipo:</b> ${item.type}</p>
                 <p class="regionPokemon"> <b>Região:</b> ${item.generation["name"]}</p>
             </div>
-            </section>
-            <section class="back-cards" id="backCards">
-                <p class="heightPokemon"> <b> Altura:</b> ${item.size["height"]}</p>
-                <p class="weightPokemon"> <b> Peso: </b> ${item.size["weight"]}</p>
-                <p class="rarityPokemon"> <b>Raridade:</b> ${item["pokemon-rarity"]}</p>
-                <p class="specialAttackPokemon"> <b>Ataque especial:</b> <br> ${item["special-attack"][0].name}</p>
-            </section>
+        </section>
+        <section class="back-cards" id="backCards">
+            <p class="heightPokemon"> <b> Altura:</b> ${item.size["height"]}</p>
+            <p class="weightPokemon"> <b> Peso: </b> ${item.size["weight"]}</p>
+            <p class="rarityPokemon"> <b>Raridade:</b> ${item["pokemon-rarity"]}</p>
+            <p class="specialAttackPokemon"> <b>Ataque especial:</b> <br> ${item["special-attack"][0].name}</p>
+        </section>
     </button>
     `).join('')
 }
