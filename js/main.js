@@ -1,4 +1,4 @@
-import { alphabeticalFilter, calculos, heightFilter, rarityFilter, regionFilter, searchName, typeFilter, weightFilter } from './data.js';
+import { alphabeticalFilter, calculos, rarityFilter, regionFilter, searchName, sizeFilter, typeFilter } from './data.js';
 import data from '../data/pokemon/pokemon.js';
 
 let selectType = document.getElementById('typeFilter');
@@ -57,28 +57,31 @@ function searchByRegion(e) {
 function searchByOrderAlphabetical() {
     if(selectOrder.value == "a-z") {
         calculationBar.innerHTML = `Pokémons ordenados de A à Z`
+        return showPokemon(alphabeticalFilter(data.pokemon, selectOrder.value))
     } else if(selectOrder.value == "z-a") {
         calculationBar.innerHTML = `Pokémons ordenados de Z à A`
+        return showPokemon(alphabeticalFilter(data.pokemon, selectOrder.value))
     }
-    return showPokemon(alphabeticalFilter(data.pokemon, selectOrder.value))
 }
 
 function searchByHeightOrder() {
     if(selectOrder.value == "shortHigh") {
         calculationBar.innerHTML = `Pokémons ordenados do mais baixo para o mais alto`
+        return showPokemon(sizeFilter(data.pokemon, "height", selectOrder.value))
     } else if(selectOrder.value == "highShort") {
         calculationBar.innerHTML = `Pokémons ordenados do mais alto para o mais baixo`
+        return showPokemon(sizeFilter(data.pokemon, "height", selectOrder.value))
     }
-    return showPokemon(heightFilter(data.pokemon, selectOrder.value))
 }
 
 function searchByWeightOrder() {
     if(selectOrder.value == "lightHeavy") {
         calculationBar.innerHTML = `Pokémons ordenados do mais leve para o mais pesado`
+        return showPokemon(sizeFilter(data.pokemon, "weight", selectOrder.value))
     } else if(selectOrder.value == "heavyLight") {
         calculationBar.innerHTML = `Pokémons ordenados do mais pesado para o mais leve`
+        return showPokemon(sizeFilter(data.pokemon, "weight", selectOrder.value))
     }
-    return showPokemon(weightFilter(data.pokemon, selectOrder.value))
 }
 
 function searchByName() {
