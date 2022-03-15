@@ -149,31 +149,33 @@
     position: relative;
 }
 
-.cards {
-    top: 10px;
-    color: #000;
-    background: none;
-    
+.hoverCards {
+    color: var(--default-secondary-font-color);
+    height: 255px;
+    width: 170px;
+    margin: 8px;
+    transition: transform 2s;
+    transform-style: preserve-3d;
+}
+
+.allCards:hover .hoverCards {
+    transform: rotateY(180deg);
 }
 
 .front-cards,
 .back-cards {
-    height: 255px;
-    width: 170px;
+    height: 100%;
+    width: 100%;
     border-radius: 10px;
-    margin: 8px;
     display: grid;
+    position: absolute;
+    backface-visibility: hidden;
 }
 
 .front-cards {
     background-color: var(--default-yellow);
     align-content: space-between;
     text-align: center;
-}
-
-.cards.active .front-cards,
-.cards:hover .front-cards {
-    display: none;
 }
 
 .numberPokemon {
@@ -211,12 +213,8 @@
     background-color: var(--default-primary-font-color);
     align-items: center;
     align-content: center;
-    display: none;
-}
-
-.cards.active .back-cards,
-.cards:hover .back-cards {
-    display: block;
+    display: grid;
+    transform: rotateY(180deg);
 }
 
 .weightPokemon,
@@ -236,6 +234,7 @@
     bottom: 1.25rem;
     margin-right: 1rem;
     position: fixed;
+    display: none;
 }
 
 .button-top img {
