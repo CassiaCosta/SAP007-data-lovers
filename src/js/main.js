@@ -75,7 +75,9 @@ function showPokemon(data) {
                 </picture>
                 <div class="info-cards">
                     <p class="namePokemon">${item.name}</p>
-                    <p class="typePokemon"> <b>Tipo:</b> ${translate(item.type)}</p>
+                    <p class="typePokemon"> <b>Tipo:</b> ${item.type.map(element => {
+                      return translate(element)
+                    })}</p>
                     <p class="regionPokemon"> <b>Região:</b> ${item.generation["name"]}</p>
                 </div>
             </section>
